@@ -4,7 +4,7 @@ require 'openssl'
 module Insightly
   class Client
     URL = 'https://api.insight.ly/v2.1/'
-    
+
     REQUESTS = {
       get: Net::HTTP::Get,
       post: Net::HTTP::Post,
@@ -19,7 +19,7 @@ module Insightly
 
     # @param [:get, :post, :put, :delete] method
     # @param [String] path
-    # @param [Net::HTTPResponse] server response
+    # @return [Net::HTTPResponse] server response
     def request(method, path)
       raise ArgumentError.new("Wrong method #{method.inspect}. :get, :post, :put, :delete are allowed") unless REQUESTS.keys.include?(method)
 
@@ -33,5 +33,13 @@ module Insightly
 
       http.request(request)
     end
+  end
+end
+
+require 'insightly/dsl'
+
+module Insightly
+  class Client
+    include DSL
   end
 end
