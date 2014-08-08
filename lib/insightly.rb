@@ -2,6 +2,7 @@ require 'insightly/version'
 
 module Insightly
   autoload :Client, 'insightly/client'
+  autoload :Resources, 'insightly/resources'
 
   class << self
     # @return [String]
