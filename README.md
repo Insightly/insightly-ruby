@@ -20,7 +20,13 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+Insightly API described at: https://api.insight.ly/v2.1/Help
+
+Insightly gem provides following methods for accessing API:
+
+```ruby
+
+```
 
 ## Contributing
 
