@@ -8,7 +8,7 @@ module Insightly
       require 'insightly/resources/object/serializers'
       require 'insightly/resources/object/attributes'
 
-      extend Serializers
+      include Serializers
       include Attributes
 
       # Define common attributes, applicable to different resources
@@ -16,7 +16,13 @@ module Insightly
       attribute :date_updated_utc, Time
 
       def inspect
-        "#<#{self.class.name}:#{object_id} #{attributes.map { |key, value| "@#{key}=#{value.inspect}" }.join(' ')}>"
+        "#<#{self.class.name}:#{'0x00%x' % (object_id << 1)} #{inspect_attributes}>"
+      end
+
+      private
+
+      def inspect_attributes
+        attributes.map { |key, value| "@#{key}=#{value.inspect}" }.join(' ')
       end
     end
   end
