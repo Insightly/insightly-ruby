@@ -1,4 +1,6 @@
 require 'delegate'
+require 'json'
+require 'time'
 
 module Insightly
   class Object < SimpleDelegator
@@ -19,7 +21,7 @@ module Insightly
         end
 
         def self.deserialize(value)
-          Time.parse(value)
+          ::Time.parse(value)
         end
       end
     end
@@ -29,19 +31,38 @@ module Insightly
     end
 
     def self.serializer_for(type)
-      serializers[type] ||= if Serializers.constants.include?(type.to_s.to_sym)
-                              Serializers.const_get(type.to_sym)
-                            else
-                              Serializers::Object
-                            end
+      serializers[type] ||=
+        begin
+          class_symbol = type.to_s.to_sym
+          if Serializers.constants.include?(class_symbol)
+            Serializers.const_get(class_symbol)
+          elsif Resources.constants.include?(class_symbol)
+            Resources.const_get(class_symbol)
+          else
+            Serializers::Object
+          end
+        end
     end
 
     def self.attributes
-      @attributes ||= {}
+      @attributes ||=
+        begin
+          if superclass.respond_to?(:attributes)
+            superclass.attributes.dup
+          else
+            Hash.new { |hash, key| hash[key] = ::Object }
+          end
+        end
     end
 
     def self.attributes_module
       @attributes_module ||= const_set(:Attributes, Module.new)
+    end
+
+    def self.define_attribute_accessor(name, type = Object)
+      attributes_module.send(:define_method, name) do
+        deserialize_attribute(name, type)
+      end
     end
 
     def self.attribute(name, type = String)
@@ -50,17 +71,16 @@ module Insightly
       define_attribute_accessor(name, type)
     end
 
-    def self.define_attribute_accessor(name, type = Object)
-      attributes_module.define_method(name) do
-        deserialize_attribute(name, type)
-      end
+    class << self
+      alias_method :has_many, :attribute
     end
 
     # @param [Net::HTTPResponse] response
     # @return [<Object>, Object]
     def self.parse(response)
-      return nil unless response.is_a?(Net::HTTPOK)
-      json = JSON.parse(response.body)
+      return nil unless response.is_a?(String) || response.is_a?(Net::HTTPOK)
+      response = response.body if response.respond_to?(:body)
+      json = JSON.parse(response)
       case json
       when Array
         json.map { |object| new(object) }
@@ -73,7 +93,7 @@ module Insightly
       attribute = name.to_s.upcase
       if __getobj__.key?(attribute)
         self.class.define_attribute_accessor(name)
-        public_send(name, *args, &block)
+        deserialize_attribute(name, self.class.attributes[name.to_sym])
       else
         super
       end
