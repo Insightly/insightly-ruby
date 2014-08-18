@@ -19,11 +19,19 @@ module Insightly
 
     # @param [:get, :post, :put, :delete] method
     # @param [String] path
+    # @param [Hash] query
     # @return [Net::HTTPResponse] server response
-    def request(method, path)
+    def request(method, path, query = {})
       raise ArgumentError.new("Wrong method #{method.inspect}. :get, :post, :put, :delete are allowed") unless REQUESTS.keys.include?(method)
 
-      uri = URI.parse("#{URL}#{path}")
+      query = if query.empty?
+                '?' << query.inject([]) do |result, (name, value)|
+                  result << "#{name}=#{value.is_a?(Array) ? value.join(',') : value}"
+                end.join('&')
+              else
+                nil
+              end
+      uri = URI.parse("#{URL}#{path}#{query}")
 
       http = Net::HTTP.new(uri.host, uri.port)
       http.use_ssl = true

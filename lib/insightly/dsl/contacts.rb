@@ -26,9 +26,13 @@ module Insightly
     end
 
     # GET /v2.1/Contacts?ids={ids}&email={email}&tag={tag}
+    # @param [Hash] options
+    # @option options :ids [Array]
+    # @option options :email [String]
+    # @option options :tag [String]
     # @return [<Insightly::Resources::Contact>, nil]
-    def get_contacts
-      Resources::Contact.parse(request(:get, 'Contacts'))
+    def get_contacts(options = {})
+      Resources::Contact.parse(request(:get, 'Contacts', options))
     end
 
     # POST /v2.1/Contacts

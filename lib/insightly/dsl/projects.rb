@@ -26,9 +26,12 @@ module Insightly
     end
 
     # GET /v2.1/Projects?ids={ids}&tag={tag}
+    # @param [Hash] options
+    # @option options :ids [Array]
+    # @option options :tag [String]
     # @return [<Insightly::Resources::Project>, nil]
-    def get_projects
-      Resources::Project.parse(request(:get, 'Projects'))
+    def get_projects(options = {})
+      Resources::Project.parse(request(:get, 'Projects', options))
     end
 
     # POST /v2.1/Projects

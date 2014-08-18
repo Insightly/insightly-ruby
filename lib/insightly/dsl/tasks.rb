@@ -18,9 +18,11 @@ module Insightly
     end
 
     # GET /v2.1/Tasks?ids={ids}
+    # @param [Hash] options
+    # @option options :ids [Array]
     # @return [<Insightly::Resources::Task>, nil]
-    def get_tasks
-      Resources::Task.parse(request(:get, 'Tasks'))
+    def get_tasks(options = {})
+      Resources::Task.parse(request(:get, 'Tasks', options))
     end
 
     # POST /v2.1/Tasks

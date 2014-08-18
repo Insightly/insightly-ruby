@@ -16,9 +16,11 @@ module Insightly
     end
 
     # GET /v2.1/TeamMembers?teamid={teamid}
+    # @param [Hash] options
+    # @option options :teamid [String]
     # @return [<Insightly::Resources::TeamMember>, nil]
-    def get_team_members
-      Resources::TeamMember.parse(request(:get, 'TeamMembers'))
+    def get_team_members(options = {})
+      Resources::TeamMember.parse(request(:get, 'TeamMembers', options))
     end
 
     # POST /v2.1/TeamMembers

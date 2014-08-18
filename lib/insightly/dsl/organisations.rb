@@ -26,9 +26,13 @@ module Insightly
     end
 
     # GET /v2.1/Organisations?ids={ids}&domain={domain}&tag={tag}
+    # @param [Hash] options
+    # @option options :ids [Array]
+    # @option options :domain [String]
+    # @option options :tag [String]
     # @return [<Insightly::Resources::Organisation>, nil]
-    def get_organisations
-      Resources::Organisation.parse(request(:get, 'Organisations'))
+    def get_organisations(options = {})
+      Resources::Organisation.parse(request(:get, 'Organisations', options))
     end
 
     # POST /v2.1/Organisations

@@ -18,9 +18,12 @@ module Insightly
     end
 
     # GET /v2.1/Emails?ids={ids}&tag={tag}
+    # @param [Hash] options
+    # @option options :ids [Array]
+    # @option options :tag [String]
     # @return [<Insightly::Resources::Email>, nil]
-    def get_emails
-      Resources::Email.parse(request(:get, 'Emails'))
+    def get_emails(options = {})
+      Resources::Email.parse(request(:get, 'Emails', options))
     end
 
     # POST /v2.1/Emails/{c_id}/Comments
