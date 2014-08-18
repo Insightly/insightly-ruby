@@ -1,8 +1,8 @@
-require 'insightly/resources'
+require 'insightly/resources/object'
 
 module Insightly
   module Resources
-    class FileAttachment < Insightly::Object
+    class FileAttachment < Insightly::Resources::Object
     end
   end
 end
