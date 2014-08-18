@@ -75,6 +75,11 @@ module Insightly
       alias_method :has_many, :attribute
     end
 
+    # Define common attributes, applicable to different resources
+
+    attribute :date_created_utc, Time
+    attribute :date_updated_utc, Time
+
     # @param [Net::HTTPResponse] response
     # @return [<Object>, Object]
     def self.parse(response)
