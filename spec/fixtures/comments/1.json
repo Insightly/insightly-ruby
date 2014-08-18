@@ -1,0 +1,42 @@
+{
+    "COMMENT_ID": 1,
+    "BODY": "sample string 2",
+    "OWNER_USER_ID": 3,
+    "DATE_CREATED_UTC": "2014-08-18 12:49:50",
+    "DATE_UPDATED_UTC": "2014-08-18 12:49:50",
+    "FILE_ATTACHMENTS": [
+        {
+            "FILE_ID": 1,
+            "FILE_NAME": "sample string 2",
+            "CONTENT_TYPE": "sample string 3",
+            "FILE_SIZE": 4,
+            "FILE_CATEGORY_ID": 1,
+            "OWNER_USER_ID": 5,
+            "DATE_CREATED_UTC": "2014-08-18 12:49:50",
+            "DATE_UPDATED_UTC": "2014-08-18 12:49:50",
+            "URL": "sample string 8"
+        },
+        {
+            "FILE_ID": 1,
+            "FILE_NAME": "sample string 2",
+            "CONTENT_TYPE": "sample string 3",
+            "FILE_SIZE": 4,
+            "FILE_CATEGORY_ID": 1,
+            "OWNER_USER_ID": 5,
+            "DATE_CREATED_UTC": "2014-08-18 12:49:50",
+            "DATE_UPDATED_UTC": "2014-08-18 12:49:50",
+            "URL": "sample string 8"
+        },
+        {
+            "FILE_ID": 1,
+            "FILE_NAME": "sample string 2",
+            "CONTENT_TYPE": "sample string 3",
+            "FILE_SIZE": 4,
+            "FILE_CATEGORY_ID": 1,
+            "OWNER_USER_ID": 5,
+            "DATE_CREATED_UTC": "2014-08-18 12:49:50",
+            "DATE_UPDATED_UTC": "2014-08-18 12:49:50",
+            "URL": "sample string 8"
+        }
+    ]
+}
