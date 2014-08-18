@@ -20,7 +20,7 @@ Or install it yourself as:
 
 ## Usage
 
-Insightly API described at: https://api.insight.ly/v2.1/Help
+[Insightly API Documentation](https://api.insight.ly/v2.1/Help)
 
 Insightly gem provides following methods for accessing API:
 
