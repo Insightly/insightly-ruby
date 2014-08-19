@@ -1,0 +1,19 @@
+{
+    "USER_ID": 1,
+    "CONTACT_ID": 2,
+    "FIRST_NAME": "sample string 3",
+    "LAST_NAME": "sample string 4",
+    "TIMEZONE_ID": "sample string 5",
+    "EMAIL_ADDRESS": "sample string 6",
+    "EMAIL_DROPBOX_IDENTIFIER": "sample string 7",
+    "ADMINISTRATOR": true,
+    "ACCOUNT_OWNER": true,
+    "ACTIVE": true,
+    "DATE_CREATED_UTC": "2014-08-18 13:15:21",
+    "DATE_UPDATED_UTC": "2014-08-18 13:15:21",
+    "USER_CURRENCY": "sample string 13",
+    "CONTACT_DISPLAY": "sample string 14",
+    "CONTACT_ORDER": "sample string 15",
+    "TASK_WEEK_START": 16,
+    "INSTANCE_ID": 17
+}
