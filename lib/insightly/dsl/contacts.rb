@@ -36,6 +36,11 @@ module Insightly
     end
 
     # POST /v2.1/Contacts
+    # @param [Insightly::Resources::Contact] contact The contact we're creating
+    # @return [<Insightly::Resources::Contact>, nil]
+    def create_contact(contact)
+      Resources::Contact.parse(request(:post, 'Contacts', contact))
+    end
 
     # POST /v2.1/Contacts/{c_id}/Image/{filename}
 
