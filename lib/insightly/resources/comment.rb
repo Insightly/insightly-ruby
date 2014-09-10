@@ -4,7 +4,7 @@ require 'insightly/resources/file_attachment'
 module Insightly
   module Resources
     class Comment < Insightly::Resources::Object
-      has_many :file_attachments, FileAttachment
+      has_many :fileattachments, FileAttachment
     end
   end
 end

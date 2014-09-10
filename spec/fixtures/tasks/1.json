@@ -1,6 +1,6 @@
 {
   "TASK_ID": 1,
-  "Title": "sample string 2",
+  "TITLE": "sample string 2",
   "CATEGORY_ID": 1,
   "DUE_DATE": "2014-08-21 17:05:40",
   "COMPLETED_DATE_UTC": "2014-08-21 17:05:40",
