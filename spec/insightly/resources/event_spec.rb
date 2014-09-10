@@ -16,7 +16,7 @@ describe Insightly::Resources::Event do
       end
     end
 
-    %w(start_date_utc end_date_utc reminder_date_utc date_created_utc date_updated_utc).each do |method|
+    %w(date_created_utc date_updated_utc).each do |method|
       it "deserialize attribute #{method} as time" do
         expect(subject.public_send(method)).to be_a(Time)
       end

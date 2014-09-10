@@ -16,7 +16,7 @@ describe Insightly::Resources::Email do
       end
     end
 
-    %w(email_date_utc date_created_utc).each do |method|
+    %w(date_created_utc).each do |method|
       it "deserialize attribute #{method} as time" do
         expect(subject.public_send(method)).to be_a(Time)
       end
