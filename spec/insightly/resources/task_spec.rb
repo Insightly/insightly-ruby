@@ -17,7 +17,7 @@ describe Insightly::Resources::Task do
       end
     end
 
-    %w(due_date completed_date_utc start_date date_created_utc date_updated_utc).each do |method|
+    %w(date_created_utc date_updated_utc).each do |method|
       it "deserialize attribute #{method} as time" do
         expect(subject.public_send(method)).to be_a(Time)
       end
