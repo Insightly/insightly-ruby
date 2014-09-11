@@ -28,11 +28,6 @@ RSpec.configure do |config|
         File.read(file_name)
       }
     )
-    stub_request(:delete, /#{Regexp.escape(base_url)}(.+)/).to_return(
-      body: lambda { |request|
-        file_name += "/DELETE/#{request.uri.path.gsub(api_version, '').underscore.downcase}#{file_extension}"
-        File.read(file_name)
-      }
-    )
+    stub_request(:delete, /#{Regexp.escape(base_url)}(.+)/).to_return(status: 202)
   end
 end
