@@ -2,6 +2,12 @@ require 'spec_helper'
 
 describe Insightly::DSL::Notes do
   # DELETE /v2.1/Notes/{id}
+  describe '#delete_note' do
+    it 'returns a response with code 202' do
+      response = Insightly.client.delete_note(1)
+      expect(response.code).to eq('202')
+    end
+  end
 
   # GET /v2.1/Notes
 

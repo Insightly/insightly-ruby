@@ -2,6 +2,12 @@ require 'spec_helper'
 
 describe Insightly::DSL::Tasks do
   # DELETE /v2.1/Tasks/{id}
+  describe '#delete_task' do
+    it 'returns a response with code 202' do
+      response = Insightly.client.delete_task(1)
+      expect(response.code).to eq('202')
+    end
+  end
 
   # GET /v2.1/Tasks/{c_id}/Comments
 

@@ -4,6 +4,12 @@ describe Insightly::DSL::Projects do
   # DELETE /v2.1/Projects/{c_id}/Image
 
   # DELETE /v2.1/Projects/{id}
+  describe '#delete_project' do
+    it 'returns a response with code 202' do
+      response = Insightly.client.delete_project(1)
+      expect(response.code).to eq('202')
+    end
+  end
 
   # GET /v2.1/Projects/{c_id}/Emails
 

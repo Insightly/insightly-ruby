@@ -2,6 +2,12 @@ require 'spec_helper'
 
 describe Insightly::DSL::Events do
   # DELETE /v2.1/Events/{id}
+  describe '#delete_event' do
+    it 'returns a response with code 202' do
+      response = Insightly.client.delete_event(1)
+      expect(response.code).to eq('202')
+    end
+  end
 
   # GET /v2.1/Events
 

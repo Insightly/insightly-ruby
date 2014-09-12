@@ -2,6 +2,12 @@ require 'spec_helper'
 
 describe Insightly::DSL::FileCategories do
   # DELETE /v2.1/FileCategories/{id}
+  describe '#delete_file_category' do
+    it 'returns a response with code 202' do
+      response = Insightly.client.delete_file_category(1)
+      expect(response.code).to eq('202')
+    end
+  end
 
   # GET /v2.1/FileCategories
 

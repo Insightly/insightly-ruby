@@ -4,6 +4,12 @@ describe Insightly::DSL::Organisations do
   # DELETE /v2.1/Organisations/{c_id}/Image
 
   # DELETE /v2.1/Organisations/{id}
+  describe '#delete_organisation' do
+    it 'returns a response with code 202' do
+      response = Insightly.client.delete_organisation(1)
+      expect(response.code).to eq('202')
+    end
+  end
 
   # GET /v2.1/Organisations/{c_id}/Emails
 

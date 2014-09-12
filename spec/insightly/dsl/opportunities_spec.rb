@@ -4,6 +4,12 @@ describe Insightly::DSL::Opportunities do
   # DELETE /v2.1/Opportunities/{c_id}/Image
 
   # DELETE /v2.1/Opportunities/{id}
+  describe '#delete_opportunity' do
+    it 'returns a response with code 202' do
+      response = Insightly.client.delete_opportunity(1)
+      expect(response.code).to eq('202')
+    end
+  end
 
   # GET /v2.1/Opportunities/{c_id}/Emails
 
