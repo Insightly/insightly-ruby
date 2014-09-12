@@ -8,6 +8,11 @@ describe Insightly::DSL::Notes do
   # GET /v2.1/Notes/{c_id}/Comments
 
   # GET /v2.1/Notes/{id}
+  describe '#get_note' do
+    it 'returns a note' do
+      expect(Insightly.client.get_note(1)).to be_a(Insightly::Resources::Note)
+    end
+  end
 
   # POST /v2.1/Notes
 

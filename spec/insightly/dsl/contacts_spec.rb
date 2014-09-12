@@ -14,6 +14,11 @@ describe Insightly::DSL::Contacts do
   # GET /v2.1/Contacts/{c_id}/Tasks
 
   # GET /v2.1/Contacts/{id}
+  describe '#get_contact' do
+    it 'returns a contact' do
+      expect(Insightly.client.get_contact(1)).to be_a(Insightly::Resources::Contact)
+    end
+  end
 
   # GET /v2.1/Contacts?ids={ids}&email={email}&tag={tag}
 

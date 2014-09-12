@@ -14,6 +14,11 @@ describe Insightly::DSL::Organisations do
   # GET /v2.1/Organisations/{c_id}/Tasks
 
   # GET /v2.1/Organisations/{id}
+  describe '#get_organisation' do
+    it 'returns an organisation' do
+      expect(Insightly.client.get_organisation(1)).to be_a(Insightly::Resources::Organisation)
+    end
+  end
 
   # GET /v2.1/Organisations?ids={ids}&domain={domain}&tag={tag}
 

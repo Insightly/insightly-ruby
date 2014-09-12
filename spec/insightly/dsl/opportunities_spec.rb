@@ -16,6 +16,11 @@ describe Insightly::DSL::Opportunities do
   # GET /v2.1/Opportunities/{c_id}/Tasks
 
   # GET /v2.1/Opportunities/{id}
+  describe '#get_opportunity' do
+    it 'returns an opportunity' do
+      expect(Insightly.client.get_opportunity(1)).to be_a(Insightly::Resources::Opportunity)
+    end
+  end
 
   # GET /v2.1/Opportunities?ids={ids}&tag={tag}
 
