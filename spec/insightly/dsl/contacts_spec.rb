@@ -27,6 +27,13 @@ describe Insightly::DSL::Contacts do
   end
 
   # GET /v2.1/Contacts?ids={ids}&email={email}&tag={tag}
+  describe '#get_contacts' do
+    it 'returns an array of contacts' do
+      contacts = Insightly.client.get_contacts
+      expect(contacts).to be_a(Array)
+      expect(contacts.first).to be_a(Insightly::Resources::Contact)
+    end
+  end
 
   # POST /v2.1/Contacts
 
