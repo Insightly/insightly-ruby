@@ -10,6 +10,13 @@ describe Insightly::DSL::Notes do
   end
 
   # GET /v2.1/Notes
+  describe '#get_notes' do
+    it 'returns an array of notes' do
+      notes = Insightly.client.get_notes
+      expect(notes).to be_a(Array)
+      expect(notes.first).to be_a(Insightly::Resources::Note)
+    end
+  end
 
   # GET /v2.1/Notes/{c_id}/Comments
 
