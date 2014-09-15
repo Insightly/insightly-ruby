@@ -2,6 +2,13 @@ require 'spec_helper'
 
 describe Insightly::DSL::Users do
   # GET /v2.1/Users
+  describe '#get_users' do
+    it 'returns an array of users' do
+      users = Insightly.client.get_users
+      expect(users).to be_a(Array)
+      expect(users.first).to be_a(Insightly::Resources::User)
+    end
+  end
 
   # GET /v2.1/Users/{id}
   describe '#get_user' do
