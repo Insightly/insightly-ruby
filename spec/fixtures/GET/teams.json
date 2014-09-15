@@ -1,0 +1,83 @@
+[
+  {
+    "TEAM_ID": 1,
+    "TEAM_NAME": "sample string 2",
+    "ANONYMOUS_TEAM": true,
+    "DATE_CREATED_UTC": "2014-09-15 15:57:32",
+    "DATE_UPDATED_UTC": "2014-09-15 15:57:32",
+    "TEAMMEMBERS": [
+      {
+        "PERMISSION_ID": 1,
+        "TEAM_ID": 2,
+        "MEMBER_USER_ID": 1,
+        "MEMBER_TEAM_ID": 1
+      },
+      {
+        "PERMISSION_ID": 1,
+        "TEAM_ID": 2,
+        "MEMBER_USER_ID": 1,
+        "MEMBER_TEAM_ID": 1
+      },
+      {
+        "PERMISSION_ID": 1,
+        "TEAM_ID": 2,
+        "MEMBER_USER_ID": 1,
+        "MEMBER_TEAM_ID": 1
+      }
+    ]
+  },
+  {
+    "TEAM_ID": 1,
+    "TEAM_NAME": "sample string 2",
+    "ANONYMOUS_TEAM": true,
+    "DATE_CREATED_UTC": "2014-09-15 15:57:32",
+    "DATE_UPDATED_UTC": "2014-09-15 15:57:32",
+    "TEAMMEMBERS": [
+      {
+        "PERMISSION_ID": 1,
+        "TEAM_ID": 2,
+        "MEMBER_USER_ID": 1,
+        "MEMBER_TEAM_ID": 1
+      },
+      {
+        "PERMISSION_ID": 1,
+        "TEAM_ID": 2,
+        "MEMBER_USER_ID": 1,
+        "MEMBER_TEAM_ID": 1
+      },
+      {
+        "PERMISSION_ID": 1,
+        "TEAM_ID": 2,
+        "MEMBER_USER_ID": 1,
+        "MEMBER_TEAM_ID": 1
+      }
+    ]
+  },
+  {
+    "TEAM_ID": 1,
+    "TEAM_NAME": "sample string 2",
+    "ANONYMOUS_TEAM": true,
+    "DATE_CREATED_UTC": "2014-09-15 15:57:32",
+    "DATE_UPDATED_UTC": "2014-09-15 15:57:32",
+    "TEAMMEMBERS": [
+      {
+        "PERMISSION_ID": 1,
+        "TEAM_ID": 2,
+        "MEMBER_USER_ID": 1,
+        "MEMBER_TEAM_ID": 1
+      },
+      {
+        "PERMISSION_ID": 1,
+        "TEAM_ID": 2,
+        "MEMBER_USER_ID": 1,
+        "MEMBER_TEAM_ID": 1
+      },
+      {
+        "PERMISSION_ID": 1,
+        "TEAM_ID": 2,
+        "MEMBER_USER_ID": 1,
+        "MEMBER_TEAM_ID": 1
+      }
+    ]
+  }
+]

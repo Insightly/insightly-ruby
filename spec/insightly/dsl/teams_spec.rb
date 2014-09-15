@@ -10,7 +10,14 @@ describe Insightly::DSL::Teams do
   end
 
   # GET /v2.1/Teams
-
+  describe '#get_teams' do
+    it 'returns an array of teams' do
+      teams = Insightly.client.get_teams
+      expect(teams).to be_a(Array)
+      expect(teams.first).to be_a(Insightly::Resources::Team)
+    end
+  end
+  
   # GET /v2.1/Teams/{id}
   describe '#get_team' do
     it 'returns a team' do
