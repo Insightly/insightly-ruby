@@ -29,7 +29,14 @@ describe Insightly::DSL::Opportunities do
   end
 
   # GET /v2.1/Opportunities?ids={ids}&tag={tag}
-
+  describe '#get_opportunities' do
+    it 'returns an array of opportunities' do
+      opportunities = Insightly.client.get_opportunities
+      expect(opportunities).to be_a(Array)
+      expect(opportunities.first).to be_a(Insightly::Resources::Opportunity)
+    end
+  end
+  
   # POST /v2.1/Opportunities
 
   # POST /v2.1/Opportunities/{c_id}/Image/{filename}
