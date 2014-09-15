@@ -10,7 +10,14 @@ describe Insightly::DSL::FileCategories do
   end
 
   # GET /v2.1/FileCategories
-
+  describe '#get_file_categories' do
+    it 'returns an array of file_categories' do
+      file_categories = Insightly.client.get_file_categories
+      expect(file_categories).to be_a(Array)
+      expect(file_categories.first).to be_a(Insightly::Resources::FileCategory)
+    end
+  end
+  
   # GET /v2.1/FileCategories/{id}
   describe '#get_file_categories' do
     it 'returns a file category' do
