@@ -10,7 +10,14 @@ describe Insightly::DSL::Events do
   end
 
   # GET /v2.1/Events
-
+  describe '#get_events' do
+    it 'returns an array of events' do
+      events = Insightly.client.get_events
+      expect(events).to be_a(Array)
+      expect(events.first).to be_a(Insightly::Resources::Event)
+    end
+  end
+  
   # GET /v2.1/Events/{id}
   describe '#get_event' do
     it 'returns an event' do
