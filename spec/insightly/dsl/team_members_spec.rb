@@ -17,7 +17,14 @@ describe Insightly::DSL::TeamMembers do
   end
 
   # GET /v2.1/TeamMembers?teamid={teamid}
-
+  describe '#get_team_members' do
+    it 'returns an array of team_members' do
+      team_members = Insightly.client.get_team_members
+      expect(team_members).to be_a(Array)
+      expect(team_members.first).to be_a(Insightly::Resources::TeamMember)
+    end
+  end
+  
   # POST /v2.1/TeamMembers
 
   # PUT /v2.1/TeamMembers
