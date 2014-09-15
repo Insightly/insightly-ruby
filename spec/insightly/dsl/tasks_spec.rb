@@ -19,7 +19,14 @@ describe Insightly::DSL::Tasks do
   end
 
   # GET /v2.1/Tasks?ids={ids}
-
+  describe '#get_tasks' do
+    it 'returns an array of task_categories' do
+      tasks = Insightly.client.get_tasks
+      expect(tasks).to be_a(Array)
+      expect(tasks.first).to be_a(Insightly::Resources::Task)
+    end
+  end
+  
   # POST /v2.1/Tasks
 
   # POST /v2.1/Tasks/{c_id}/Comments
