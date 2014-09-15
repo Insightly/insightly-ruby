@@ -10,7 +10,14 @@ describe Insightly::DSL::OpportunityCategories do
   end
 
   # GET /v2.1/OpportunityCategories
-
+  describe '#get_opportunity_categories' do
+    it 'returns an array of opportunity_categories' do
+      opportunity_categories = Insightly.client.get_opportunity_categories
+      expect(opportunity_categories).to be_a(Array)
+      expect(opportunity_categories.first).to be_a(Insightly::Resources::OpportunityCategory)
+    end
+  end
+  
   # GET /v2.1/OpportunityCategories/{id}
   describe '#get_opportunity_category' do
     it 'returns an opportunity category' do
