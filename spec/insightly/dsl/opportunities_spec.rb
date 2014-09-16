@@ -24,7 +24,7 @@ describe Insightly::DSL::Opportunities do
   # GET /v2.1/Opportunities/{id}
   describe '#get_opportunity' do
     it 'returns an opportunity' do
-      expect(Insightly.client.get_opportunity(1)).to be_a(Insightly::Resources::Opportunity)
+      expect(Insightly.client.get_opportunity(1)).to be_a(Opportunity)
     end
   end
 
@@ -33,7 +33,7 @@ describe Insightly::DSL::Opportunities do
     it 'returns an array of opportunities' do
       opportunities = Insightly.client.get_opportunities
       expect(opportunities).to be_a(Array)
-      expect(opportunities.first).to be_a(Insightly::Resources::Opportunity)
+      expect(opportunities.first).to be_a(Opportunity)
     end
   end
   

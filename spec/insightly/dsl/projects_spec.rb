@@ -22,7 +22,7 @@ describe Insightly::DSL::Projects do
   # GET /v2.1/Projects/{id}
   describe '#get_project' do
     it 'returns a project' do
-      expect(Insightly.client.get_project(1)).to be_a(Insightly::Resources::Project)
+      expect(Insightly.client.get_project(1)).to be_a(Project)
     end
   end
 
@@ -31,7 +31,7 @@ describe Insightly::DSL::Projects do
     it 'returns an array of projects' do
       projects = Insightly.client.get_projects
       expect(projects).to be_a(Array)
-      expect(projects.first).to be_a(Insightly::Resources::Project)
+      expect(projects.first).to be_a(Project)
     end
   end
   

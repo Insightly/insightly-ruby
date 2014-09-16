@@ -22,7 +22,7 @@ describe Insightly::DSL::Organisations do
   # GET /v2.1/Organisations/{id}
   describe '#get_organisation' do
     it 'returns an organisation' do
-      expect(Insightly.client.get_organisation(1)).to be_a(Insightly::Resources::Organisation)
+      expect(Insightly.client.get_organisation(1)).to be_a(Organisation)
     end
   end
 
@@ -31,7 +31,7 @@ describe Insightly::DSL::Organisations do
     it 'returns an array of organisations' do
       organisations = Insightly.client.get_organisations
       expect(organisations).to be_a(Array)
-      expect(organisations.first).to be_a(Insightly::Resources::Organisation)
+      expect(organisations.first).to be_a(Organisation)
     end
   end
   

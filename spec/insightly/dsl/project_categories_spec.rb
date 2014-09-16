@@ -16,7 +16,7 @@ describe Insightly::DSL::ProjectCategories do
     it 'returns an array of project_categories' do
       project_categories = Insightly.client.get_project_categories
       expect(project_categories).to be_a(Array)
-      expect(project_categories.first).to be_a(Insightly::Resources::ProjectCategory)
+      expect(project_categories.first).to be_a(ProjectCategory)
     end
   end
 
@@ -25,7 +25,7 @@ describe Insightly::DSL::ProjectCategories do
   # @param [String, Fixnum] id A ProjectCategory's ID
   describe '#get_project_category' do
     it 'returns an project_category' do
-      expect(Insightly.client.get_project_category(1)).to be_a(Insightly::Resources::ProjectCategory)
+      expect(Insightly.client.get_project_category(1)).to be_a(ProjectCategory)
     end
   end
 

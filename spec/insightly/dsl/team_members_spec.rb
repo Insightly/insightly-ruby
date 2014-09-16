@@ -12,7 +12,7 @@ describe Insightly::DSL::TeamMembers do
   # GET /v2.1/TeamMembers/{id}
   describe '#get_team_member' do
     it 'returns a team member' do
-      expect(Insightly.client.get_team_member(1)).to be_a(Insightly::Resources::TeamMember)
+      expect(Insightly.client.get_team_member(1)).to be_a(TeamMember)
     end
   end
 
@@ -21,7 +21,7 @@ describe Insightly::DSL::TeamMembers do
     it 'returns an array of team_members' do
       team_members = Insightly.client.get_team_members
       expect(team_members).to be_a(Array)
-      expect(team_members.first).to be_a(Insightly::Resources::TeamMember)
+      expect(team_members.first).to be_a(TeamMember)
     end
   end
   

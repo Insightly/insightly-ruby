@@ -14,7 +14,7 @@ describe Insightly::DSL::Tasks do
   # GET /v2.1/Tasks/{id}
   describe '#get_task' do
     it 'returns a task' do
-      expect(Insightly.client.get_task(1)).to be_a(Insightly::Resources::Task)
+      expect(Insightly.client.get_task(1)).to be_a(Task)
     end
   end
 
@@ -23,7 +23,7 @@ describe Insightly::DSL::Tasks do
     it 'returns an array of task_categories' do
       tasks = Insightly.client.get_tasks
       expect(tasks).to be_a(Array)
-      expect(tasks.first).to be_a(Insightly::Resources::Task)
+      expect(tasks.first).to be_a(Task)
     end
   end
   

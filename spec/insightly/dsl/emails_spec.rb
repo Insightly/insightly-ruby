@@ -16,14 +16,14 @@ describe Insightly::DSL::Emails do
     it 'returns an array of emails' do
       emails = Insightly.client.get_emails
       expect(emails).to be_a(Array)
-      expect(emails.first).to be_a(Insightly::Resources::Email)
+      expect(emails.first).to be_a(Email)
     end
   end
 
   # GET /v2.1/Emails/{id}
   describe '#get_email' do
     it 'returns an email' do
-      expect(Insightly.client.get_email(1)).to be_a(Insightly::Resources::Email)
+      expect(Insightly.client.get_email(1)).to be_a(Email)
     end
   end
 

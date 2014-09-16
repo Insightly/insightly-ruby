@@ -22,7 +22,7 @@ describe Insightly::DSL::Contacts do
   # GET /v2.1/Contacts/{id}
   describe '#get_contact' do
     it 'returns a contact' do
-      expect(Insightly.client.get_contact(1)).to be_a(Insightly::Resources::Contact)
+      expect(Insightly.client.get_contact(1)).to be_a(Contact)
     end
   end
 
@@ -31,7 +31,7 @@ describe Insightly::DSL::Contacts do
     it 'returns an array of contacts' do
       contacts = Insightly.client.get_contacts
       expect(contacts).to be_a(Array)
-      expect(contacts.first).to be_a(Insightly::Resources::Contact)
+      expect(contacts.first).to be_a(Contact)
     end
   end
 
@@ -39,8 +39,8 @@ describe Insightly::DSL::Contacts do
   describe '#create_contact' do
     it 'creates a contact' do
       expect(
-        Insightly.client.create_contact(Insightly::Resources::Contact.new({}))
-      ).to be_a(Insightly::Resources::Contact)
+        Insightly.client.create_contact(Contact.new({}))
+      ).to be_a(Contact)
     end
   end
 
