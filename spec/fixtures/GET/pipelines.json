@@ -1,0 +1,23 @@
+[
+  {
+    "PIPELINE_ID": 1,
+    "PIPELINE_NAME": "sample string 2",
+    "FOR_OPPORTUNITIES": true,
+    "FOR_PROJECTS": true,
+    "OWNER_USER_ID": 5
+  },
+  {
+    "PIPELINE_ID": 1,
+    "PIPELINE_NAME": "sample string 2",
+    "FOR_OPPORTUNITIES": true,
+    "FOR_PROJECTS": true,
+    "OWNER_USER_ID": 5
+  },
+  {
+    "PIPELINE_ID": 1,
+    "PIPELINE_NAME": "sample string 2",
+    "FOR_OPPORTUNITIES": true,
+    "FOR_PROJECTS": true,
+    "OWNER_USER_ID": 5
+  }
+]

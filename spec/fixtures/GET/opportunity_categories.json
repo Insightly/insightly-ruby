@@ -1,0 +1,20 @@
+[
+  {
+    "CATEGORY_ID": 1,
+    "CATEGORY_NAME": "sample string 2",
+    "ACTIVE": true,
+    "BACKGROUND_COLOR": "sample string 4"
+  },
+  {
+    "CATEGORY_ID": 1,
+    "CATEGORY_NAME": "sample string 2",
+    "ACTIVE": true,
+    "BACKGROUND_COLOR": "sample string 4"
+  },
+  {
+    "CATEGORY_ID": 1,
+    "CATEGORY_NAME": "sample string 2",
+    "ACTIVE": true,
+    "BACKGROUND_COLOR": "sample string 4"
+  }
+]
