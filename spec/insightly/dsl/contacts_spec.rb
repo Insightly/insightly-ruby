@@ -36,6 +36,13 @@ describe Insightly::DSL::Contacts do
   end
 
   # POST /v2.1/Contacts
+  describe '#create_contact' do
+    it 'creates a contact' do
+      expect(
+        Insightly.client.create_contact(Insightly::Resources::Contact.new({}))
+      ).to be_a(Insightly::Resources::Contact)
+    end
+  end
 
   # POST /v2.1/Contacts/{c_id}/Image/{filename}
 
