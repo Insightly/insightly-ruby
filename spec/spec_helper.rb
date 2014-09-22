@@ -2,7 +2,6 @@ SPEC_ROOT = File.expand_path('../..', __FILE__)
 $LOAD_PATH.unshift File.join(SPEC_ROOT, 'lib')
 require 'webmock/rspec'
 require 'insightly'
-require 'active_support/inflector'
 
 RSpec.configure do |config|
   config.before do

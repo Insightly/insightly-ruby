@@ -7,7 +7,7 @@ describe Insightly::DSL::Organisations do
   describe '#delete_organisation' do
     it 'returns a response with code 202' do
       response = Insightly.client.delete_organisation(1)
-      expect(response.code).to eq('202')
+      expect(response.code).to eq(202)
     end
   end
 

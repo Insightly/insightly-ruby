@@ -6,7 +6,7 @@ describe Insightly::DSL::ProjectCategories do
   describe '#delete_project_category' do
     it 'returns a response with code 202' do
       response = Insightly.client.delete_project_category(1)
-      expect(response.code).to eq('202')
+      expect(response.code).to eq(202)
     end
   end
 

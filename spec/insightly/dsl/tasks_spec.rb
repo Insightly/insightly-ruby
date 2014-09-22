@@ -5,7 +5,7 @@ describe Insightly::DSL::Tasks do
   describe '#delete_task' do
     it 'returns a response with code 202' do
       response = Insightly.client.delete_task(1)
-      expect(response.code).to eq('202')
+      expect(response.code).to eq(202)
     end
   end
 

@@ -5,7 +5,7 @@ describe Insightly::DSL::FileCategories do
   describe '#delete_file_category' do
     it 'returns a response with code 202' do
       response = Insightly.client.delete_file_category(1)
-      expect(response.code).to eq('202')
+      expect(response.code).to eq(202)
     end
   end
 
