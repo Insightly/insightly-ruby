@@ -6,12 +6,7 @@ module Insightly
   class Client
     URL = 'https://api.insight.ly/v2.1/'
 
-    REQUESTS = {
-      get: Net::HTTP::Get,
-      post: Net::HTTP::Post,
-      put: Net::HTTP::Put,
-      delete: Net::HTTP::Delete,
-    }
+    REQUESTS = [:get, :post, :put, :delete]
 
     # @param [String] api_key
     def initialize(api_key = Insightly.api_key)
@@ -21,38 +16,18 @@ module Insightly
     # @param [:get, :post, :put, :delete] method
     # @param [String] path
     # @param [Hash] query
-    # @return [Net::HTTPResponse] server response
-    # def request(method, path, query = {})
-    #   raise ArgumentError.new("Wrong method #{method.inspect}. :get, :post, :put, :delete are allowed") unless REQUESTS.keys.include?(method)
-
-    #   query = if query.empty?
-    #             '?' << query.inject([]) do |result, (name, value)|
-    #               result << "#{name}=#{value.is_a?(Array) ? value.join(',') : value}"
-    #             end.join('&')
-    #           else
-    #             nil
-    #           end
-    #   uri = URI.parse("#{URL}#{path}#{query}")
-
-    #   http = Net::HTTP.new(uri.host, uri.port)
-    #   http.use_ssl = true
-
-    #   request = REQUESTS[method.to_sym].new(uri.path)
-    #   request.basic_auth(@api_key, '')
-
-    #   http.request(request)
-    # end
-
+    # @return [RequestClient::Response] server response
     def request(method, path, query = {})
-      response = RestClient::Request.new(
+      raise ArgumentError.new("Wrong method #{method.inspect}. :get, :post, :put, :delete are allowed") unless REQUESTS.include?(method)
+
+      RestClient::Request.new(
         method: method,
         url: URL + path.to_s,
-        params: query,
+        payload: query,
         user: @api_key,
         password: '',
         headers: {accept: :json, content_type: :json}
       ).execute
-      JSON.parse(response.to_s)
     end
   end
 end
