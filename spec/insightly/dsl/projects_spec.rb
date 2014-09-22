@@ -7,7 +7,7 @@ describe Insightly::DSL::Projects do
   describe '#delete_project' do
     it 'returns a response with code 202' do
       response = Insightly.client.delete_project(1)
-      expect(response.code).to eq('202')
+      expect(response.code).to eq(202)
     end
   end
 

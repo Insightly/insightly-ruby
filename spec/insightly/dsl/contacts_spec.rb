@@ -7,7 +7,7 @@ describe Insightly::DSL::Contacts do
   describe '#delete_contact' do
     it 'returns a response with code 202' do
       response = Insightly.client.delete_contact(1)
-      expect(response.code).to eq('202')
+      expect(response.code).to eq(202)
     end
   end
 

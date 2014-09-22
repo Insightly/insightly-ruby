@@ -5,7 +5,7 @@ describe Insightly::DSL::Events do
   describe '#delete_event' do
     it 'returns a response with code 202' do
       response = Insightly.client.delete_event(1)
-      expect(response.code).to eq('202')
+      expect(response.code).to eq(202)
     end
   end
 

@@ -5,7 +5,7 @@ describe Insightly::DSL::TeamMembers do
   describe '#delete_team_member' do
     it 'returns a response with code 202' do
       response = Insightly.client.delete_team_member(1)
-      expect(response.code).to eq('202')
+      expect(response.code).to eq(202)
     end
   end
 
