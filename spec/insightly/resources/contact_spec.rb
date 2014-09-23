@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 describe Insightly::Resources::Contact do
-  subject(:contact) { Insightly.client.get_contact(1) }
+  subject(:contact) { Insightly.client.get_contact(id: 1) }
 
   describe 'instance' do
     it 'is decorated with Contact object' do

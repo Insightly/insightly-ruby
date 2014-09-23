@@ -62,14 +62,14 @@ module Insightly
     # Adds a Contact's Image
     # @param [id:] id of the contact.
     # @param [filename:] Name of Image File to be attached to Contact.
-    def add_contact_image(id: filename:)
+    def add_contact_image(id:, filename:)
     end
 
     # PUT /v2.1/Contacts/{c_id}/Image/{filename}
     # Updates a Contact's Image.
     # @param [id:] id of the contact.
     # @param [filename:] Name of Image File to be attached to Contact.
-    def update_contact_image(id: filename:)
+    def update_contact_image(id:, filename:)
     end
 
     # DELETE /v2.1/Contacts/{c_id}/Image
