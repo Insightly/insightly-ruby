@@ -5,7 +5,7 @@ module Insightly
     # GET /v2.1/Comments/{id}
     # @param [id:] id A Comment's ID
     # @return [Insightly::Resources::Comment]
-    def show_comment(id:)
+    def get_comment(id:)
       Resources::Comment.parse(request(:get, "Comments/#{id}"))
     end
 

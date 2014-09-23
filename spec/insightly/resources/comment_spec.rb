@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 describe Insightly::Resources::Comment do
-  subject(:comment) { Insightly.client.show_comment(id: 1) }
+  subject(:comment) { Insightly.client.get_comment(id: 1) }
 
   describe 'instance' do
     it 'is decorated with Comment object' do
