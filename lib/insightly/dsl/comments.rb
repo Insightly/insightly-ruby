@@ -10,7 +10,7 @@ module Insightly
     end
 
     # POST /v2.1/Comments?c_id={c_id}&filename={filename}
-    # Adds a File Attachment to a Comment.  Don't know the context of this, but it is weird.
+    # Adds a File Attachment to a Comment.
     # @param [id:] comment id.
     # @param [filename:] name of the attachment.
     # @return [201|400|404|403|417]
