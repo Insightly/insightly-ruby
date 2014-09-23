@@ -28,9 +28,9 @@ describe Insightly::DSL::Comments do
   end
 
   # DELETE /v2.1/Comments/{id}
-  describe '#destroy_comment' do
+  describe '#delete_comment' do
     it 'returns a response with code 202' do
-      response = Insightly.client.destroy_comment(id: 1)
+      response = Insightly.client.delete_comment(id: 1)
       expect(response.code).to eq(202)
     end
   end

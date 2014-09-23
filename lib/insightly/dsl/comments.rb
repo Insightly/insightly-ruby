@@ -28,7 +28,7 @@ module Insightly
 
     # DELETE /v2.1/Comments/{id}
     # @param [id:] id A Comment's ID
-    def destroy_comment(id:)
+    def delete_comment(id:)
       request(:delete, "Comments/#{id}")
     end
   end
