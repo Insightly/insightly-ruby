@@ -15,19 +15,32 @@ module Insightly
     end
 
     # GET /v2.1/Notes/{c_id}/Comments
+    # Gets a the Comments attached to a Note.
+    def get_note_comments(id:)
+      Resources::Note.parse(request(:get, "Notes/#{id}/Comments"))
+    end
 
     # GET /v2.1/Notes/{id}
     # @return [Insightly::Resources::Note]
-    # @param [String, Fixnum] id A Note's ID
+    # @param [String, Fixnum] id: A Note's ID
     def get_note(id:)
       Resources::Note.parse(request(:get, "Notes/#{id}"))
     end
 
     # POST /v2.1/Notes
+    # @param [Hash] note: Note attributes.
+    def create_note(note:)
+      Resources::Note.parse(request(:post, "Notes", note))
+    end
 
     # POST /v2.1/Notes/{c_id}/Comments
+    # API is not well defined.
+    # https://api.insight.ly/v2.1/Help/Api/POST-Notes-c_id-Comments
 
     # POST /v2.1/Notes?c_id={c_id}&filename={filename}
+    # Adds a File Attachment to a Note.
+    # @param [String|Fixnum] id: A Note's ID.
+    # @param [String] filename:
 
     # PUT /v2.1/Notes
   end
