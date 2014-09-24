@@ -28,6 +28,7 @@ module Insightly
     end
 
     # POST /v2.1/Notes
+    # Creates a note.
     # @param [Hash] note: Note attributes.
     def create_note(note:)
       Resources::Note.parse(request(:post, "Notes", note))
@@ -41,7 +42,15 @@ module Insightly
     # Adds a File Attachment to a Note.
     # @param [String|Fixnum] id: A Note's ID.
     # @param [String] filename:
+    def create_note_file(id:, filename:)
+      request(:post, "Notes?c_id=#{id}&filename=#{filename}")
+    end
 
     # PUT /v2.1/Notes
+    # Updates a note.
+    # @param [Hash] note: Note attributes.
+    def update_note(note:)
+      Resources::Note.parse(request(:put, "Notes", note))
+    end
   end
 end
