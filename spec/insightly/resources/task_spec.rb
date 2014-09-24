@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 describe Insightly::Resources::Task do
-  subject(:task) { Insightly.client.get_task(1) }
+  subject(:task) { Insightly.client.get_task(id: 1) }
 
   describe 'instance' do
     it 'is decorated with Task object' do
