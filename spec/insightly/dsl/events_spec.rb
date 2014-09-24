@@ -28,14 +28,14 @@ describe Insightly::DSL::Events do
   # POST /v2.1/Events
   describe '#create_event' do
     xit 'creates and returns event' do
-      expect(Insightly.client.create_event(contact: {})).to be_a(Insightly::Resources::Event)
+      expect(Insightly.client.create_event(event: {})).to be_a(Insightly::Resources::Event)
     end
   end
 
   # PUT /v2.1/Events
   describe '#update_event' do
     xit 'updates and returns event' do
-      expect(Insightly.client.update_event(contact: {id: 1})).to be_a(Insightly::Resources::Event)
+      expect(Insightly.client.update_event(event: {id: 1})).to be_a(Insightly::Resources::Event)
     end
   end
 end
