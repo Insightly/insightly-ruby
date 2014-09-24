@@ -3,8 +3,8 @@ require 'insightly/dsl'
 module Insightly
   module DSL::Notes
     # DELETE /v2.1/Notes/{id}
-    # @param [String, Fixnum] id A Note's ID
-    def delete_note(id)
+    # @param [String, Fixnum] id: A Note's ID
+    def delete_note(id:)
       request(:delete, "Notes/#{id}")
     end
 
@@ -19,7 +19,7 @@ module Insightly
     # GET /v2.1/Notes/{id}
     # @return [Insightly::Resources::Note]
     # @param [String, Fixnum] id A Note's ID
-    def get_note(id)
+    def get_note(id:)
       Resources::Note.parse(request(:get, "Notes/#{id}"))
     end
 
