@@ -19,7 +19,7 @@ module Insightly
     # @param [String, Fixnum] team_id: The ID of the team we're getting members for.
     # @return [<Insightly::Resources::TeamMember>, nil]
     def get_team_members(team_id:)
-      Resources::TeamMember.parse(request(:get, "Emails/?teamid=#{team_id}"))
+      Resources::TeamMember.parse(request(:get, "TeamMembers/?teamid=#{team_id}"))
     end
 
     # POST /v2.1/TeamMembers
