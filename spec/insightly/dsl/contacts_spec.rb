@@ -42,9 +42,9 @@ describe Insightly::DSL::Contacts do
   # GET /v2.1/Contacts/{c_id}/Emails
   describe '#get_contact_emails' do
     it 'returns a contact with emails' do
-      emails = Insightly.client.get_emails(id: 1)
+      emails = Insightly.client.get_contact_emails(id: 1)
       expect(emails).to be_a(Array)
-      expect(emails.first).to be_a(Insightly::Resources::Email)
+      expect(emails.first).to be_a(Insightly::Resources::Contact)
     end
   end
 
