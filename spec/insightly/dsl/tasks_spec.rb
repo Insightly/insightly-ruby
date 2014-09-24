@@ -9,10 +9,10 @@ describe Insightly::DSL::Tasks do
     end
   end
 
-  # GET /v2.1/Tasks/{c_id}/Comments
+  # GET /v2.1/Tasks/{id}/Comments
   describe '#get_comment_tasks' do
     xit 'returns an array of task comments' do
-      comments = Insightly.client.get_task_comments(c_id: 1)
+      comments = Insightly.client.get_task_comments(id: 1)
       expect(comments).to be_a(Array)
       expect(comments.first).to be_a(Insightly::Resources::Comment)
     end

@@ -9,10 +9,10 @@ module Insightly
     end
 
     # GET /v2.1/Tasks/{c_id}/Comments
-    # @param [String, Fixnum] c_id A Task's ID
+    # @param [String, Fixnum] id A Task's ID
     # @return [Array, nil]
-    def get_task_comments(c_id:)
-      Resources::Task.parse(request(:get, "Tasks/#{c_id}/Comments"))
+    def get_task_comments(id:)
+      Resources::Task.parse(request(:get, "Tasks/#{id}/Comments"))
     end
 
     # GET /v2.1/Tasks/{id}
@@ -36,9 +36,9 @@ module Insightly
     end
 
     # POST /v2.1/Tasks/{c_id}/Comments
-    # @param [String, Fixnum] c_id A Task's ID
+    # @param [String, Fixnum] id A Task's ID
     # @param [Hash] comment The comment to create
-    def create_task_comments(c_id:, comment:)
+    def create_task_comments(id:, comment:)
       Resources::Task.parse(request(:post, "Tasks/#{c_id}/Comments", comment))
     end
 
