@@ -45,7 +45,7 @@ module Insightly
     # PUT /v2.1/Tasks
     # @param [Hash] task The task to update
     def update_task(task:)
-      Resources::Contact.parse(request(:put, "Tasks", task))
+      Resources::Task.parse(request(:put, "Tasks", task))
     end
   end
 end

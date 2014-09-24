@@ -41,7 +41,7 @@ describe Insightly::DSL::Tasks do
     end
   end
 
-  # POST /v2.1/Tasks/{c_id}/Comments
+  # PUT /v2.1/Tasks
   describe '#update_task' do
     it 'updates and returns task' do
       expect(Insightly.client.update_task(task: {})).to be_a(Insightly::Resources::Task)
