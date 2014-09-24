@@ -3,7 +3,7 @@ require 'insightly/dsl'
 module Insightly
   module DSL::FileCategories
     # DELETE /v2.1/FileCategories/{id}
-    # @param [String, Fixnum] id: A FileCategory's ID
+    # @param [String, Fixnum] id: A file category's ID
     def delete_file_category(id:)
       request(:delete, "FileCategories/#{id}")
     end
@@ -16,7 +16,7 @@ module Insightly
 
     # GET /v2.1/FileCategories/{id}
     # @return [Insightly::Resources::FileCategory]
-    # @param [String, Fixnum] id: A FileCategory's ID
+    # @param [String, Fixnum] id: A file category's ID
     def get_file_category(id:)
       Resources::FileCategory.parse(request(:get, "FileCategories/#{id}"))
     end
