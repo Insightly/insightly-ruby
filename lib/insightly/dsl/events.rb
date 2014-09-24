@@ -4,7 +4,7 @@ module Insightly
   module DSL::Events
     # DELETE /v2.1/Events/{id}
     # @param [String, Fixnum] id A Event's ID
-    def delete_event(id)
+    def delete_event(id:)
       request(:delete, "Events/#{id}")
     end
 
@@ -17,7 +17,7 @@ module Insightly
     # GET /v2.1/Events/{id}
     # @return [Insightly::Resources::Event]
     # @param [String, Fixnum] id A Event's ID
-    def get_event(id)
+    def get_event(id:)
       Resources::Event.parse(request(:get, "Events/#{id}"))
     end
 
