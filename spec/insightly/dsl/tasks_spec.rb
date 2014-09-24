@@ -36,14 +36,14 @@ describe Insightly::DSL::Tasks do
   
   # POST /v2.1/Tasks
   describe '#create_task' do
-    xit 'creates and returns task' do
+    it 'creates and returns task' do
       expect(Insightly.client.create_task(task: {})).to be_a(Insightly::Resources::Task)
     end
   end
 
   # POST /v2.1/Tasks/{c_id}/Comments
   describe '#update_task' do
-    xit 'updates and returns task' do
+    it 'updates and returns task' do
       expect(Insightly.client.update_task(task: {})).to be_a(Insightly::Resources::Task)
     end
   end
