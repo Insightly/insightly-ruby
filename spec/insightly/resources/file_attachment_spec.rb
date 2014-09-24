@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 describe Insightly::Resources::FileAttachment do
-  subject(:file_attachment) { Insightly.client.get_file_attachment(1) }
+  subject(:file_attachment) { Insightly.client.get_file_attachment(id: 1) }
 
   describe 'instance' do
     it 'is decorated with FileAttachment object' do
