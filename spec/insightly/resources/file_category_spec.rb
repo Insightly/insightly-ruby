@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 describe Insightly::Resources::FileCategory do
-  subject(:file_category) { Insightly.client.get_file_category(1) }
+  subject(:file_category) { Insightly.client.get_file_category(id: 1) }
 
   describe 'instance' do
     it 'is decorated with FileCategory object' do
