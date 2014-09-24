@@ -11,7 +11,7 @@ module Insightly
     # GET /v2.1/Pipelines/{id}
     # @return [Insightly::Resources::Pipeline]
     # @param [String, Fixnum] id A Pipeline's ID
-    def get_pipeline(id)
+    def get_pipeline(id:)
       Resources::Pipeline.parse(request(:get, "Pipelines/#{id}"))
     end
   end

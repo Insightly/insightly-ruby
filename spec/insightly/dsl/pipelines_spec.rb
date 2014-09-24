@@ -9,11 +9,11 @@ describe Insightly::DSL::Pipelines do
       expect(pipelines.first).to be_a(Insightly::Resources::Pipeline)
     end
   end
-  
+
   # GET /v2.1/Pipelines/{id}
   describe '#get_pipeline' do
     it 'returns a pipeline' do
-      expect(Insightly.client.get_pipeline(1)).to be_a(Insightly::Resources::Pipeline)
+      expect(Insightly.client.get_pipeline(id: 1)).to be_a(Insightly::Resources::Pipeline)
     end
   end
 end
