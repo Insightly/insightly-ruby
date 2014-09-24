@@ -1,0 +1,236 @@
+[
+  {
+    "EMAIL_ID": 1,
+    "GMAIL_MESSAGE_ID": "sample string 2",
+    "EMAIL_DATE_UTC": "2014-09-24 13:58:58",
+    "EMAIL_FROM": "sample string 3",
+    "EMAIL_TO": "sample string 4",
+    "EMAIL_CC": "sample string 5",
+    "SUBJECT": "sample string 6",
+    "BODY": "sample string 7",
+    "FORMAT": "sample string 8",
+    "SIZE": 1,
+    "OWNER_USER_ID": 9,
+    "DATE_CREATED_UTC": "2014-09-24 13:58:58",
+    "VISIBLE_TO": "sample string 11",
+    "VISIBLE_TEAM_ID": 1,
+    "VISIBLE_USER_IDS": "sample string 12",
+    "FILE_ATTACHMENTS": [
+      {
+        "FILE_ID": 1,
+        "FILE_NAME": "sample string 2",
+        "CONTENT_TYPE": "sample string 3",
+        "FILE_SIZE": 4,
+        "FILE_CATEGORY_ID": 1,
+        "OWNER_USER_ID": 5,
+        "DATE_CREATED_UTC": "2014-09-24 13:58:58",
+        "DATE_UPDATED_UTC": "2014-09-24 13:58:58",
+        "URL": "sample string 8"
+      },
+      {
+        "FILE_ID": 1,
+        "FILE_NAME": "sample string 2",
+        "CONTENT_TYPE": "sample string 3",
+        "FILE_SIZE": 4,
+        "FILE_CATEGORY_ID": 1,
+        "OWNER_USER_ID": 5,
+        "DATE_CREATED_UTC": "2014-09-24 13:58:58",
+        "DATE_UPDATED_UTC": "2014-09-24 13:58:58",
+        "URL": "sample string 8"
+      },
+      {
+        "FILE_ID": 1,
+        "FILE_NAME": "sample string 2",
+        "CONTENT_TYPE": "sample string 3",
+        "FILE_SIZE": 4,
+        "FILE_CATEGORY_ID": 1,
+        "OWNER_USER_ID": 5,
+        "DATE_CREATED_UTC": "2014-09-24 13:58:58",
+        "DATE_UPDATED_UTC": "2014-09-24 13:58:58",
+        "URL": "sample string 8"
+      }
+    ],
+    "EMAILLINKS": [
+      {
+        "EMAIL_LINK_ID": 1,
+        "EMAIL_ID": 2,
+        "CONTACT_ID": 1,
+        "ORGANISATION_ID": 1,
+        "OPPORTUNITY_ID": 1,
+        "PROJECT_ID": 1
+      },
+      {
+        "EMAIL_LINK_ID": 1,
+        "EMAIL_ID": 2,
+        "CONTACT_ID": 1,
+        "ORGANISATION_ID": 1,
+        "OPPORTUNITY_ID": 1,
+        "PROJECT_ID": 1
+      },
+      {
+        "EMAIL_LINK_ID": 1,
+        "EMAIL_ID": 2,
+        "CONTACT_ID": 1,
+        "ORGANISATION_ID": 1,
+        "OPPORTUNITY_ID": 1,
+        "PROJECT_ID": 1
+      }
+    ]
+  },
+  {
+    "EMAIL_ID": 1,
+    "GMAIL_MESSAGE_ID": "sample string 2",
+    "EMAIL_DATE_UTC": "2014-09-24 13:58:58",
+    "EMAIL_FROM": "sample string 3",
+    "EMAIL_TO": "sample string 4",
+    "EMAIL_CC": "sample string 5",
+    "SUBJECT": "sample string 6",
+    "BODY": "sample string 7",
+    "FORMAT": "sample string 8",
+    "SIZE": 1,
+    "OWNER_USER_ID": 9,
+    "DATE_CREATED_UTC": "2014-09-24 13:58:58",
+    "VISIBLE_TO": "sample string 11",
+    "VISIBLE_TEAM_ID": 1,
+    "VISIBLE_USER_IDS": "sample string 12",
+    "FILE_ATTACHMENTS": [
+      {
+        "FILE_ID": 1,
+        "FILE_NAME": "sample string 2",
+        "CONTENT_TYPE": "sample string 3",
+        "FILE_SIZE": 4,
+        "FILE_CATEGORY_ID": 1,
+        "OWNER_USER_ID": 5,
+        "DATE_CREATED_UTC": "2014-09-24 13:58:58",
+        "DATE_UPDATED_UTC": "2014-09-24 13:58:58",
+        "URL": "sample string 8"
+      },
+      {
+        "FILE_ID": 1,
+        "FILE_NAME": "sample string 2",
+        "CONTENT_TYPE": "sample string 3",
+        "FILE_SIZE": 4,
+        "FILE_CATEGORY_ID": 1,
+        "OWNER_USER_ID": 5,
+        "DATE_CREATED_UTC": "2014-09-24 13:58:58",
+        "DATE_UPDATED_UTC": "2014-09-24 13:58:58",
+        "URL": "sample string 8"
+      },
+      {
+        "FILE_ID": 1,
+        "FILE_NAME": "sample string 2",
+        "CONTENT_TYPE": "sample string 3",
+        "FILE_SIZE": 4,
+        "FILE_CATEGORY_ID": 1,
+        "OWNER_USER_ID": 5,
+        "DATE_CREATED_UTC": "2014-09-24 13:58:58",
+        "DATE_UPDATED_UTC": "2014-09-24 13:58:58",
+        "URL": "sample string 8"
+      }
+    ],
+    "EMAILLINKS": [
+      {
+        "EMAIL_LINK_ID": 1,
+        "EMAIL_ID": 2,
+        "CONTACT_ID": 1,
+        "ORGANISATION_ID": 1,
+        "OPPORTUNITY_ID": 1,
+        "PROJECT_ID": 1
+      },
+      {
+        "EMAIL_LINK_ID": 1,
+        "EMAIL_ID": 2,
+        "CONTACT_ID": 1,
+        "ORGANISATION_ID": 1,
+        "OPPORTUNITY_ID": 1,
+        "PROJECT_ID": 1
+      },
+      {
+        "EMAIL_LINK_ID": 1,
+        "EMAIL_ID": 2,
+        "CONTACT_ID": 1,
+        "ORGANISATION_ID": 1,
+        "OPPORTUNITY_ID": 1,
+        "PROJECT_ID": 1
+      }
+    ]
+  },
+  {
+    "EMAIL_ID": 1,
+    "GMAIL_MESSAGE_ID": "sample string 2",
+    "EMAIL_DATE_UTC": "2014-09-24 13:58:58",
+    "EMAIL_FROM": "sample string 3",
+    "EMAIL_TO": "sample string 4",
+    "EMAIL_CC": "sample string 5",
+    "SUBJECT": "sample string 6",
+    "BODY": "sample string 7",
+    "FORMAT": "sample string 8",
+    "SIZE": 1,
+    "OWNER_USER_ID": 9,
+    "DATE_CREATED_UTC": "2014-09-24 13:58:58",
+    "VISIBLE_TO": "sample string 11",
+    "VISIBLE_TEAM_ID": 1,
+    "VISIBLE_USER_IDS": "sample string 12",
+    "FILE_ATTACHMENTS": [
+      {
+        "FILE_ID": 1,
+        "FILE_NAME": "sample string 2",
+        "CONTENT_TYPE": "sample string 3",
+        "FILE_SIZE": 4,
+        "FILE_CATEGORY_ID": 1,
+        "OWNER_USER_ID": 5,
+        "DATE_CREATED_UTC": "2014-09-24 13:58:58",
+        "DATE_UPDATED_UTC": "2014-09-24 13:58:58",
+        "URL": "sample string 8"
+      },
+      {
+        "FILE_ID": 1,
+        "FILE_NAME": "sample string 2",
+        "CONTENT_TYPE": "sample string 3",
+        "FILE_SIZE": 4,
+        "FILE_CATEGORY_ID": 1,
+        "OWNER_USER_ID": 5,
+        "DATE_CREATED_UTC": "2014-09-24 13:58:58",
+        "DATE_UPDATED_UTC": "2014-09-24 13:58:58",
+        "URL": "sample string 8"
+      },
+      {
+        "FILE_ID": 1,
+        "FILE_NAME": "sample string 2",
+        "CONTENT_TYPE": "sample string 3",
+        "FILE_SIZE": 4,
+        "FILE_CATEGORY_ID": 1,
+        "OWNER_USER_ID": 5,
+        "DATE_CREATED_UTC": "2014-09-24 13:58:58",
+        "DATE_UPDATED_UTC": "2014-09-24 13:58:58",
+        "URL": "sample string 8"
+      }
+    ],
+    "EMAILLINKS": [
+      {
+        "EMAIL_LINK_ID": 1,
+        "EMAIL_ID": 2,
+        "CONTACT_ID": 1,
+        "ORGANISATION_ID": 1,
+        "OPPORTUNITY_ID": 1,
+        "PROJECT_ID": 1
+      },
+      {
+        "EMAIL_LINK_ID": 1,
+        "EMAIL_ID": 2,
+        "CONTACT_ID": 1,
+        "ORGANISATION_ID": 1,
+        "OPPORTUNITY_ID": 1,
+        "PROJECT_ID": 1
+      },
+      {
+        "EMAIL_LINK_ID": 1,
+        "EMAIL_ID": 2,
+        "CONTACT_ID": 1,
+        "ORGANISATION_ID": 1,
+        "OPPORTUNITY_ID": 1,
+        "PROJECT_ID": 1
+      }
+    ]
+  }
+]
