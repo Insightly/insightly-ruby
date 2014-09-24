@@ -4,7 +4,7 @@ describe Insightly::DSL::Notes do
   # DELETE /v2.1/Notes/{id}
   describe '#delete_note' do
     it 'returns a response with code 202' do
-      response = Insightly.client.delete_note(1)
+      response = Insightly.client.delete_note(id: 1)
       expect(response.code).to eq(202)
     end
   end
@@ -23,7 +23,7 @@ describe Insightly::DSL::Notes do
   # GET /v2.1/Notes/{id}
   describe '#get_note' do
     it 'returns a note' do
-      expect(Insightly.client.get_note(1)).to be_a(Insightly::Resources::Note)
+      expect(Insightly.client.get_note(id: 1)).to be_a(Insightly::Resources::Note)
     end
   end
 

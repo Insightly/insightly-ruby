@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 describe Insightly::Resources::Note do
-  subject(:note) { Insightly.client.get_note(1) }
+  subject(:note) { Insightly.client.get_note(id: 1) }
 
   describe 'instance' do
     it 'is decorated with Note object' do
