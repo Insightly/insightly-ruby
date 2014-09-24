@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 describe Insightly::Resources::CustomField do
-  subject(:CustomField) { Insightly.client.get_custom_field(1) }
+  subject(:CustomField) { Insightly.client.get_custom_field(id: 1) }
 
   describe 'instance' do
     it 'is decorated with CustomField object' do

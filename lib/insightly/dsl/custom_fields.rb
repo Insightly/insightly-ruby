@@ -11,7 +11,7 @@ module Insightly
     # GET /v2.1/CustomFields/{id}
     # @return [Insightly::Resources::CustomField]
     # @param [String, Fixnum] id A CustomField's ID
-    def get_custom_field(id)
+    def get_custom_field(id:)
       Resources::CustomField.parse(request(:get, "CustomFields/#{id}"))
     end
   end

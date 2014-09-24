@@ -13,7 +13,7 @@ describe Insightly::DSL::CustomFields do
   # GET /v2.1/CustomFields/{id}
   describe '#get_custom_field' do
     it 'returns a custom field' do
-      expect(Insightly.client.get_custom_field(1)).to be_a(Insightly::Resources::CustomField)
+      expect(Insightly.client.get_custom_field(id: 1)).to be_a(Insightly::Resources::CustomField)
     end
   end
 end
