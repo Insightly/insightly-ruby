@@ -4,7 +4,7 @@ describe Insightly::DSL::Events do
   # DELETE /v2.1/Events/{id}
   describe '#delete_event' do
     it 'returns a response with code 202' do
-      response = Insightly.client.delete_event(1)
+      response = Insightly.client.delete_event(id: 1)
       expect(response.code).to eq(202)
     end
   end
@@ -17,11 +17,11 @@ describe Insightly::DSL::Events do
       expect(events.first).to be_a(Insightly::Resources::Event)
     end
   end
-  
+
   # GET /v2.1/Events/{id}
   describe '#get_event' do
     it 'returns an event' do
-      expect(Insightly.client.get_event(1)).to be_a(Insightly::Resources::Event)
+      expect(Insightly.client.get_event(id: 1)).to be_a(Insightly::Resources::Event)
     end
   end
 
