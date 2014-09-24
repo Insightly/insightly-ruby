@@ -2,30 +2,39 @@ require 'insightly/dsl'
 
 module Insightly
   module DSL::Emails
+    # GET /v2.1/Emails?ids={ids}&tag={tag}
+    # Gets a list of Emails.
+    # @param [Array] id: Array of email ids (optional).
+    # @param [String] tag: single tag (optional).
+    def get_emails(ids: [], tag: '')
+      ids = ids.join(',')
+      Resources::Email.parse(request(:get, "Emails/?ids=#{ids}&tag=#{tag}"))
+    end
+
+    # GET /v2.1/Emails/{id}
+    # Gets an Email.
+    # @param [String|Fixnum] id: id of the email.
+    def get_email(id:)
+      Resources::Email.parse(request(:get, "Emails/#{id}"))
+    end
+
     # DELETE /v2.1/Emails/{id}
-    # @param [String, Fixnum] id A Email's ID
-    def delete_email(id)
+    # Deletes an email.
+    # @param [String|Fixnum] id: id of the email.
+    def delete_email(id:)
       request(:delete, "Emails/#{id}")
     end
 
     # GET /v2.1/Emails/{c_id}/Comments
-
-    # GET /v2.1/Emails/{id}
-    # @return [Insightly::Resources::Email]
-    # @param [String, Fixnum] id A Email's ID
-    def get_email(id)
-      Resources::Email.parse(request(:get, "Emails/#{id}"))
-    end
-
-    # GET /v2.1/Emails?ids={ids}&tag={tag}
-    # @param [Hash] options
-    # @option options :ids [Array]
-    # @option options :tag [String]
-    # @return [<Insightly::Resources::Email>, nil]
-    def get_emails(options = {})
-      Resources::Email.parse(request(:get, 'Emails', options))
+    # Gets an Email's Comments.
+    # @param [String|Fixnum] id: id of the email.
+    def get_email_comments(id:)
+      Resources::Email.parse(request(:get, "Emails/#{id}/Comments"))
     end
 
     # POST /v2.1/Emails/{c_id}/Comments
+    # Adds a Comment to an Email.
+    # API is not well defined for this method.  Leaving this as a TODO.
+    # https://api.insight.ly/v2.1/Help/Api/POST-Emails-c_id-Comments
   end
 end
