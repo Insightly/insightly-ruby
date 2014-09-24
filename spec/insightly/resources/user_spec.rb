@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 describe Insightly::Resources::User do
-  subject(:user) { Insightly.client.get_user(1) }
+  subject(:user) { Insightly.client.get_user(id: 1) }
 
   describe 'instance' do
     it 'is decorated with User object' do
