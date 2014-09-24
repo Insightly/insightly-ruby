@@ -11,7 +11,7 @@ module Insightly
     # GET /v2.1/Users/{id}
     # @return [Insightly::Resources::User]
     # @param [String, Fixnum] id A User's ID
-    def get_user(id)
+    def get_user(id:)
       Resources::User.parse(request(:get, "Users/#{id}"))
     end
   end
