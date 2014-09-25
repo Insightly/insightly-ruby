@@ -22,7 +22,17 @@ module Insightly
     end
 
     # POST /v2.1/ProjectCategories
+    # @param [Hash] category: A Hash of project category attributes.
+    # @return [Insightly::Resources::ProjectCategory]
+    def create_project_category(category:)
+      Resources::ProjectCategory.parse(request(:post, "ProjectCategories", category))
+    end
 
     # PUT /v2.1/ProjectCategories
+    # @param [Hash] category: A Hash of project category attributes.
+    # @return [Insightly::Resources::ProjectCategory]
+    def update_project_category(category:)
+      Resources::ProjectCategory.parse(request(:put, "ProjectCategories", category))
+    end
   end
 end
