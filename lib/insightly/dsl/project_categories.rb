@@ -4,7 +4,7 @@ module Insightly
   module DSL::ProjectCategories
     # DELETE /v2.1/ProjectCategories/{id}
     # @param [String, Fixnum] id A ProjectCategory's ID
-    def delete_project_category(id)
+    def delete_project_category(id:)
       request(:delete, "ProjectCategories/#{id}")
     end
 
@@ -17,7 +17,7 @@ module Insightly
     # GET /v2.1/ProjectCategories/{id}
     # @return [Insightly::Resources::ProjectCategory]
     # @param [String, Fixnum] id A ProjectCategory's ID
-    def get_project_category(id)
+    def get_project_category(id:)
       Resources::ProjectCategory.parse(request(:get, "ProjectCategories/#{id}"))
     end
 
