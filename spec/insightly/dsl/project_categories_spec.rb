@@ -5,7 +5,7 @@ describe Insightly::DSL::ProjectCategories do
   # @param [String, Fixnum] id A ProjectCategory's ID
   describe '#delete_project_category' do
     it 'returns a response with code 202' do
-      response = Insightly.client.delete_project_category(1)
+      response = Insightly.client.delete_project_category(id: 1)
       expect(response.code).to eq(202)
     end
   end
@@ -25,11 +25,21 @@ describe Insightly::DSL::ProjectCategories do
   # @param [String, Fixnum] id A ProjectCategory's ID
   describe '#get_project_category' do
     it 'returns an project_category' do
-      expect(Insightly.client.get_project_category(1)).to be_a(Insightly::Resources::ProjectCategory)
+      expect(Insightly.client.get_project_category(id: 1)).to be_a(Insightly::Resources::ProjectCategory)
     end
   end
 
   # POST /v2.1/ProjectCategories
+  describe '#create_project_category' do
+    it 'creates and returns a project_category' do
+      expect(Insightly.client.create_project_category(category: {})).to be_a(Insightly::Resources::ProjectCategory)
+    end
+  end
 
   # PUT /v2.1/ProjectCategories
+  describe '#update_project_category' do
+    it 'updates and returns a project_category' do
+      expect(Insightly.client.update_project_category(category: {id: 1})).to be_a(Insightly::Resources::ProjectCategory)
+    end
+  end
 end
