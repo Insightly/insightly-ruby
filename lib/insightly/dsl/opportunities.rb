@@ -15,7 +15,7 @@ module Insightly
     # @param [String, Fixnum] id An opportunity's ID.
     # @return [Array, nil].
     def get_opportunity_emails(id:)
-      Resources::Opportunity.parse(request(:get, "Opportunities/#{id}/Emails"))
+      Resources::Email.parse(request(:get, "Opportunities/#{id}/Emails"))
     end
 
     # GET /v2.1/Opportunities/{c_id}/Image

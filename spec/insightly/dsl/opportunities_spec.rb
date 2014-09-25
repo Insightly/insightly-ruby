@@ -22,13 +22,13 @@ describe Insightly::DSL::Opportunities do
     it 'returns an opportunity emails' do
       emails = Insightly.client.get_opportunity_emails(id: 1)
       expect(emails).to be_a(Array)
-      expect(emails.first).to be_a(Insightly::Resources::Opportunity)
+      expect(emails.first).to be_a(Insightly::Resources::Email)
     end
   end
 
   # GET /v2.1/Opportunities/{c_id}/Image
   describe '#get_opportunity_image' do
-    it 'returns an opportunity image' do
+    xit 'returns an opportunity image' do
       image = Insightly.client.get_opportunity_image(id: 1)
       expect(image).to be_a(Array)
       expect(image.first).to be_a(Insightly::Resources::Opportunity)
@@ -40,7 +40,7 @@ describe Insightly::DSL::Opportunities do
     it 'returns an opportunity notes' do
       notes = Insightly.client.get_opportunity_notes(id: 1)
       expect(notes).to be_a(Array)
-      expect(notes.first).to be_a(Insightly::Resources::Opportunity)
+      expect(notes.first).to be_a(Insightly::Resources::Note)
     end
   end
 
@@ -49,7 +49,7 @@ describe Insightly::DSL::Opportunities do
     it 'returns an opportunity state history' do
       state_history = Insightly.client.get_opportunity_state_history(id: 1)
       expect(state_history).to be_a(Array)
-      expect(state_history.first).to be_a(Insightly::Resources::Opportunity)
+      expect(state_history.first).to be_a(Insightly::Resources::OpportunityStateReason)
     end
   end
 
@@ -58,7 +58,7 @@ describe Insightly::DSL::Opportunities do
     it 'returns an opportunity tasks' do
       tasks = Insightly.client.get_opportunity_tasks(id: 1)
       expect(tasks).to be_a(Array)
-      expect(tasks.first).to be_a(Insightly::Resources::Opportunity)
+      expect(tasks.first).to be_a(Insightly::Resources::Task)
     end
   end
 
