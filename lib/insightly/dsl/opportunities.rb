@@ -40,6 +40,7 @@ module Insightly
 
     # GET /v2.1/Opportunities/{c_id}/Tasks
     # @param [String, Fixnum] id An Opportunity's ID
+    # @return [Array, nil]
     def get_opportunity_tasks(id:)
       Resources::Opportunity.parse(request(:get, "Opportunities/#{id}/Tasks"))
     end
