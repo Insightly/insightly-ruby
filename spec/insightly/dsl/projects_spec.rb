@@ -6,7 +6,7 @@ describe Insightly::DSL::Projects do
   # DELETE /v2.1/Projects/{id}
   describe '#delete_project' do
     it 'returns a response with code 202' do
-      response = Insightly.client.delete_project(1)
+      response = Insightly.client.delete_project(id: 1)
       expect(response.code).to eq(202)
     end
   end
@@ -22,7 +22,7 @@ describe Insightly::DSL::Projects do
   # GET /v2.1/Projects/{id}
   describe '#get_project' do
     it 'returns a project' do
-      expect(Insightly.client.get_project(1)).to be_a(Insightly::Resources::Project)
+      expect(Insightly.client.get_project(id: 1)).to be_a(Insightly::Resources::Project)
     end
   end
 
@@ -34,7 +34,7 @@ describe Insightly::DSL::Projects do
       expect(projects.first).to be_a(Insightly::Resources::Project)
     end
   end
-  
+
   # POST /v2.1/Projects
 
   # POST /v2.1/Projects/{c_id}/Image/{filename}
