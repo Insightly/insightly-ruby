@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 describe Insightly::Resources::Project do
-  subject(:project) { Insightly.client.get_project(1) }
+  subject(:project) { Insightly.client.get_project(id: 1) }
 
   describe 'instance' do
     it 'is decorated with Project object' do
