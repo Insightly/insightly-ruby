@@ -67,7 +67,8 @@ module Insightly
     end
 
     # POST /v2.1/Organisations/{c_id}/Image/{filename}
-    # @param [Hash] organization A hash of organization attributes
+    # @param [String, Fixnum] id An organisation's ID
+    # @param [String] filename name of the file
     # @return [Insightly::Resources::Organisation]
     def create_organisation_image(id:, filename:)
       request(:post, "Organisations/#{id}/Image/#{filename}")
@@ -81,7 +82,8 @@ module Insightly
     end
 
     # PUT /v2.1/Organisations/{c_id}/Image/{filename}
-    # @param [Hash] organization A hash of organization attributes
+    # @param [String, Fixnum] id An organisation's ID
+    # @param [String] filename name of the file
     # @return [Insightly::Resources::Organisation]
     def update_organisation_image(id:, filename:)
       request(:put, "Organisations/#{id}/Image/#{filename}")
