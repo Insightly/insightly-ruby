@@ -1,0 +1,23 @@
+[
+  {
+    "OPPORTUNITY_ID": 1,
+    "DATE_CHANGED_UTC": "2014-09-24 14:00:53",
+    "FOR_OPPORTUNITY_STATE": "sample string 3",
+    "STATE_REASON_ID": 1,
+    "STATE_REASON": "sample string 4"
+  },
+  {
+    "OPPORTUNITY_ID": 1,
+    "DATE_CHANGED_UTC": "2014-09-24 14:00:53",
+    "FOR_OPPORTUNITY_STATE": "sample string 3",
+    "STATE_REASON_ID": 1,
+    "STATE_REASON": "sample string 4"
+  },
+  {
+    "OPPORTUNITY_ID": 1,
+    "DATE_CHANGED_UTC": "2014-09-24 14:00:53",
+    "FOR_OPPORTUNITY_STATE": "sample string 3",
+    "STATE_REASON_ID": 1,
+    "STATE_REASON": "sample string 4"
+  }
+]

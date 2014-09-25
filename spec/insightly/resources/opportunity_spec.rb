@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 describe Insightly::Resources::Opportunity do
-  subject(:opportunity) { Insightly.client.get_opportunity(1) }
+  subject(:opportunity) { Insightly.client.get_opportunity(id: 1) }
 
   describe 'instance' do
     it 'is decorated with Opportunity object' do
