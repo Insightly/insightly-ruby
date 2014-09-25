@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 describe Insightly::Resources::Pipeline do
-  subject(:pipeline) { Insightly.client.get_pipeline(1) }
+  subject(:pipeline) { Insightly.client.get_pipeline(id: 1) }
 
   describe 'instance' do
     it 'is decorated with Pipeline object' do
