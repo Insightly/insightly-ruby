@@ -3,48 +3,48 @@ require 'insightly/dsl'
 module Insightly
   module DSL::Organisations
     # DELETE /v2.1/Organisations/{c_id}/Image
-    # @param [String, Fixnum] id A Organisation's ID
+    # @param [String, Fixnum] id An organisation's ID
     def delete_organisation_image(id:)
       request(:delete, "Organisations/#{id}/Image")
     end
 
     # DELETE /v2.1/Organisations/{id}
-    # @param [String, Fixnum] id A Organisation's ID
+    # @param [String, Fixnum] id An organisation's ID
     def delete_organisation(id:)
       request(:delete, "Organisations/#{id}")
     end
 
     # GET /v2.1/Organisations/{c_id}/Emails
     # @return [Insightly::Resources::Organisation]
-    # @param [String, Fixnum] id A Organisation's ID
+    # @param [String, Fixnum] id An organisation's ID
     def get_organisation_emails(id:)
       Resources::Organisation.parse(request(:get, "Organisations/#{id}/Emails"))
     end
 
     # GET /v2.1/Organisations/{c_id}/Image
     # @return [Insightly::Resources::Organisation]
-    # @param [String, Fixnum] id A Organisation's ID
+    # @param [String, Fixnum] id An organisation's ID
     def get_organisation_image(id:)
       Resources::Organisation.parse(request(:get, "Organisations/#{id}/Image"))
     end
 
     # GET /v2.1/Organisations/{c_id}/Notes
     # @return [Insightly::Resources::Organisation]
-    # @param [String, Fixnum] id A Organisation's ID
+    # @param [String, Fixnum] id An organisation's ID
     def get_organisation_notes(id:)
       Resources::Organisation.parse(request(:get, "Organisations/#{id}/Notes"))
     end
 
     # GET /v2.1/Organisations/{c_id}/Tasks
     # @return [Insightly::Resources::Organisation]
-    # @param [String, Fixnum] id A Organisation's ID
+    # @param [String, Fixnum] id An organisation's ID
     def get_organisation_tasks(id:)
       Resources::Organisation.parse(request(:get, "Organisations/#{id}/Tasks"))
     end
 
     # GET /v2.1/Organisations/{id}
     # @return [Insightly::Resources::Organisation]
-    # @param [String, Fixnum] id A Organisation's ID
+    # @param [String, Fixnum] id An organisation's ID
     def get_organisation(id:)
       Resources::Organisation.parse(request(:get, "Organisations/#{id}"))
     end
