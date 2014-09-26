@@ -1,15 +1,12 @@
 require 'spec_helper'
 
 describe Insightly::DSL::Emails do
-  # DELETE /v2.1/Emails/{id}
-  describe '#delete_email' do
-    it 'returns a response with code 202' do
-      response = Insightly.client.delete_email(id: 1)
-      expect(response.code).to eq(202)
+  # GET /v2.1/Emails/{id}
+  describe '#get_email' do
+    it 'returns an email' do
+      expect(Insightly.client.get_email(id: 1)).to be_a(Email)
     end
   end
-
-  # GET /v2.1/Emails/{c_id}/Comments
 
   # GET /v2.1/Emails?ids={ids}&tag={tag}
   describe '#get_emails' do
@@ -20,12 +17,17 @@ describe Insightly::DSL::Emails do
     end
   end
 
-  # GET /v2.1/Emails/{id}
-  describe '#get_email' do
-    it 'returns an email' do
-      expect(Insightly.client.get_email(id: 1)).to be_a(Insightly::Resources::Email)
-    end
-  end
+  # GET /v2.1/Emails/{c_id}/Comments
+  # TODO
 
   # POST /v2.1/Emails/{c_id}/Comments
+  # TODO
+
+  # DELETE /v2.1/Emails/{id}
+  describe '#delete_email' do
+    it 'returns a response with code 202' do
+      response = Insightly.client.delete_email(id: 1)
+      expect(response.code).to eq(202)
+    end
+  end
 end
