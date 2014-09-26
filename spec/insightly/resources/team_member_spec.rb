@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 describe Insightly::Resources::TeamMember do
-  subject(:team_member) { Insightly.client.get_team_member(1) }
+  subject(:team_member) { Insightly.client.get_team_member(id: 1) }
 
   describe 'instance' do
     it 'is decorated with TeamMember object' do

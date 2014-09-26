@@ -1,0 +1,146 @@
+[
+  {
+    "TASK_ID": 1,
+    "Title": "sample string 2",
+    "CATEGORY_ID": 1,
+    "DUE_DATE": "2014-09-24 03:11:39",
+    "COMPLETED_DATE_UTC": "2014-09-24 03:11:39",
+    "PUBLICLY_VISIBLE": true,
+    "COMPLETED": true,
+    "PROJECT_ID": 1,
+    "DETAILS": "sample string 5",
+    "STATUS": "sample string 6",
+    "PRIORITY": 1,
+    "PERCENT_COMPLETE": 1,
+    "START_DATE": "2014-09-24 03:11:39",
+    "ASSIGNED_BY_USER_ID": 1,
+    "PARENT_TASK_ID": 1,
+    "OWNER_VISIBLE": true,
+    "RESPONSIBLE_USER_ID": 1,
+    "OWNER_USER_ID": 8,
+    "DATE_CREATED_UTC": "2014-09-24 03:11:39",
+    "DATE_UPDATED_UTC": "2014-09-24 03:11:39",
+    "TASKLINKS": [
+      {
+        "TASK_LINK_ID": 1,
+        "TASK_ID": 1,
+        "CONTACT_ID": 1,
+        "ORGANISATION_ID": 1,
+        "OPPORTUNITY_ID": 1,
+        "PROJECT_ID": 1
+      },
+      {
+        "TASK_LINK_ID": 1,
+        "TASK_ID": 1,
+        "CONTACT_ID": 1,
+        "ORGANISATION_ID": 1,
+        "OPPORTUNITY_ID": 1,
+        "PROJECT_ID": 1
+      },
+      {
+        "TASK_LINK_ID": 1,
+        "TASK_ID": 1,
+        "CONTACT_ID": 1,
+        "ORGANISATION_ID": 1,
+        "OPPORTUNITY_ID": 1,
+        "PROJECT_ID": 1
+      }
+    ]
+  },
+  {
+    "TASK_ID": 1,
+    "Title": "sample string 2",
+    "CATEGORY_ID": 1,
+    "DUE_DATE": "2014-09-24 03:11:39",
+    "COMPLETED_DATE_UTC": "2014-09-24 03:11:39",
+    "PUBLICLY_VISIBLE": true,
+    "COMPLETED": true,
+    "PROJECT_ID": 1,
+    "DETAILS": "sample string 5",
+    "STATUS": "sample string 6",
+    "PRIORITY": 1,
+    "PERCENT_COMPLETE": 1,
+    "START_DATE": "2014-09-24 03:11:39",
+    "ASSIGNED_BY_USER_ID": 1,
+    "PARENT_TASK_ID": 1,
+    "OWNER_VISIBLE": true,
+    "RESPONSIBLE_USER_ID": 1,
+    "OWNER_USER_ID": 8,
+    "DATE_CREATED_UTC": "2014-09-24 03:11:39",
+    "DATE_UPDATED_UTC": "2014-09-24 03:11:39",
+    "TASKLINKS": [
+      {
+        "TASK_LINK_ID": 1,
+        "TASK_ID": 1,
+        "CONTACT_ID": 1,
+        "ORGANISATION_ID": 1,
+        "OPPORTUNITY_ID": 1,
+        "PROJECT_ID": 1
+      },
+      {
+        "TASK_LINK_ID": 1,
+        "TASK_ID": 1,
+        "CONTACT_ID": 1,
+        "ORGANISATION_ID": 1,
+        "OPPORTUNITY_ID": 1,
+        "PROJECT_ID": 1
+      },
+      {
+        "TASK_LINK_ID": 1,
+        "TASK_ID": 1,
+        "CONTACT_ID": 1,
+        "ORGANISATION_ID": 1,
+        "OPPORTUNITY_ID": 1,
+        "PROJECT_ID": 1
+      }
+    ]
+  },
+  {
+    "TASK_ID": 1,
+    "Title": "sample string 2",
+    "CATEGORY_ID": 1,
+    "DUE_DATE": "2014-09-24 03:11:39",
+    "COMPLETED_DATE_UTC": "2014-09-24 03:11:39",
+    "PUBLICLY_VISIBLE": true,
+    "COMPLETED": true,
+    "PROJECT_ID": 1,
+    "DETAILS": "sample string 5",
+    "STATUS": "sample string 6",
+    "PRIORITY": 1,
+    "PERCENT_COMPLETE": 1,
+    "START_DATE": "2014-09-24 03:11:39",
+    "ASSIGNED_BY_USER_ID": 1,
+    "PARENT_TASK_ID": 1,
+    "OWNER_VISIBLE": true,
+    "RESPONSIBLE_USER_ID": 1,
+    "OWNER_USER_ID": 8,
+    "DATE_CREATED_UTC": "2014-09-24 03:11:39",
+    "DATE_UPDATED_UTC": "2014-09-24 03:11:39",
+    "TASKLINKS": [
+      {
+        "TASK_LINK_ID": 1,
+        "TASK_ID": 1,
+        "CONTACT_ID": 1,
+        "ORGANISATION_ID": 1,
+        "OPPORTUNITY_ID": 1,
+        "PROJECT_ID": 1
+      },
+      {
+        "TASK_LINK_ID": 1,
+        "TASK_ID": 1,
+        "CONTACT_ID": 1,
+        "ORGANISATION_ID": 1,
+        "OPPORTUNITY_ID": 1,
+        "PROJECT_ID": 1
+      },
+      {
+        "TASK_LINK_ID": 1,
+        "TASK_ID": 1,
+        "CONTACT_ID": 1,
+        "ORGANISATION_ID": 1,
+        "OPPORTUNITY_ID": 1,
+        "PROJECT_ID": 1
+      }
+    ]
+  }
+]

@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 describe Insightly::Resources::Organisation do
-  subject(:organisation) { Insightly.client.get_organisation(1) }
+  subject(:organisation) { Insightly.client.get_organisation(id: 1) }
 
   describe 'instance' do
     it 'is decorated with Organisation object' do

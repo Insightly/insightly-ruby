@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 describe Insightly::Resources::Event do
-  subject(:event) { Insightly.client.get_event(1) }
+  subject(:event) { Insightly.client.get_event(id: 1) }
 
   describe 'instance' do
     it 'is decorated with Event object' do
