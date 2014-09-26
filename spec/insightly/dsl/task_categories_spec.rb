@@ -14,7 +14,7 @@ describe Insightly::DSL::TaskCategories do
     it 'returns an array of task_categories' do
       task_categories = Insightly.client.get_task_categories
       expect(task_categories).to be_a(Array)
-      expect(task_categories.first).to be_a(Insightly::Resources::TaskCategory)
+      expect(task_categories.first).to be_a(TaskCategory)
     end
   end
   

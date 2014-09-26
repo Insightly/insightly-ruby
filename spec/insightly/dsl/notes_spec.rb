@@ -14,7 +14,7 @@ describe Insightly::DSL::Notes do
     it 'returns an array of notes' do
       notes = Insightly.client.get_notes
       expect(notes).to be_a(Array)
-      expect(notes.first).to be_a(Insightly::Resources::Note)
+      expect(notes.first).to be_a(Note)
     end
   end
 

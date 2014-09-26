@@ -6,7 +6,7 @@ describe Insightly::DSL::CustomFields do
     it 'returns an array of custom fields' do
       custom_fields = Insightly.client.get_custom_fields
       expect(custom_fields).to be_a(Array)
-      expect(custom_fields.first).to be_a(Insightly::Resources::CustomField)
+      expect(custom_fields.first).to be_a(CustomField)
     end
   end
 

@@ -6,7 +6,7 @@ describe Insightly::DSL::PipelineStages do
     it 'returns an array of pipeline_stages' do
       pipeline_stages = Insightly.client.get_pipeline_stages
       expect(pipeline_stages).to be_a(Array)
-      expect(pipeline_stages.first).to be_a(Insightly::Resources::PipelineStage)
+      expect(pipeline_stages.first).to be_a(PipelineStage)
     end
   end
 

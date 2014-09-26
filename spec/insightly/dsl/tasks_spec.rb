@@ -30,7 +30,7 @@ describe Insightly::DSL::Tasks do
     xit 'returns an array of tasks' do
       tasks = Insightly.client.get_tasks
       expect(tasks).to be_a(Array)
-      expect(tasks.first).to be_a(Insightly::Resources::Task)
+      expect(tasks.first).to be_a(Task)
     end
   end
   

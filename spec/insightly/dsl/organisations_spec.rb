@@ -65,7 +65,7 @@ describe Insightly::DSL::Organisations do
     it 'returns an array of organisations' do
       organisations = Insightly.client.get_organisations
       expect(organisations).to be_a(Array)
-      expect(organisations.first).to be_a(Insightly::Resources::Organisation)
+      expect(organisations.first).to be_a(Organisation)
     end
   end
 

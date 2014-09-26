@@ -14,7 +14,7 @@ describe Insightly::DSL::Teams do
     it 'returns an array of teams' do
       teams = Insightly.client.get_teams
       expect(teams).to be_a(Array)
-      expect(teams.first).to be_a(Insightly::Resources::Team)
+      expect(teams.first).to be_a(Team)
     end
   end
   

@@ -6,7 +6,7 @@ describe Insightly::DSL::Users do
     it 'returns an array of users' do
       users = Insightly.client.get_users
       expect(users).to be_a(Array)
-      expect(users.first).to be_a(Insightly::Resources::User)
+      expect(users.first).to be_a(User)
     end
   end
 

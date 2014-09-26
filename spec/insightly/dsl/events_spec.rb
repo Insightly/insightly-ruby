@@ -14,7 +14,7 @@ describe Insightly::DSL::Events do
     it 'returns an array of events' do
       events = Insightly.client.get_events
       expect(events).to be_a(Array)
-      expect(events.first).to be_a(Insightly::Resources::Event)
+      expect(events.first).to be_a(Event)
     end
   end
 

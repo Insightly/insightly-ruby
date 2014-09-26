@@ -65,7 +65,7 @@ describe Insightly::DSL::Projects do
     it 'returns an array of projects' do
       projects = Insightly.client.get_projects
       expect(projects).to be_a(Array)
-      expect(projects.first).to be_a(Insightly::Resources::Project)
+      expect(projects.first).to be_a(Project)
     end
   end
 

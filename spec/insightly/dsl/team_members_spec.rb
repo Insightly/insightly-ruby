@@ -21,7 +21,7 @@ describe Insightly::DSL::TeamMembers do
     xit 'returns an array of team_members' do
       team_members = Insightly.client.get_team_members(team_id: 1)
       expect(team_members).to be_a(Array)
-      expect(team_members.first).to be_a(Insightly::Resources::TeamMember)
+      expect(team_members.first).to be_a(TeamMember)
     end
   end
 

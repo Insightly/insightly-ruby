@@ -14,7 +14,7 @@ describe Insightly::DSL::OpportunityCategories do
     it 'returns an array of opportunity_categories' do
       opportunity_categories = Insightly.client.get_opportunity_categories
       expect(opportunity_categories).to be_a(Array)
-      expect(opportunity_categories.first).to be_a(Insightly::Resources::OpportunityCategory)
+      expect(opportunity_categories.first).to be_a(OpportunityCategory)
     end
   end
 

@@ -16,7 +16,7 @@ describe Insightly::DSL::Emails do
     xit 'returns an array of emails' do
       emails = Insightly.client.get_emails
       expect(emails).to be_a(Array)
-      expect(emails.first).to be_a(Insightly::Resources::Email)
+      expect(emails.first).to be_a(Email)
     end
   end
 
