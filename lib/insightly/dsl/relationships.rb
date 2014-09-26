@@ -3,9 +3,10 @@ require 'insightly/dsl'
 module Insightly
   module DSL::Relationships
     # GET /v2.1/Relationships
-    # @return [<Insightly::Resources::Relationship>, nil]
+    # Get a list of relationships.
+    # @return [Array, nil].
     def get_relationships
-      Resources::Relationship.parse(request(:get, 'Relationships'))
+      Resources::Relationship.parse(request(:get, "Relationships"))
     end
   end
 end

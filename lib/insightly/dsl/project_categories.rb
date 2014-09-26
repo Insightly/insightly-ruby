@@ -2,37 +2,43 @@ require 'insightly/dsl'
 
 module Insightly
   module DSL::ProjectCategories
-    # DELETE /v2.1/ProjectCategories/{id}
-    # @param [String, Fixnum] id A ProjectCategory's ID
-    def delete_project_category(id:)
-      request(:delete, "ProjectCategories/#{id}")
-    end
-
-    # GET /v2.1/ProjectCategories
-    # @return [<Insightly::Resources::ProjectCategory>, nil]
-    def get_project_categories
-      Resources::ProjectCategory.parse(request(:get, 'ProjectCategories'))
-    end
-
     # GET /v2.1/ProjectCategories/{id}
-    # @return [Insightly::Resources::ProjectCategory]
-    # @param [String, Fixnum] id A ProjectCategory's ID
+    # Get a project category.
+    # @param [String, Fixnum] id A project category's ID.
+    # @return [Insightly::Resources::ProjectCategory, nil].
     def get_project_category(id:)
       Resources::ProjectCategory.parse(request(:get, "ProjectCategories/#{id}"))
     end
 
+    # GET /v2.1/ProjectCategories
+    # Get a list of project categories.
+    # @return [Array, nil].
+    def get_project_categories
+      Resources::ProjectCategory.parse(request(:get, 'ProjectCategories'))
+    end
+
     # POST /v2.1/ProjectCategories
-    # @param [Hash] category: A Hash of project category attributes.
-    # @return [Insightly::Resources::ProjectCategory]
+    # Create a project category.
+    # @param [Hash] category: The project category to create.
+    # @return [Insightly::Resources::ProjectCategory, nil].
     def create_project_category(category:)
       Resources::ProjectCategory.parse(request(:post, "ProjectCategories", category))
     end
 
     # PUT /v2.1/ProjectCategories
-    # @param [Hash] category: A Hash of project category attributes.
-    # @return [Insightly::Resources::ProjectCategory]
+    # Update a project category.
+    # @param [Hash] category The project category to update.
+    # @return [Insightly::Resources::ProjectCategory, nil]
     def update_project_category(category:)
       Resources::ProjectCategory.parse(request(:put, "ProjectCategories", category))
+    end
+
+    # DELETE /v2.1/ProjectCategories/{id}
+    # Delete a project category.
+    # @param [String, Fixnum] id A project category's ID.
+    # @return [RestClient::Response].
+    def delete_project_category(id:)
+      request(:delete, "ProjectCategories/#{id}")
     end
   end
 end

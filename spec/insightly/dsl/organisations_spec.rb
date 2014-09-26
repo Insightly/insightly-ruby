@@ -22,13 +22,13 @@ describe Insightly::DSL::Organisations do
     it 'returns organisation emails' do
       response = Insightly.client.get_organisation_emails(id: 1)
       expect(response).to be_a(Array)
-      expect(response.first).to be_a(Insightly::Resources::Organisation)
+      expect(response.first).to be_a(Insightly::Resources::Email)
     end
   end
 
   # GET /v2.1/Organisations/{c_id}/Image
   describe '#get_organisation_image' do
-    it 'returns organisation image' do
+    xit 'returns organisation image' do
       response = Insightly.client.get_organisation_image(id: 1)
       expect(response).to be_a(Array)
       expect(response.first).to be_a(Insightly::Resources::Organisation)
@@ -40,7 +40,7 @@ describe Insightly::DSL::Organisations do
     it 'returns organisation notes' do
       response = Insightly.client.get_organisation_notes(id: 1)
       expect(response).to be_a(Array)
-      expect(response.first).to be_a(Insightly::Resources::Organisation)
+      expect(response.first).to be_a(Insightly::Resources::Note)
     end
   end
 
@@ -49,7 +49,7 @@ describe Insightly::DSL::Organisations do
     it 'returns organisation tasks' do
       response = Insightly.client.get_organisation_tasks(id: 1)
       expect(response).to be_a(Array)
-      expect(response.first).to be_a(Insightly::Resources::Organisation)
+      expect(response.first).to be_a(Insightly::Resources::Task)
     end
   end
 
