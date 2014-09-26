@@ -4,7 +4,7 @@ describe Insightly::DSL::Comments do
   # GET /v2.1/Comments/{id}
   describe '#get_comment' do
     it 'returns a comment' do
-      expect(Insightly.client.get_comment(id: 1)).to be_a(Insightly::Resources::Comment)
+      expect(Insightly.client.get_comment(id: 1)).to be_a(Comment)
     end
   end
 
@@ -23,7 +23,7 @@ describe Insightly::DSL::Comments do
     it 'updates a comment' do
       # TODO: Better test.
       response = Insightly.client.update_comment(comment: {})
-      expect(response).to be_a(Insightly::Resources::Comment)
+      expect(response).to be_a(Comment)
     end
   end
 
