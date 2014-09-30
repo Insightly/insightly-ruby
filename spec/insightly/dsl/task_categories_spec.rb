@@ -20,14 +20,14 @@ describe Insightly::DSL::TaskCategories do
   # POST /v2.1/TaskCategories
   describe '#create_task_category' do
     it 'creates and returns task_category' do
-      expect(Insightly.client.create_task_category(category: {})).to be_a(TaskCategory)
+      expect(Insightly.client.create_task_category(category: {category_name: ''})).to be_a(TaskCategory)
     end
   end
 
   # PUT /v2.1/TaskCategories
   describe '#update_task_category' do
     it 'updates and returns task_category' do
-      expect(Insightly.client.update_task_category(category: {})).to be_a(TaskCategory)
+      expect(Insightly.client.update_task_category(category: {category_name: ''})).to be_a(TaskCategory)
     end
   end
 

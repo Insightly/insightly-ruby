@@ -5,20 +5,20 @@ module Insightly
     # GET /v2.1/Emails/{id}
     # Gets an email.
     # @param [String, Fixnum] id The ID of the email.
-    # @raise [ArgumentError] If the method arguments are nil.
+    # @raise [ArgumentError] If the method arguments are blank.
     # @return [Insightly::Resources::Email, nil]
     def get_email(id:)
-      raise ArgumentError, "ID cannot be nil" if id.nil?
+      raise ArgumentError, "ID cannot be blank" if id.blank?
       Resources::Email.parse(request(:get, "Emails/#{id}"))
     end
 
     # GET /v2.1/Emails/{c_id}/Comments
     # Gets an email's comments.
     # @param [String, Fixnum] id The ID of the email.
-    # @raise [ArgumentError] If the method arguments are nil.
+    # @raise [ArgumentError] If the method arguments are blank.
     # @return [Array, nil].
     def get_email_comments(id:)
-      raise ArgumentError, "ID cannot be nil" if id.nil?
+      raise ArgumentError, "ID cannot be blank" if id.blank?
       Resources::Comment.parse(request(:get, "Emails/#{id}/Comments"))
     end
 
@@ -40,10 +40,10 @@ module Insightly
     # DELETE /v2.1/Emails/{id}
     # Deletes an email.
     # @param [String, Fixnum] id The ID of the email to delete.
-    # @raise [ArgumentError] If the method arguments are nil.
+    # @raise [ArgumentError] If the method arguments are blank.
     # @return [RestClient::Response].
     def delete_email(id:)
-      raise ArgumentError, "ID cannot be nil" if id.nil?
+      raise ArgumentError, "ID cannot be blank" if id.blank?
       request(:delete, "Emails/#{id}")
     end
   end

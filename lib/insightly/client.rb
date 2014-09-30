@@ -1,6 +1,9 @@
-require 'string'
 require 'rest_client'
 require 'openssl'
+require 'utils/string'
+require 'utils/fixnum'
+require 'utils/hash'
+require 'utils/nil_class'
 
 module Insightly
   class Client

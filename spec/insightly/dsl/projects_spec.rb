@@ -56,7 +56,7 @@ describe Insightly::DSL::Projects do
   # POST /v2.1/Projects
   describe '#create_project' do
     it 'creates and returns a project' do
-      expect(Insightly.client.create_project(project: {})).to be_a(Project)
+      expect(Insightly.client.create_project(project: {project_name: ''})).to be_a(Project)
     end
   end
 
@@ -70,7 +70,7 @@ describe Insightly::DSL::Projects do
   # PUT /v2.1/Projects
   describe '#update_project' do
     it 'updates and returns a project' do
-      expect(Insightly.client.update_project(project: {})).to be_a(Project)
+      expect(Insightly.client.update_project(project: {project_name: ''})).to be_a(Project)
     end
   end
 
