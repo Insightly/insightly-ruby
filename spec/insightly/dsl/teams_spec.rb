@@ -20,14 +20,14 @@ describe Insightly::DSL::Teams do
   # POST /v2.1/Teams
   describe '#create_team' do
     it 'returns a team' do
-      expect(Insightly.client.create_team(team: {})).to be_a(Team)
+      expect(Insightly.client.create_team(team: {team_name: ''})).to be_a(Team)
     end
   end
 
   # PUT /v2.1/Teams
   describe '#create_team' do
     it 'returns a team' do
-      expect(Insightly.client.create_team(team: {})).to be_a(Team)
+      expect(Insightly.client.create_team(team: {team_name: ''})).to be_a(Team)
     end
   end
 

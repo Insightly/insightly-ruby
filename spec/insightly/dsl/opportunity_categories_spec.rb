@@ -20,7 +20,7 @@ describe Insightly::DSL::OpportunityCategories do
   # POST /v2.1/OpportunityCategories
   describe '#create_opportunity_category' do
     it 'creates and returns an opportunity category' do
-      expect(Insightly.client.create_opportunity_category(category: {})).to be_a(OpportunityCategory)
+      expect(Insightly.client.create_opportunity_category(category: {category_name: ''})).to be_a(OpportunityCategory)
     end
   end
 

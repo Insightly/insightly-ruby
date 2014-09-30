@@ -11,7 +11,7 @@ describe Insightly::DSL::Comments do
   # POST /v2.1/Comments?c_id={c_id}&filename={filename}
   describe '#create_comment_attachment' do
     xit 'returns a resonse with code 201' do
-      response = Insightly.client.create_comment_attachment(id: 1, filename: '')
+      response = Insightly.client.create_comment_attachment(id: 1, filename: '1.jpg')
       # TODO: actually expect 201 response.
       # TODO: make stub file name deal with query params when generating filenames.
       expect(response.code).to eq(200)
@@ -22,7 +22,7 @@ describe Insightly::DSL::Comments do
   describe '#update_comment' do
     it 'updates a comment' do
       # TODO: Better test.
-      response = Insightly.client.update_comment(comment: {})
+      response = Insightly.client.update_comment(comment: {body: ''})
       expect(response).to be_a(Comment)
     end
   end

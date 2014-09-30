@@ -23,7 +23,7 @@ describe Insightly::DSL::Notes do
   # POST /v2.1/Notes
   describe '#create_note' do
     it 'creates and returns a note' do
-      expect(Insightly.client.create_note(note: {})).to be_a(Note)
+      expect(Insightly.client.create_note(note: {title: ''})).to be_a(Note)
     end
   end
 
@@ -33,7 +33,7 @@ describe Insightly::DSL::Notes do
   # POST /v2.1/Notes?c_id={c_id}&filename={filename}
   describe '#create_note_file' do
     it 'adds attachment to the note' do
-      response = Insightly.client.create_note_file(id: 1, filename: '')
+      response = Insightly.client.create_note_file(id: 1, filename: '1.jpg')
       expect(response.code).to eq(200)
     end
   end

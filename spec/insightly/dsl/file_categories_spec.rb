@@ -20,7 +20,7 @@ describe Insightly::DSL::FileCategories do
   # POST /v2.1/FileCategories
   describe '#create_file_category' do
     it 'creates and returns a file category' do
-      expect(Insightly.client.create_file_category(category: {})).to be_a(FileCategory)
+      expect(Insightly.client.create_file_category(category: {category_name: ''})).to be_a(FileCategory)
     end
   end
 
