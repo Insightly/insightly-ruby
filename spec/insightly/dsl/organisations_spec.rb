@@ -56,7 +56,7 @@ describe Insightly::DSL::Organisations do
   # POST /v2.1/Organisations
   describe '#create_organisation' do
     it 'creates and returns organisation' do
-      expect(Insightly.client.create_organisation(organisation: {})).to be_a(Organisation)
+      expect(Insightly.client.create_organisation(organisation: {organisation_name: ''})).to be_a(Organisation)
     end
   end
 

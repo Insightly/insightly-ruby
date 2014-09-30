@@ -20,14 +20,14 @@ describe Insightly::DSL::TeamMembers do
   # POST /v2.1/TeamMembers
   describe '#create_team_member' do
     it 'returns a team_member' do
-      expect(Insightly.client.create_team_member(team_member: {})).to be_a(TeamMember)
+      expect(Insightly.client.create_team_member(team_member: {member_user_id: 1})).to be_a(TeamMember)
     end
   end
 
   # PUT /v2.1/TeamMembers
   describe '#update_team_member' do
     it 'returns a team_member' do
-      expect(Insightly.client.update_team_member(team_member: {})).to be_a(TeamMember)
+      expect(Insightly.client.update_team_member(team_member: {member_user_id: 1})).to be_a(TeamMember)
     end
   end
 

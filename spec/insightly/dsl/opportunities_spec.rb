@@ -65,7 +65,7 @@ describe Insightly::DSL::Opportunities do
   # POST /v2.1/Opportunities
   describe '#create_opportunities' do
     it 'creates and returns an opportunity' do
-      expect(Insightly.client.create_opportunity(opportunity: {})).to be_a(Opportunity)
+      expect(Insightly.client.create_opportunity(opportunity: {opportunity_name: ''})).to be_a(Opportunity)
     end
   end
 

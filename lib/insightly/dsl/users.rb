@@ -5,8 +5,10 @@ module Insightly
     # GET /v2.1/Users/{id}
     # Get a user.
     # @param [String, Fixnum] id A user's ID.
+    # @raise [ArgumentError] If the method arguments are blank.
     # @return [Insightly::Resources::User, nil].
     def get_user(id:)
+      raise ArgumentError, "ID cannot be blank" if id.blank?
       Resources::User.parse(request(:get, "Users/#{id}"))
     end
 

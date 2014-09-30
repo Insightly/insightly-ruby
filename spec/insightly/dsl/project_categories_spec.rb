@@ -20,7 +20,7 @@ describe Insightly::DSL::ProjectCategories do
   # POST /v2.1/ProjectCategories
   describe '#create_project_category' do
     it 'creates and returns a project_category' do
-      expect(Insightly.client.create_project_category(category: {})).to be_a(ProjectCategory)
+      expect(Insightly.client.create_project_category(category: {category_name: ''})).to be_a(ProjectCategory)
     end
   end
 
