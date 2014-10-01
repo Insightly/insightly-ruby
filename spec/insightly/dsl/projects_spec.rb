@@ -46,7 +46,7 @@ describe Insightly::DSL::Projects do
 
   # GET /v2.1/Projects?ids={ids}&tag={tag}
   describe '#get_projects' do
-    it 'returns an array of projects' do
+    xit 'returns an array of projects' do
       projects = Insightly.client.get_projects
       expect(projects).to be_a(Array)
       expect(projects.first).to be_a(Project)

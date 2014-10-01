@@ -33,6 +33,13 @@ describe Insightly::DSL::Tasks do
     end
   end
 
+  # POST /v2.1/Tasks/{c_id}/Comments
+  describe '#create_task_comments' do
+    xit 'creates and returns comment' do
+      expect(Insightly.client.create_task_comments(id: 1, comment: {title: ''})).to be_a(Comment)
+    end
+  end
+
   # PUT /v2.1/Tasks
   describe '#update_task' do
     it 'updates and returns task' do

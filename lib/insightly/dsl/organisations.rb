@@ -58,8 +58,8 @@ module Insightly
     # @param [String] tag The tag an organisation has been tagged with (optional).
     # @return [Array, nil].
     def get_organisations(ids: [], domain: '', tag: '')
-      ids = ids.join(',')
-      Resources::Organisation.parse(request(:get, "Organisations?ids=#{ids}&domain=#{domain}&tag=#{tag}"))
+      url = "Organisations".build_url(params: {ids: ids.join(','), domain: domain, tag: tag})
+      Resources::Organisation.parse(request(:get, url))
     end
 
     # POST /v2.1/Organisations
