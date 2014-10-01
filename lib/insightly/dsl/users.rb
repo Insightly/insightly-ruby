@@ -4,7 +4,7 @@ module Insightly
   module DSL::Users
     # GET /v2.1/Users/{id}
     # Get a user.
-    # @param [String, Fixnum] id A user's ID.
+    # @param [UrlHelper, Fixnum] id A user's ID.
     # @raise [ArgumentError] If the method arguments are blank.
     # @return [Insightly::Resources::User, nil].
     def get_user(id:)

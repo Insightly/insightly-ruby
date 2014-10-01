@@ -4,7 +4,7 @@ module Insightly
   module DSL::Opportunities
     # GET /v2.1/Opportunities/{id}
     # Get an opportunity.
-    # @param [String, Fixnum] id An opportunity's ID.
+    # @param [UrlHelper, Fixnum] id An opportunity's ID.
     # @raise [ArgumentError] If the method arguments are blank.
     # @return [Insightly::Resources::Opportunity, nil].
     def get_opportunity(id:)
@@ -14,7 +14,7 @@ module Insightly
 
     # GET /v2.1/Opportunities/{c_id}/Emails
     # Get an opportunity's emails.
-    # @param [String, Fixnum] id An opportunity's ID.
+    # @param [UrlHelper, Fixnum] id An opportunity's ID.
     # @raise [ArgumentError] If the method arguments are blank.
     # @return [Array, nil].
     def get_opportunity_emails(id:)
@@ -23,7 +23,7 @@ module Insightly
     end
 
     # GET /v2.1/Opportunities/{c_id}/Image
-    # @param [String, Fixnum] id An opportunity's ID
+    # @param [UrlHelper, Fixnum] id An opportunity's ID
     # @raise [ArgumentError] If the method arguments are blank.
     # TODO - What does this return?
     # def get_opportunity_image(id:)
@@ -32,7 +32,7 @@ module Insightly
 
     # GET /v2.1/Opportunities/{c_id}/Notes
     # Get an opportunity's notes.
-    # @param [String, Fixnum] id An opportunity's ID.
+    # @param [UrlHelper, Fixnum] id An opportunity's ID.
     # @raise [ArgumentError] If the method arguments are blank.
     # @return [Array, nil].
     def get_opportunity_notes(id:)
@@ -42,7 +42,7 @@ module Insightly
 
     # GET /v2.1/Opportunities/{c_id}/StateHistory
     # Get an opportunity's state history.
-    # @param [String, Fixnum] id An opportunity's ID.
+    # @param [UrlHelper, Fixnum] id An opportunity's ID.
     # @raise [ArgumentError] If the method arguments are blank.
     # @return [Array, nil].
     def get_opportunity_state_history(id:)
@@ -52,7 +52,7 @@ module Insightly
 
     # GET /v2.1/Opportunities/{c_id}/Tasks
     # Get an opportunity's tasks.
-    # @param [String, Fixnum] id An opportunity's ID.
+    # @param [UrlHelper, Fixnum] id An opportunity's ID.
     # @raise [ArgumentError] If the method arguments are blank.
     # @return [Array, nil].
     def get_opportunity_tasks(id:)
@@ -63,10 +63,10 @@ module Insightly
     # GET /v2.1/Opportunities?ids={ids}&tag={tag}
     # Get a list of opportunities.
     # @param [Array] ids IDs of opportunities (optional).
-    # @param [String] tag The tag that has been applied to an opportunity (optional).
+    # @param [UrlHelper] tag The tag that has been applied to an opportunity (optional).
     # @return [Array, nil].
     def get_opportunities(ids: [], tag: '')
-      url = "Opportunities".build_url(params: {ids: ids.join(','), tag: tag})
+      url = UrlHelper.build_url(path: "Opportunities", params: {ids: ids.join(','), tag: tag})
       Resources::Opportunity.parse(request(:get, url))
     end
 
@@ -82,8 +82,8 @@ module Insightly
 
     # POST /v2.1/Opportunities/{c_id}/Image/{filename}
     # Add an attachment to an opportunity.
-    # @param [String, Fixnum] id An opportunity's ID.
-    # @param [String] filename A name of a file.
+    # @param [UrlHelper, Fixnum] id An opportunity's ID.
+    # @param [UrlHelper] filename A name of a file.
     # @raise [ArgumentError] If the method arguments are blank.
     # @return [RestClient::Response]
     def create_opportunity_image(id:, filename:)
@@ -103,8 +103,8 @@ module Insightly
     end
 
     # PUT /v2.1/Opportunities/{c_id}/Image/{filename}
-    # @param [String, Fixnum] id An opportunity's ID.
-    # @param [String] filename A name of a file.
+    # @param [UrlHelper, Fixnum] id An opportunity's ID.
+    # @param [UrlHelper] filename A name of a file.
     # @raise [ArgumentError] If the method arguments are blank.
     # @return [RestClient::Response].
     def update_opportunity_image(id:, filename:)
@@ -114,7 +114,7 @@ module Insightly
     end
 
     # DELETE /v2.1/Opportunities/{id}
-    # @param [String, Fixnum] id An opportunity's ID.
+    # @param [UrlHelper, Fixnum] id An opportunity's ID.
     # @raise [ArgumentError] If the method arguments are blank.
     # @return [RestClient::Response].
     def delete_opportunity(id:)
@@ -123,7 +123,7 @@ module Insightly
     end
 
     # DELETE /v2.1/Opportunities/{c_id}/Image
-    # @param [String, Fixnum] id An opportunity's ID.
+    # @param [UrlHelper, Fixnum] id An opportunity's ID.
     # @raise [ArgumentError] If the method arguments are blank.
     # @return [RestClient::Response].
     def delete_opportunity_image(id:)

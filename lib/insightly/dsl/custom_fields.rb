@@ -4,7 +4,7 @@ module Insightly
   module DSL::CustomFields
     # GET /v2.1/CustomFields/{id}
     # Get a custom field.
-    # @param [String, Fixnum] id A CustomField's ID.
+    # @param [UrlHelper, Fixnum] id A CustomField's ID.
     # @raise [ArgumentError] If the method arguments are blank.
     # @return [Insightly::Resources::CustomField, nil].
     def get_custom_field(id:)

@@ -1,7 +1,7 @@
 require 'rest_client'
 require 'openssl'
 require 'active_support/all'
-require 'utils/string'
+require 'utils/url_helper'
 
 module Insightly
   class Client
@@ -9,13 +9,13 @@ module Insightly
 
     REQUESTS = [:get, :post, :put, :delete]
 
-    # @param [String] api_key
+    # @param [UrlHelper] api_key
     def initialize(api_key = Insightly.api_key)
       @api_key = api_key
     end
 
     # @param [:get, :post, :put, :delete] method
-    # @param [String] path
+    # @param [UrlHelper] path
     # @param [Hash] query
     # @return [RequestClient::Response] server response
     def request(method, path, query = {})

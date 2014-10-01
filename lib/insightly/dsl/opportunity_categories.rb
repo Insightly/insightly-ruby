@@ -4,7 +4,7 @@ module Insightly
   module DSL::OpportunityCategories
     # GET /v2.1/OpportunityCategories/{id}
     # Get an opportunity category.
-    # @param [String, Fixnum] id An opportunity category's ID.
+    # @param [UrlHelper, Fixnum] id An opportunity category's ID.
     # @raise [ArgumentError] If the method arguments are blank.
     # @return [Insightly::Resources::OpportunityCategory, nil].
     def get_opportunity_category(id:)
@@ -41,7 +41,7 @@ module Insightly
 
     # DELETE /v2.1/OpportunityCategories/{id}
     # Delete an opportunity category.
-    # @param [String, Fixnum] id A OpportunityCategory's ID.
+    # @param [UrlHelper, Fixnum] id A OpportunityCategory's ID.
     # @raise [ArgumentError] If the method arguments are blank.
     # @return [RestClient::Response].
     def delete_opportunity_category(id:)

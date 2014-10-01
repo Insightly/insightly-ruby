@@ -4,7 +4,7 @@ module Insightly
   module DSL::Events
     # GET /v2.1/Events/{id}
     # Get an event.
-    # @param [String, Fixnum] id An event's ID.
+    # @param [UrlHelper, Fixnum] id An event's ID.
     # @raise [ArgumentError] If the method arguments are blank.
     # @return [Insightly::Resources::Event, nil].
     def get_event(id:)
@@ -41,7 +41,7 @@ module Insightly
 
     # DELETE /v2.1/Events/{id}
     # Delete an event.
-    # @param [String, Fixnum] id An event's ID.
+    # @param [UrlHelper, Fixnum] id An event's ID.
     # @raise [ArgumentError] If the method arguments are blank.
     # @return [RestClient::Response].
     def delete_event(id:)

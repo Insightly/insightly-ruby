@@ -4,7 +4,7 @@ module Insightly
   module DSL::Emails
     # GET /v2.1/Emails/{id}
     # Gets an email.
-    # @param [String, Fixnum] id The ID of the email.
+    # @param [UrlHelper, Fixnum] id The ID of the email.
     # @raise [ArgumentError] If the method arguments are blank.
     # @return [Insightly::Resources::Email, nil]
     def get_email(id:)
@@ -14,7 +14,7 @@ module Insightly
 
     # GET /v2.1/Emails/{c_id}/Comments
     # Gets an email's comments.
-    # @param [String, Fixnum] id The ID of the email.
+    # @param [UrlHelper, Fixnum] id The ID of the email.
     # @raise [ArgumentError] If the method arguments are blank.
     # @return [Array, nil].
     def get_email_comments(id:)
@@ -25,16 +25,16 @@ module Insightly
     # GET /v2.1/Emails?ids={ids}&tag={tag}
     # Gets a list of Emails.
     # @param [Array] ids The list of email IDs (optional).
-    # @param [String] tag Emails tagged with this tag (optional).
+    # @param [UrlHelper] tag Emails tagged with this tag (optional).
     # @return [Array, nil].
     def get_emails(ids: [], tag: '')
-      url = "Emails".build_url(params: {ids: ids.join(','), tag: tag})
+      url = UrlHelper.build_url(path: "Emails", params: {ids: ids.join(','), tag: tag})
       Resources::Email.parse(request(:get, url))
     end
 
     # POST /v2.1/Emails/{c_id}/Comments
     # Create a comment for a task.
-    # @param [String, Fixnum] id A task's ID.
+    # @param [UrlHelper, Fixnum] id A task's ID.
     # @param [Hash] comment The comment to create.
     # @raise [ArgumentError] If the method arguments are blank.
     # @return [Insightly::Resources::Comment, nil].
@@ -46,7 +46,7 @@ module Insightly
 
     # DELETE /v2.1/Emails/{id}
     # Deletes an email.
-    # @param [String, Fixnum] id The ID of the email to delete.
+    # @param [UrlHelper, Fixnum] id The ID of the email to delete.
     # @raise [ArgumentError] If the method arguments are blank.
     # @return [RestClient::Response].
     def delete_email(id:)

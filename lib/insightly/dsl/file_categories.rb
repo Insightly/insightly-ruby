@@ -4,7 +4,7 @@ module Insightly
   module DSL::FileCategories
     # GET /v2.1/FileCategories/{id}
     # Get a file category.
-    # @param [String, Fixnum] id: A file category's ID.
+    # @param [UrlHelper, Fixnum] id: A file category's ID.
     # @raise [ArgumentError] If the method arguments are blank.
     # @return [Insightly::Resources::FileCategory, nil].
     def get_file_category(id:)
@@ -41,7 +41,7 @@ module Insightly
 
     # DELETE /v2.1/FileCategories/{id}
     # Delete a file category.
-    # @param [String, Fixnum] id: A file category's ID.
+    # @param [UrlHelper, Fixnum] id: A file category's ID.
     # @raise [ArgumentError] If the method arguments are blank.
     # @return [RestClient::Response].
     def delete_file_category(id:)

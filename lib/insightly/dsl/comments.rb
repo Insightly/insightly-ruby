@@ -4,7 +4,7 @@ module Insightly
   module DSL::Comments
     # GET /v2.1/Comments/{id}
     # Get a comment.
-    # @param [String, Fixnum] id A comment's ID.
+    # @param [UrlHelper, Fixnum] id A comment's ID.
     # @raise [ArgumentError] If the method arguments are blank.
     # @return [Insightly::Resources::Comment, nil].
     def get_comment(id:)
@@ -14,8 +14,8 @@ module Insightly
 
     # POST /v2.1/Comments?c_id={c_id}&filename={filename}
     # Adds a file attachment to a comment.
-    # @param [String, Fixnum] id A comment's ID.
-    # @param [String] filename The name of the attachment.
+    # @param [UrlHelper, Fixnum] id A comment's ID.
+    # @param [UrlHelper] filename The name of the attachment.
     # @raise [ArgumentError] If the method arguments are blank.
     # @return [RestClient::Response].
     def create_comment_attachment(id:, filename:)
@@ -36,7 +36,7 @@ module Insightly
 
     # DELETE /v2.1/Comments/{id}
     # Deletes a comment.
-    # @param [String, Fixnum] id A comment's ID.
+    # @param [UrlHelper, Fixnum] id A comment's ID.
     # @raise [ArgumentError] If the method arguments are blank.
     # @return [RestClient::Response].
     def delete_comment(id:)

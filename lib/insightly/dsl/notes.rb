@@ -4,7 +4,7 @@ module Insightly
   module DSL::Notes
     # GET /v2.1/Notes/{id}
     # Get a note.
-    # @param [String, Fixnum] id A note's ID.
+    # @param [UrlHelper, Fixnum] id A note's ID.
     # @raise [ArgumentError] If the method arguments are blank.
     # @return [Insightly::Resources::Note, nil].
     def get_note(id:)
@@ -14,7 +14,7 @@ module Insightly
 
     # GET /v2.1/Notes/{c_id}/Comments
     # Gets the comments attached to a note.
-    # @param [String, Fixnum] id A note's ID.
+    # @param [UrlHelper, Fixnum] id A note's ID.
     # @raise [ArgumentError] If the method arguments are blank.
     # @return [Array, nil].
     def get_note_comments(id:)
@@ -45,8 +45,8 @@ module Insightly
 
     # POST /v2.1/Notes?c_id={c_id}&filename={filename}
     # Adds a File Attachment to a Note.
-    # @param [String|Fixnum] id A Note's ID.
-    # @param [String] filename The name of the file.
+    # @param [UrlHelper|Fixnum] id A Note's ID.
+    # @param [UrlHelper] filename The name of the file.
     # @raise [ArgumentError] If the method arguments are blank.
     # @return [RestClient::Response].
     def create_note_file(id:, filename:)
@@ -66,7 +66,7 @@ module Insightly
     end
 
     # DELETE /v2.1/Notes/{id}
-    # @param [String, Fixnum] id A note's ID.
+    # @param [UrlHelper, Fixnum] id A note's ID.
     # @raise [ArgumentError] If the method arguments are blank.
     # @return [RestClient::Response].
     def delete_note(id:)

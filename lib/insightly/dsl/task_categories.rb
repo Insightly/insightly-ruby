@@ -4,7 +4,7 @@ module Insightly
   module DSL::TaskCategories
     # GET /v2.1/TaskCategories/{id}
     # Get a task category.
-    # @param [String, Fixnum] id A task category's ID.
+    # @param [UrlHelper, Fixnum] id A task category's ID.
     # @raise [ArgumentError] If the method arguments are blank.
     # @return [Insightly::Resources::TaskCategory, nil].
     def get_task_category(id:)
@@ -41,7 +41,7 @@ module Insightly
 
     # DELETE /v2.1/TaskCategories/{id}
     # Delete a task category.
-    # @param [String, Fixnum] id A task category's ID.
+    # @param [UrlHelper, Fixnum] id A task category's ID.
     # @raise [ArgumentError] If the method arguments are blank.
     # @return [RestClient::Response].
     def delete_task_category(id:)

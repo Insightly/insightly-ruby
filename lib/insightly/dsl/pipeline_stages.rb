@@ -4,7 +4,7 @@ module Insightly
   module DSL::PipelineStages
     # GET /v2.1/PipelineStages/{id}
     # Get a pipeline stage.
-    # @param [String, Fixnum] id A pipeline stage's ID.
+    # @param [UrlHelper, Fixnum] id A pipeline stage's ID.
     # @raise [ArgumentError] If the method arguments are blank.
     # @return [Insightly::Resources::PipelineStage, nil].
     def get_pipeline_stage(id:)

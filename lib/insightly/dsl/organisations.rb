@@ -4,7 +4,7 @@ module Insightly
   module DSL::Organisations
     # GET /v2.1/Organisations/{id}
     # Get an organisation.
-    # @param [String, Fixnum] id An organisation's ID.
+    # @param [UrlHelper, Fixnum] id An organisation's ID.
     # @raise [ArgumentError] If the method arguments are blank.
     # @return [Insightly::Resources::Organisation, nil].
     def get_organisation(id:)
@@ -14,7 +14,7 @@ module Insightly
 
     # GET /v2.1/Organisations/{c_id}/Emails
     # Get an organisation's emails.
-    # @param [String, Fixnum] id An organisation's ID.
+    # @param [UrlHelper, Fixnum] id An organisation's ID.
     # @raise [ArgumentError] If the method arguments are blank.
     # @return [Array, nil].
     def get_organisation_emails(id:)
@@ -24,7 +24,7 @@ module Insightly
 
     # GET /v2.1/Organisations/{c_id}/Image
     # Get an organisations image.
-    # @param [String, Fixnum] id An organisation's ID
+    # @param [UrlHelper, Fixnum] id An organisation's ID
     # @raise [ArgumentError] If the method arguments are blank.
     # @return [Insightly::Resources::Organisation]
     # TODO - What does this return?
@@ -34,7 +34,7 @@ module Insightly
 
     # GET /v2.1/Organisations/{c_id}/Notes
     # Get an organisations notes.
-    # @param [String, Fixnum] id An organisation's ID.
+    # @param [UrlHelper, Fixnum] id An organisation's ID.
     # @raise [ArgumentError] If the method arguments are blank.
     # @return [Array, nil].
     def get_organisation_notes(id:)
@@ -44,7 +44,7 @@ module Insightly
 
     # GET /v2.1/Organisations/{c_id}/Tasks
     # Get an organisations tasks.
-    # @param [String, Fixnum] id An organisation's ID.
+    # @param [UrlHelper, Fixnum] id An organisation's ID.
     # @raise [ArgumentError] If the method arguments are blank.
     # @return [Array, nil].
     def get_organisation_tasks(id:)
@@ -54,11 +54,11 @@ module Insightly
 
     # GET /v2.1/Organisations?ids={ids}&domain={domain}&tag={tag}
     # @param [Array] ids The organisation's IDs (optional).
-    # @param [String] domain The email domain (optional).
-    # @param [String] tag The tag an organisation has been tagged with (optional).
+    # @param [UrlHelper] domain The email domain (optional).
+    # @param [UrlHelper] tag The tag an organisation has been tagged with (optional).
     # @return [Array, nil].
     def get_organisations(ids: [], domain: '', tag: '')
-      url = "Organisations".build_url(params: {ids: ids.join(','), domain: domain, tag: tag})
+      url = UrlHelper.build_url(path: "Organisations", params: {ids: ids.join(','), domain: domain, tag: tag})
       Resources::Organisation.parse(request(:get, url))
     end
 
@@ -74,8 +74,8 @@ module Insightly
 
     # POST /v2.1/Organisations/{c_id}/Image/{filename}
     # Create an organisation image.
-    # @param [String, Fixnum] id The organisation's ID.
-    # @param [String] filename The name of the file.
+    # @param [UrlHelper, Fixnum] id The organisation's ID.
+    # @param [UrlHelper] filename The name of the file.
     # @raise [ArgumentError] If the method arguments are blank.
     # @return [RestClient::Response].
     def create_organisation_image(id:, filename:)
@@ -96,8 +96,8 @@ module Insightly
 
     # PUT /v2.1/Organisations/{c_id}/Image/{filename}
     # Update an organisation's image.
-    # @param [String, Fixnum] id An organisation's ID.
-    # @param [String] filename name of the file.
+    # @param [UrlHelper, Fixnum] id An organisation's ID.
+    # @param [UrlHelper] filename name of the file.
     # @raise [ArgumentError] If the method arguments are blank.
     # @return [RestClient::Response].
     def update_organisation_image(id:, filename:)
@@ -108,7 +108,7 @@ module Insightly
 
     # DELETE /v2.1/Organisations/{id}
     # Delete an organisation.
-    # @param [String, Fixnum] id An organisation's ID.
+    # @param [UrlHelper, Fixnum] id An organisation's ID.
     # @raise [ArgumentError] If the method arguments are blank.
     # @return [RestClient::Response].
     def delete_organisation(id:)
@@ -118,7 +118,7 @@ module Insightly
 
     # DELETE /v2.1/Organisations/{c_id}/Image
     # Delete an organisation image.
-    # @param [String, Fixnum] id An organisation's ID.
+    # @param [UrlHelper, Fixnum] id An organisation's ID.
     # @raise [ArgumentError] If the method arguments are blank.
     # @return [RestClient::Response].
     def delete_organisation_image(id:)
