@@ -60,8 +60,8 @@ module Insightly
     # @param [String] tag The tag that has been applied to contacts (optional).
     # @return [Array, nil].
     def get_contacts(ids: [], email: '', tag: '')
-      query = build_url("Contacts", {ids: ids.join(','), email: email, tag: tag})
-      Resources::Contact.parse(request(:get, query))
+      url = build_url("Contacts", {ids: ids.join(','), email: email, tag: tag})
+      Resources::Contact.parse(request(:get, url))
     end
 
     # POST /v2.1/Contacts
