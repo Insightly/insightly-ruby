@@ -45,7 +45,7 @@ module Insightly
 
     # POST /v2.1/Notes?c_id={c_id}&filename={filename}
     # Adds a File Attachment to a Note.
-    # @param [String|Fixnum] id A Note's ID.
+    # @param [String, Fixnum] id A Note's ID.
     # @param [String] filename The name of the file.
     # @raise [ArgumentError] If the method arguments are blank.
     # @return [RestClient::Response].

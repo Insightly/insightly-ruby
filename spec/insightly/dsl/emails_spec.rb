@@ -18,10 +18,20 @@ describe Insightly::DSL::Emails do
   end
 
   # GET /v2.1/Emails/{c_id}/Comments
-  # TODO
+  describe '#get_email_comments' do
+    xit 'returns an array of comments' do
+      emails = Insightly.client.get_email_comments(id: 1)
+      expect(emails).to be_a(Array)
+      expect(emails.first).to be_a(Comment)
+    end
+  end
 
   # POST /v2.1/Emails/{c_id}/Comments
-  # TODO
+  describe '#create_email_comments' do
+    xit 'creates and returns comment' do
+      expect(Insightly.client.create_email_comments(id: 1, comment: {title: ''})).to be_a(Comment)
+    end
+  end
 
   # DELETE /v2.1/Emails/{id}
   describe '#delete_email' do
