@@ -27,7 +27,7 @@ module Insightly
     # @return [Insightly::Resources::TeamMember, nil].
     def create_team_member(team_member:)
       raise ArgumentError, "Team member cannot be blank" if team_member.blank?
-      Resources::TeamMember.parse(request(:post, 'TeamMembers', team_member))
+      Resources::TeamMember.parse(request(:post, "TeamMembers", team_member))
     end
 
     # PUT /v2.1/TeamMembers
@@ -37,7 +37,7 @@ module Insightly
     # @return [Insightly::Resources::TeamMember, nil].
     def update_team_member(team_member:)
       raise ArgumentError, "Team member cannot be blank" if team_member.blank?
-      Resources::TeamMember.parse(request(:put, 'TeamMembers', team_member))
+      Resources::TeamMember.parse(request(:put, "TeamMembers", team_member))
     end
 
     # DELETE /v2.1/TeamMembers/{id}
