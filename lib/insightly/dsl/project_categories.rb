@@ -4,7 +4,7 @@ module Insightly
   module DSL::ProjectCategories
     # GET /v2.1/ProjectCategories/{id}
     # Get a project category.
-    # @param [UrlHelper, Fixnum] id A project category's ID.
+    # @param [String, Fixnum] id A project category's ID.
     # @raise [ArgumentError] If the method arguments are blank.
     # @return [Insightly::Resources::ProjectCategory, nil].
     def get_project_category(id:)
@@ -41,7 +41,7 @@ module Insightly
 
     # DELETE /v2.1/ProjectCategories/{id}
     # Delete a project category.
-    # @param [UrlHelper, Fixnum] id A project category's ID.
+    # @param [String, Fixnum] id A project category's ID.
     # @raise [ArgumentError] If the method arguments are blank.
     # @return [RestClient::Response].
     def delete_project_category(id:)

@@ -4,7 +4,7 @@ module Insightly
   module DSL::Pipelines
     # GET /v2.1/Pipelines/{id}
     # Get a pipeline.
-    # @param [UrlHelper, Fixnum] id A pipeline's ID.
+    # @param [String, Fixnum] id A pipeline's ID.
     # @raise [ArgumentError] If the method arguments are blank.
     # @return [Insightly::Resources::Pipeline, nil].
     def get_pipeline(id:)

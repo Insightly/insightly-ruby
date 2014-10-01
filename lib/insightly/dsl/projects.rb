@@ -4,7 +4,7 @@ module Insightly
   module DSL::Projects
     # GET /v2.1/Projects/{id}
     # Get a project.
-    # @param [UrlHelper, Fixnum] id A project's ID.
+    # @param [String, Fixnum] id A project's ID.
     # @raise [ArgumentError] If the method arguments are blank.
     # @return [Insightly::Resources::Project, nil].
     def get_project(id:)
@@ -14,7 +14,7 @@ module Insightly
 
     # GET /v2.1/Projects/{c_id}/Emails
     # Get a list of project emails.
-    # @param [UrlHelper, Fixnum] id A project's ID.
+    # @param [String, Fixnum] id A project's ID.
     # @raise [ArgumentError] If the method arguments are blank.
     # @return [Array, nil].
     def get_project_emails(id:)
@@ -24,7 +24,7 @@ module Insightly
 
     # GET /v2.1/Projects/{c_id}/Image
     # Get a project image.
-    # @param [UrlHelper, Fixnum] id A project's ID.
+    # @param [String, Fixnum] id A project's ID.
     # @raise [ArgumentError] If the method arguments are blank.
     # @return [Insightly::Resources::Project].
     # TODO - What does this return?
@@ -35,7 +35,7 @@ module Insightly
 
     # GET /v2.1/Projects/{c_id}/Notes
     # Get a projects notes.
-    # @param [UrlHelper, Fixnum] id A project's ID.
+    # @param [String, Fixnum] id A project's ID.
     # @raise [ArgumentError] If the method arguments are blank.
     # @return [Array, nil].
     def get_project_notes(id:)
@@ -45,7 +45,7 @@ module Insightly
 
     # GET /v2.1/Projects/{c_id}/Tasks
     # Get a project tasks.
-    # @param [UrlHelper, Fixnum] id A project's ID.
+    # @param [String, Fixnum] id A project's ID.
     # @raise [ArgumentError] If the method arguments are blank.
     # @return [Array, nil].
     def get_project_tasks(id:)
@@ -56,7 +56,7 @@ module Insightly
     # GET /v2.1/Projects?ids={ids}&tag={tag}
     # Get a list of projects.
     # @param [Array] ids The IDs of the projects to retrieve (optional).
-    # @param [UrlHelper] tag The tag that is applied to the projects (optional).
+    # @param [String] tag The tag that is applied to the projects (optional).
     # @return [Array, nil].
     def get_projects(ids: [], tag: '')
       url = UrlHelper.build_url(path: "Projects", params: {ids: ids.join(','), tag: tag})
@@ -75,8 +75,8 @@ module Insightly
 
     # POST /v2.1/Projects/{c_id}/Image/{filename}
     # Create a project image.
-    # @param [UrlHelper, Fixnum] id A project's ID.
-    # @param [UrlHelper] filename A Project image file name.
+    # @param [String, Fixnum] id A project's ID.
+    # @param [String] filename A Project image file name.
     # @raise [ArgumentError] If the method arguments are blank.
     # @return [RestClient::Response].
     def create_project_image(id:, filename:)
@@ -97,8 +97,8 @@ module Insightly
 
     # PUT /v2.1/Projects/{c_id}/Image/{filename}
     # Update a project's image.
-    # @param [UrlHelper, Fixnum] id A project's ID.
-    # @param [UrlHelper] filename A project image file name.
+    # @param [String, Fixnum] id A project's ID.
+    # @param [String] filename A project image file name.
     # @raise [ArgumentError] If the method arguments are blank.
     # @return [RestClient::Response].
     def update_project_image(id:, filename:)
@@ -109,7 +109,7 @@ module Insightly
 
     # DELETE /v2.1/Projects/{id}
     # Delete a project.
-    # @param [UrlHelper, Fixnum] id A project's ID.
+    # @param [String, Fixnum] id A project's ID.
     # @raise [ArgumentError] If the method arguments are blank.
     # @return [RestClient::Response].
     def delete_project(id:)
@@ -119,7 +119,7 @@ module Insightly
 
     # DELETE /v2.1/Projects/{c_id}/Image
     # Delete a project image.
-    # @param [UrlHelper, Fixnum] id A project's ID.
+    # @param [String, Fixnum] id A project's ID.
     # @raise [ArgumentError] If the method arguments are blank.
     # @return [RestClient::Response].
     def delete_project_image(id:)

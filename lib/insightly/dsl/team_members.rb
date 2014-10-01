@@ -4,7 +4,7 @@ module Insightly
   module DSL::TeamMembers
     # GET /v2.1/TeamMembers/{id}
     # Get a team member.
-    # @param [UrlHelper, Fixnum] id A team member's ID.
+    # @param [String, Fixnum] id A team member's ID.
     # @raise [ArgumentError] If the method arguments are blank.
     # @return [Insightly::Resources::TeamMember, nil].
     def get_team_member(id:)
@@ -14,7 +14,7 @@ module Insightly
 
     # GET /v2.1/TeamMembers?teamid={teamid}
     # Get a list of team members.
-    # @param [UrlHelper, Fixnum] team_id: The ID of the team we're getting members for (optional).
+    # @param [String, Fixnum] team_id: The ID of the team we're getting members for (optional).
     # @return [Array, nil]
     def get_team_members(team_id:)
       Resources::TeamMember.parse(request(:get, "TeamMembers/?teamid=#{team_id}"))
@@ -42,7 +42,7 @@ module Insightly
 
     # DELETE /v2.1/TeamMembers/{id}
     # Delete a team member.
-    # @param [UrlHelper, Fixnum] id A team member's ID.
+    # @param [String, Fixnum] id A team member's ID.
     # @raise [ArgumentError] If the method arguments are blank.
     # @return [RestClient::Response].
     def delete_team_member(id:)

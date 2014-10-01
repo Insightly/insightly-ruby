@@ -9,13 +9,13 @@ module Insightly
 
     REQUESTS = [:get, :post, :put, :delete]
 
-    # @param [UrlHelper] api_key
+    # @param [String] api_key
     def initialize(api_key = Insightly.api_key)
       @api_key = api_key
     end
 
     # @param [:get, :post, :put, :delete] method
-    # @param [UrlHelper] path
+    # @param [String] path
     # @param [Hash] query
     # @return [RequestClient::Response] server response
     def request(method, path, query = {})

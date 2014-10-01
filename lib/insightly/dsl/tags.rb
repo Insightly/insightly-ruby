@@ -4,7 +4,7 @@ module Insightly
   module DSL::Tags
     # GET /v2.1/Tags/{id}
     # Get a tag.
-    # @param [UrlHelper, Fixnum] id A Tag's ID.
+    # @param [String, Fixnum] id A Tag's ID.
     # @raise [ArgumentError] If the method arguments are blank.
     # @return [Insightly::Resources::Tag, nil].
     def get_tag(id)

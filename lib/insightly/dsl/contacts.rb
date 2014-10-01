@@ -4,7 +4,7 @@ module Insightly
   module DSL::Contacts
     # GET /v2.1/Contacts/{id}
     # Gets a contact by id.
-    # @param [UrlHelper, Fixnum] id The ID of the contact.
+    # @param [String, Fixnum] id The ID of the contact.
     # @raise [ArgumentError] If the method arguments are blank.
     # @return [Insightly::Resources::Contact, nil].
     def get_contact(id:)
@@ -24,7 +24,7 @@ module Insightly
 
     # GET /v2.1/Contacts/{c_id}/Image
     # Gets a contact's image.
-    # @param [UrlHelper, Fixnum] id The ID of the contact.
+    # @param [String, Fixnum] id The ID of the contact.
     # @raise [ArgumentError] If the method arguments are blank.
     # @return [Array, nil].
     # TODO - What does this return?
@@ -35,7 +35,7 @@ module Insightly
 
     # GET /v2.1/Contacts/{c_id}/Notes
     # Gets a contact's notes.
-    # @param [UrlHelper, Fixnum] id The ID of the contact.
+    # @param [String, Fixnum] id The ID of the contact.
     # @raise [ArgumentError] If the method arguments are blank.
     # @return [Array, nil].
     def get_contact_notes(id:)
@@ -45,7 +45,7 @@ module Insightly
 
     # GET /v2.1/Contacts/{c_id}/Tasks
     # Gets a contact's tasks.
-    # @param [UrlHelper, Fixnum] id The ID of the contact.
+    # @param [String, Fixnum] id The ID of the contact.
     # @raise [ArgumentError] If the method arguments are blank.
     # @return [Array, nil].
     def get_contact_tasks(id:)
@@ -56,8 +56,8 @@ module Insightly
     # GET /v2.1/Contacts?ids={ids}&email={email}&tag={tag}
     # Get a list of contacts.
     # @param [Array] ids The contact ids of the contacts to return (optional).
-    # @param [UrlHelper] email The email address of the contact to return (optional).
-    # @param [UrlHelper] tag The tag that has been applied to contacts (optional).
+    # @param [String] email The email address of the contact to return (optional).
+    # @param [String] tag The tag that has been applied to contacts (optional).
     # @return [Array, nil].
     def get_contacts(ids: [], email: '', tag: '')
       url = UrlHelper.build_url(path: "Contacts", params: {ids: ids.join(','), email: email, tag: tag})
@@ -76,8 +76,8 @@ module Insightly
 
     # POST /v2.1/Contacts/{c_id}/Image/{filename}
     # Adds a contact's image.
-    # @param [UrlHelper, Fixnum] id The ID of the contact.
-    # @param [UrlHelper] filename The name of image file to be attached to the contact.
+    # @param [String, Fixnum] id The ID of the contact.
+    # @param [String] filename The name of image file to be attached to the contact.
     # @raise [ArgumentError] If the method arguments are blank.
     # @return [RestClient::Response].
     def create_contact_image(id:, filename:)
@@ -98,8 +98,8 @@ module Insightly
 
     # PUT /v2.1/Contacts/{c_id}/Image/{filename}
     # Updates a contact's image.
-    # @param [UrlHelper, Fixnum] id The ID of the contact.
-    # @param [UrlHelper] filename The name of image file to be attached to the contact.
+    # @param [String, Fixnum] id The ID of the contact.
+    # @param [String] filename The name of image file to be attached to the contact.
     # @raise [ArgumentError] If the method arguments are blank.
     # @return [RestClient::Response].
     def update_contact_image(id:, filename:)
@@ -110,7 +110,7 @@ module Insightly
 
     # DELETE /v2.1/Contacts/{id}
     # Deletes a contact.
-    # @param [UrlHelper, Fixnum] id The ID of the contact to delete.
+    # @param [String, Fixnum] id The ID of the contact to delete.
     # @raise [ArgumentError] If the method arguments are blank.
     # @return [RestClient::Response].
     def delete_contact(id:)
@@ -120,7 +120,7 @@ module Insightly
 
     # DELETE /v2.1/Contacts/{c_id}/Image
     # Deletes a contact's image.
-    # @param [UrlHelper, Fixnum] id The ID of the contact with the image to delete.
+    # @param [String, Fixnum] id The ID of the contact with the image to delete.
     # @raise [ArgumentError] If the method arguments are blank.
     # @return [RestClient::Response].
     def delete_contact_image(id:)

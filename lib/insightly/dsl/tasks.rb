@@ -4,7 +4,7 @@ module Insightly
   module DSL::Tasks
     # GET /v2.1/Tasks/{id}
     # Get a task.
-    # @param [UrlHelper, Fixnum] id A Task's ID.
+    # @param [String, Fixnum] id A Task's ID.
     # @raise [ArgumentError] If the method arguments are blank.
     # @return [Insightly::Resources::Task, nil].
     def get_task(id:)
@@ -14,7 +14,7 @@ module Insightly
 
     # GET /v2.1/Tasks/{c_id}/Comments
     # Get a list of comments for a task.
-    # @param [UrlHelper, Fixnum] id A Task's ID.
+    # @param [String, Fixnum] id A Task's ID.
     # @raise [ArgumentError] If the method arguments are blank.
     # @return [Array, nil].
     def get_task_comments(id:)
@@ -43,7 +43,7 @@ module Insightly
 
     # POST /v2.1/Tasks/{c_id}/Comments
     # Create a comment for a task.
-    # @param [UrlHelper, Fixnum] id A task's ID.
+    # @param [String, Fixnum] id A task's ID.
     # @param [Hash] comment The comment to create.
     # @raise [ArgumentError] If the method arguments are blank.
     # @return [Insightly::Resources::Comment, nil].
@@ -65,7 +65,7 @@ module Insightly
 
     # DELETE /v2.1/Tasks/{id}
     # Delete a task.
-    # @param [UrlHelper, Fixnum] id A Task's ID.
+    # @param [String, Fixnum] id A Task's ID.
     # @raise [ArgumentError] If the method arguments are blank.
     # @return [RestClient::Response].
     def delete_task(id:)
