@@ -8,7 +8,12 @@ module Insightly
           end
 
           def self.deserialize(value)
-            value
+            case value
+            when Array
+              value.map { |v| v.deep_transform_keys{ |key| key.downcase } }
+            when Hash
+              value.deep_transform_keys{ |key| key.downcase }
+            end
           end
         end
 
@@ -46,19 +51,18 @@ module Insightly
               end
           end
 
-          # @param [Net::HTTPResponse] response
-          # @return [<Object>, Object]
+          # @param [Faraday::Response] response
+          # @return [Object]
           def deserialize(response)
             raise "Response #{response.class.name} to be a Faraday::Response" unless response.is_a?(Faraday::Response)
 
-            attributes = response.body.to_s
+            attributes = response.body
             begin
               attributes = JSON.parse(response.body)
             rescue JSON::ParserError
               puts "Could not parse: #{response.body}"
             end
 
-            # TODO: Deal with nested attributes (not being downcased).
             case attributes
             when Array
               attributes.map { |object| new(object) }
