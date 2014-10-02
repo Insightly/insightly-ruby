@@ -18,7 +18,7 @@ module Insightly
       # Setup HTTP request conntection to insightly.
       @connection ||= Faraday.new do |builder|
         builder.basic_auth @api_key, ''
-        builder.request  :url_encoded
+        builder.request :url_encoded
         builder.response :logger
         builder.adapter Faraday.default_adapter
       end

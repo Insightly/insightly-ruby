@@ -1,3 +1,4 @@
+require 'logger'
 module Insightly
   module Resources
     class Object
@@ -13,6 +14,8 @@ module Insightly
               value.map { |v| v.deep_transform_keys{ |key| key.downcase } }
             when Hash
               value.deep_transform_keys{ |key| key.downcase }
+            else
+              value
             end
           end
         end
@@ -51,8 +54,8 @@ module Insightly
               end
           end
 
-          # @param [Faraday::Response] response
-          # @return [Object]
+          # @param [Faraday::Response] response.
+          # @return [Object].
           def deserialize(response)
             raise "Response #{response.class.name} to be a Faraday::Response" unless response.is_a?(Faraday::Response)
 
@@ -60,7 +63,8 @@ module Insightly
             begin
               attributes = JSON.parse(response.body)
             rescue JSON::ParserError
-              puts "Could not parse: #{response.body}"
+              logger = Logger.new(STDOUT)
+              logger.error("Could not parse: #{response.body}")
             end
 
             case attributes
