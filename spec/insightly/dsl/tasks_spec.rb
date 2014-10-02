@@ -25,7 +25,7 @@ describe Insightly::DSL::Tasks do
       expect(comments.first).to be_a(Comment)
     end
   end
-  
+
   # POST /v2.1/Tasks
   describe '#create_task' do
     it 'creates and returns task' do
@@ -51,7 +51,7 @@ describe Insightly::DSL::Tasks do
   describe '#delete_task' do
     it 'returns a response with code 202' do
       response = Insightly.client.delete_task(id: 1)
-      expect(response.code).to eq(202)
+      expect(response.status).to eq(202)
     end
   end
 end

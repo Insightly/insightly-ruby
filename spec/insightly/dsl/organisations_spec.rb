@@ -64,7 +64,7 @@ describe Insightly::DSL::Organisations do
   describe '#create_organisation_image' do
     xit 'returns 201' do
       response = Insightly.client.create_organisation_image(id: 1, filename: '')
-      expect(response.code).to eq(201)
+      expect(response.status).to eq(201)
     end
   end
 
@@ -79,7 +79,7 @@ describe Insightly::DSL::Organisations do
   describe '#update_organisation_image' do
     xit 'returns 201' do
       response = Insightly.client.update_organisation_image(id: 1, filename: '')
-      expect(response.code).to eq(201)
+      expect(response.status).to eq(201)
     end
   end
 
@@ -87,7 +87,7 @@ describe Insightly::DSL::Organisations do
   describe '#delete_organisation' do
     it 'returns a response with code 202' do
       response = Insightly.client.delete_organisation(id: 1)
-      expect(response.code).to eq(202)
+      expect(response.status).to eq(202)
     end
   end
 
@@ -95,7 +95,7 @@ describe Insightly::DSL::Organisations do
   describe '#delete_organisation_image' do
     it 'returns a response with code 202' do
       response = Insightly.client.delete_organisation_image(id: 1)
-      expect(response.code).to eq(202)
+      expect(response.status).to eq(202)
     end
   end
 end

@@ -37,7 +37,7 @@ describe Insightly::DSL::Emails do
   describe '#delete_email' do
     it 'returns a response with code 202' do
       response = Insightly.client.delete_email(id: 1)
-      expect(response.code).to eq(202)
+      expect(response.status).to eq(202)
     end
   end
 end

@@ -85,7 +85,7 @@ describe Insightly::DSL::Projects do
   describe '#delete_project' do
     it 'returns a response with code 202' do
       response = Insightly.client.delete_project(id: 1)
-      expect(response.code).to eq(202)
+      expect(response.status).to eq(202)
     end
   end
 
@@ -93,7 +93,7 @@ describe Insightly::DSL::Projects do
   describe '#delete_project_image' do
     it 'returns a response with code 202' do
       response = Insightly.client.delete_project_image(id: 1)
-      expect(response.code).to eq(202)
+      expect(response.status).to eq(202)
     end
   end
 end
