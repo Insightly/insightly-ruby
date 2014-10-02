@@ -62,7 +62,7 @@ describe Insightly::DSL::Contacts do
   describe '#add_contact_image' do
     xit 'returns 201' do
       response = Insightly.client.add_contact_image(id: 1, filename: '')
-      expect(response.code).to eq(201)
+      expect(response.status).to eq(201)
     end
   end
 
@@ -77,7 +77,7 @@ describe Insightly::DSL::Contacts do
   describe '#update_contact_image' do
     xit 'returns 201' do
       response = Insightly.client.update_contact_image(id: 1, filename: '')
-      expect(response.code).to eq(201)
+      expect(response.status).to eq(201)
     end
   end
 
@@ -85,7 +85,7 @@ describe Insightly::DSL::Contacts do
   describe '#delete_contact' do
     it 'returns a response with code 202' do
       response = Insightly.client.delete_contact(id: 1)
-      expect(response.code).to eq(202)
+      expect(response.status).to eq(202)
     end
   end
 
@@ -93,7 +93,7 @@ describe Insightly::DSL::Contacts do
   describe '#delete_contact_image' do
     it 'returns 202' do
       response = Insightly.client.delete_contact_image(id: 1)
-      expect(response.code).to eq(202)
+      expect(response.status).to eq(202)
     end
   end
 end
