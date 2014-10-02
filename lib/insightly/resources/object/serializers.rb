@@ -49,18 +49,21 @@ module Insightly
           # @param [Net::HTTPResponse] response
           # @return [<Object>, Object]
           def deserialize(response)
-            return nil unless response.is_a?(String) || response.is_a?(Array) || response.is_a?(Net::HTTPOK)
-            if response.respond_to?(:body)
-              response = response.body
-              json = JSON.parse(response)
-            else
-              json = response
+            raise "Response #{response.class.name} to be a Faraday::Response" unless response.is_a?(Faraday::Response)
+
+            attributes = response.body.to_s
+            begin
+              attributes = JSON.parse(response.body)
+            rescue JSON::ParserError
+              puts "Could not parse: #{response.body}"
             end
-            case json
+
+            # TODO: Deal with nested attributes (not being downcased).
+            case attributes
             when Array
-              json.map { |object| new(object) }
+              attributes.map { |object| new(object) }
             when Hash
-              new(json)
+              new(attributes)
             end
           end
 

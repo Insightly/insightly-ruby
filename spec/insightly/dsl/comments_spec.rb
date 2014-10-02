@@ -14,7 +14,7 @@ describe Insightly::DSL::Comments do
       response = Insightly.client.create_comment_attachment(id: 1, filename: '1.jpg')
       # TODO: actually expect 201 response.
       # TODO: make stub file name deal with query params when generating filenames.
-      expect(response.code).to eq(200)
+      expect(response.status).to eq(200)
     end
   end
 
@@ -31,7 +31,7 @@ describe Insightly::DSL::Comments do
   describe '#delete_comment' do
     it 'returns a response with code 202' do
       response = Insightly.client.delete_comment(id: 1)
-      expect(response.code).to eq(202)
+      expect(response.status).to eq(202)
     end
   end
 end

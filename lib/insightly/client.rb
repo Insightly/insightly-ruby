@@ -1,4 +1,5 @@
-require 'rest_client'
+require 'faraday'
+require 'json'
 require 'openssl'
 require 'active_support/all'
 require 'utils/url_helper'
@@ -21,14 +22,17 @@ module Insightly
     def request(method, path, query = {})
       raise ArgumentError.new("Wrong method #{method.inspect}. :get, :post, :put, :delete are allowed") unless REQUESTS.include?(method)
 
-      RestClient::Request.new(
-        method: method,
-        url: URL + path.to_s,
-        payload: query,
-        user: @api_key,
-        password: '',
-        headers: {accept: :json, content_type: :json}
-      ).execute
+      payload = query.empty? ? JSON.generate(query) : ''
+      headers = {'Accept' => 'application/json', 'Content-Type' => 'application/json'}
+
+      connection = Faraday.new do |builder|
+        builder.basic_auth @api_key, ''
+        builder.request  :url_encoded
+        builder.response :logger
+        builder.adapter Faraday.default_adapter
+      end
+
+      connection.run_request(method, "#{URL}#{path}", payload, headers)
     end
   end
 end
