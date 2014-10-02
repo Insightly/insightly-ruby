@@ -73,7 +73,7 @@ describe Insightly::DSL::Opportunities do
   describe '#create_opportunity_image' do
     xit 'returns 201' do
       response = Insightly.client.create_opportunity_image(id: 1, filename: '')
-      expect(response.code).to eq(201)
+      expect(response.status).to eq(201)
     end
   end
 
@@ -88,7 +88,7 @@ describe Insightly::DSL::Opportunities do
   describe '#update_opportunity_image' do
     xit 'returns 201' do
       response = Insightly.client.update_opportunity_image(id: 1, filename: '')
-      expect(response.code).to eq(201)
+      expect(response.status).to eq(201)
     end
   end
 
@@ -96,7 +96,7 @@ describe Insightly::DSL::Opportunities do
   describe '#delete_opportunity' do
     it 'returns a response with code 202' do
       response = Insightly.client.delete_opportunity(id: 1)
-      expect(response.code).to eq(202)
+      expect(response.status).to eq(202)
     end
   end
 
@@ -104,7 +104,7 @@ describe Insightly::DSL::Opportunities do
   describe '#delete_opportunity_image' do
     it 'returns a response with code 202' do
       response = Insightly.client.delete_opportunity_image(id: 1)
-      expect(response.code).to eq(202)
+      expect(response.status).to eq(202)
     end
   end
 end

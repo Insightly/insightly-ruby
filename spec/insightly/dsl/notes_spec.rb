@@ -34,7 +34,7 @@ describe Insightly::DSL::Notes do
   describe '#create_note_file' do
     it 'adds attachment to the note' do
       response = Insightly.client.create_note_file(id: 1, filename: '1.jpg')
-      expect(response.code).to eq(200)
+      expect(response.status).to eq(200)
     end
   end
 
@@ -49,7 +49,7 @@ describe Insightly::DSL::Notes do
   describe '#delete_note' do
     it 'returns a response with code 202' do
       response = Insightly.client.delete_note(id: 1)
-      expect(response.code).to eq(202)
+      expect(response.status).to eq(202)
     end
   end
 end

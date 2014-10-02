@@ -5,6 +5,6 @@ describe Insightly::Client do
 
   it 'make request to api.insight.ly' do
     response = client.request(:get, 'Users')
-    expect(response.code).to eq(200)
+    expect(response.status).to eq(200)
   end
 end
