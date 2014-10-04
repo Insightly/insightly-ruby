@@ -24,8 +24,6 @@ module Insightly
 
     # GET /v2.1/Contacts/{c_id}/Image
     # Gets a contact's image.
-    # WARNING: This currently will return status code 400 not a default contact image
-    # if not contact image exists.
     # @param [String, Fixnum] id The ID of the contact.
     # @raise [ArgumentError] If the method arguments are blank.
     # @return [Faraday::Response].
