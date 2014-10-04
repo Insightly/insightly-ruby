@@ -59,7 +59,7 @@ module Insightly
     # @param [String] tag The tag that is applied to the projects (optional).
     # @return [Array, nil].
     def get_projects(ids: [], tag: '')
-      url = UrlHelper.build_url(path: "Projects", params: {ids: ids.join(','), tag: tag})
+      url = Utils::UrlHelper.build_url(path: "Projects", params: {ids: ids.join(','), tag: tag})
       Resources::Project.parse(request(:get, url))
     end
 
@@ -78,7 +78,7 @@ module Insightly
     # @param [String, Fixnum] id A project's ID.
     # @param [String] filename A Project image file name.
     # @raise [ArgumentError] If the method arguments are blank.
-    # @return [RestClient::Response].
+    # @return [Faraday::Response].
     def create_project_image(id:, filename:)
       raise ArgumentError, "ID cannot be blank" if id.blank?
       raise ArgumentError, "Filename cannot be blank" if filename.blank?
@@ -100,7 +100,7 @@ module Insightly
     # @param [String, Fixnum] id A project's ID.
     # @param [String] filename A project image file name.
     # @raise [ArgumentError] If the method arguments are blank.
-    # @return [RestClient::Response].
+    # @return [Faraday::Response].
     def update_project_image(id:, filename:)
       raise ArgumentError, "ID cannot be blank" if id.blank?
       raise ArgumentError, "Filename cannot be blank" if filename.blank?
@@ -111,7 +111,7 @@ module Insightly
     # Delete a project.
     # @param [String, Fixnum] id A project's ID.
     # @raise [ArgumentError] If the method arguments are blank.
-    # @return [RestClient::Response].
+    # @return [Faraday::Response].
     def delete_project(id:)
       raise ArgumentError, "ID cannot be blank" if id.blank?
       request(:delete, "Projects/#{id}")
@@ -121,7 +121,7 @@ module Insightly
     # Delete a project image.
     # @param [String, Fixnum] id A project's ID.
     # @raise [ArgumentError] If the method arguments are blank.
-    # @return [RestClient::Response].
+    # @return [Faraday::Response].
     def delete_project_image(id:)
       raise ArgumentError, "ID cannot be blank" if id.blank?
       request(:delete, "Projects/#{id}/Image")

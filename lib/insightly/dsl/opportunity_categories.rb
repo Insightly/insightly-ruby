@@ -43,7 +43,7 @@ module Insightly
     # Delete an opportunity category.
     # @param [String, Fixnum] id A OpportunityCategory's ID.
     # @raise [ArgumentError] If the method arguments are blank.
-    # @return [RestClient::Response].
+    # @return [Faraday::Response].
     def delete_opportunity_category(id:)
       raise ArgumentError, "ID cannot be blank" if id.blank?
       request(:delete, "OpportunityCategories/#{id}")

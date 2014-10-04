@@ -43,7 +43,7 @@ module Insightly
     # Delete an event.
     # @param [String, Fixnum] id An event's ID.
     # @raise [ArgumentError] If the method arguments are blank.
-    # @return [RestClient::Response].
+    # @return [Faraday::Response].
     def delete_event(id:)
       raise ArgumentError, "ID cannot be blank" if id.blank?
       request(:delete, "Events/#{id}")

@@ -71,7 +71,7 @@ describe Insightly::DSL::Opportunities do
 
   # POST /v2.1/Opportunities/{c_id}/Image/{filename}
   describe '#create_opportunity_image' do
-    xit 'returns 201' do
+    xit 'returns a response with code 201' do
       response = Insightly.client.create_opportunity_image(id: 1, filename: '')
       expect(response.status).to eq(201)
     end
@@ -86,7 +86,7 @@ describe Insightly::DSL::Opportunities do
 
   # PUT /v2.1/Opportunities/{c_id}/Image/{filename}
   describe '#update_opportunity_image' do
-    xit 'returns 201' do
+    xit 'returns a response with code 201' do
       response = Insightly.client.update_opportunity_image(id: 1, filename: '')
       expect(response.status).to eq(201)
     end

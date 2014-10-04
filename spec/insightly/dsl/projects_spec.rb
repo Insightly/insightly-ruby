@@ -62,7 +62,7 @@ describe Insightly::DSL::Projects do
 
   # POST /v2.1/Projects/{c_id}/Image/{filename}
   describe '#create_project_image' do
-    xit 'returns 201' do
+    xit 'returns a response with code 201' do
       response = Insightly.client.create_project_image(id: 1, filename: '')
     end
   end
@@ -76,7 +76,7 @@ describe Insightly::DSL::Projects do
 
   # PUT /v2.1/Projects/{c_id}/Image/{filename}
   describe '#update_project_image' do
-    xit 'returns 201' do
+    xit 'returns a response with code 201' do
       response = Insightly.client.update_project_image(id: 1, filename: '')
     end
   end

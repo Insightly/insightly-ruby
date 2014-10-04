@@ -28,7 +28,7 @@ module Insightly
     # @param [String] tag Emails tagged with this tag (optional).
     # @return [Array, nil].
     def get_emails(ids: [], tag: '')
-      url = UrlHelper.build_url(path: "Emails", params: {ids: ids.join(','), tag: tag})
+      url = Utils::UrlHelper.build_url(path: "Emails", params: {ids: ids.join(','), tag: tag})
       Resources::Email.parse(request(:get, url))
     end
 
@@ -48,7 +48,7 @@ module Insightly
     # Deletes an email.
     # @param [String, Fixnum] id The ID of the email to delete.
     # @raise [ArgumentError] If the method arguments are blank.
-    # @return [RestClient::Response].
+    # @return [Faraday::Response].
     def delete_email(id:)
       raise ArgumentError, "ID cannot be blank" if id.blank?
       request(:delete, "Emails/#{id}")

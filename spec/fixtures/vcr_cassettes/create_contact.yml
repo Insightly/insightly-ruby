@@ -1,0 +1,47 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://<INSIGHTLY_API_KEY>:@api.insight.ly/v2.1/Contacts
+    body:
+      encoding: UTF-8
+      string: '{"first_name":"Shark","last_name":"Nado"}'
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Cache-Control:
+      - no-cache
+      Pragma:
+      - no-cache
+      Content-Type:
+      - application/json; charset=utf-8
+      Expires:
+      - "-1"
+      Location:
+      - https://api.insight.ly/v2.1/Contacts/80192679
+      Server:
+      - Microsoft-IIS/7.5
+      Date:
+      - Sat, 04 Oct 2014 18:24:31 GMT
+      Content-Length:
+      - '470'
+      Set-Cookie:
+      - snaptid=sac1prdc01ut04; path=/
+    body:
+      encoding: UTF-8
+      string: '{"CONTACT_ID":80192679,"SALUTATION":null,"FIRST_NAME":"Shark","LAST_NAME":"Nado","BACKGROUND":null,"IMAGE_URL":"http://s3.amazonaws.com/insightly.userfiles/339351/","DEFAULT_LINKED_ORGANISATION":null,"DATE_CREATED_UTC":"2014-10-04
+        18:24:32","DATE_UPDATED_UTC":"2014-10-04 18:24:32","VISIBLE_TO":"EVERYONE","VISIBLE_TEAM_ID":null,"VISIBLE_USER_IDS":null,"CUSTOMFIELDS":[],"ADDRESSES":[],"CONTACTINFOS":[],"DATES":[],"TAGS":[],"LINKS":[],"CONTACTLINKS":[],"EMAILLINKS":[]}'
+    http_version: 
+  recorded_at: Sat, 04 Oct 2014 18:24:25 GMT
+recorded_with: VCR 2.9.0
