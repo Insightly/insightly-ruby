@@ -24,14 +24,15 @@ module Insightly
 
     # GET /v2.1/Contacts/{c_id}/Image
     # Gets a contact's image.
+    # WARNING: This currently will return status code 400 not a default contact image
+    # if not contact image exists.
     # @param [String, Fixnum] id The ID of the contact.
     # @raise [ArgumentError] If the method arguments are blank.
-    # @return [Array, nil].
-    # TODO - What does this return?
-    # def get_contact_image(id:)
-    #   raise ArgumentError, "ID cannot be blank" if id.blank?
-    #   request(:get, "Contacts/#{id}/Image")
-    # end
+    # @return [Faraday::Response].
+    def get_contact_image(id:)
+      raise ArgumentError, "ID cannot be blank" if id.blank?
+      request(:get, "Contacts/#{id}/Image")
+    end
 
     # GET /v2.1/Contacts/{c_id}/Notes
     # Gets a contact's notes.
@@ -60,7 +61,7 @@ module Insightly
     # @param [String] tag The tag that has been applied to contacts (optional).
     # @return [Array, nil].
     def get_contacts(ids: [], email: '', tag: '')
-      url = UrlHelper.build_url(path: "Contacts", params: {ids: ids.join(','), email: email, tag: tag})
+      url = Utils::UrlHelper.build_url(path: "Contacts", params: {ids: ids.join(','), email: email, tag: tag})
       Resources::Contact.parse(request(:get, url))
     end
 

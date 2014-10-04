@@ -10,6 +10,7 @@ module Insightly
         params = params.to_query
         query = path
         query << ("?" + params) unless params.blank?
+        query
       end
     end
   end

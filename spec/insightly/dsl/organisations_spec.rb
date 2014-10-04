@@ -62,7 +62,7 @@ describe Insightly::DSL::Organisations do
 
   # POST /v2.1/Organisations/{c_id}/Image/{filename}
   describe '#create_organisation_image' do
-    xit 'returns 201' do
+    xit 'returns a response with code 201' do
       response = Insightly.client.create_organisation_image(id: 1, filename: '')
       expect(response.status).to eq(201)
     end
@@ -77,7 +77,7 @@ describe Insightly::DSL::Organisations do
 
   # PUT /v2.1/Organisations/{c_id}/Image/{filename}
   describe '#update_organisation_image' do
-    xit 'returns 201' do
+    xit 'returns a response with code 201' do
       response = Insightly.client.update_organisation_image(id: 1, filename: '')
       expect(response.status).to eq(201)
     end
