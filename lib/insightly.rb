@@ -8,11 +8,6 @@ module Insightly
   class << self
     # @return [String]
     attr_accessor :api_key
-    # @return [Logger]
-    attr_accessor :logger
-    def logger
-      @logger || Logger.new(STDOUT)
-    end
   end
 
   module_function
