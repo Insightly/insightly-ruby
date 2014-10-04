@@ -37,11 +37,11 @@ module Insightly
     # @param [String, Fixnum] id A task's ID.
     # @param [Hash] comment The comment to create.
     # @raise [ArgumentError] If the method arguments are blank.
-    # @return [Insightly::Resources::Comment, nil].
-    def create_email_comments(id:, comment:)
+    # @return [Faraday::Response].
+    def create_email_comment(id:, comment:)
       raise ArgumentError, "ID cannot be blank" if id.blank?
       raise ArgumentError, "Comment cannot be blank" if comment.blank?
-      Resources::Comment.parse(request(:post, "Emails/#{id}/Comments", comment))
+      request(:post, "Emails/#{id}/Comments", comment)
     end
 
     # DELETE /v2.1/Emails/{id}
