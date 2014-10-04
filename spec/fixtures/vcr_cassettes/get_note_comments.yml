@@ -1,0 +1,48 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://<INSIGHTLY_API_KEY>:@api.insight.ly/v2.1/Notes/15377334/Comments
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - no-cache
+      Pragma:
+      - no-cache
+      Content-Type:
+      - application/json; charset=utf-8
+      Expires:
+      - "-1"
+      Vary:
+      - Accept-Encoding
+      Server:
+      - Microsoft-IIS/7.5
+      Date:
+      - Sat, 04 Oct 2014 23:20:19 GMT
+      Content-Length:
+      - '390'
+      Set-Cookie:
+      - snaptid=sac1prdc01ut05; path=/
+    body:
+      encoding: UTF-8
+      string: '[{"COMMENT_ID":3469737,"BODY":"\r\n<p>Moa says hi.</p>\r\n","OWNER_USER_ID":607181,"DATE_CREATED_UTC":"2014-10-04
+        23:15:57","DATE_UPDATED_UTC":"2014-10-04 23:15:57","FILE_ATTACHMENTS":[{"FILE_ID":33105809,"FILE_NAME":"moa.png","CONTENT_TYPE":"image/png","FILE_SIZE":180571,"FILE_CATEGORY_ID":null,"OWNER_USER_ID":607181,"DATE_CREATED_UTC":"2014-10-04
+        23:15:58","DATE_UPDATED_UTC":"2014-10-04 23:15:58","URL":"/fileattachments/33105809"}]}]'
+    http_version: 
+  recorded_at: Sat, 04 Oct 2014 23:20:11 GMT
+recorded_with: VCR 2.9.0
