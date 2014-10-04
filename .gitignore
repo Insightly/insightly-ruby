@@ -13,3 +13,4 @@
 *.o
 *.a
 mkmf.log
+/config/gem_secret.yml
