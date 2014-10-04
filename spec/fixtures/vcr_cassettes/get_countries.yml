@@ -1,0 +1,85 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://<INSIGHTLY_API_KEY>:@api.insight.ly/v2.1/Countries
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - no-cache
+      Pragma:
+      - no-cache
+      Content-Type:
+      - application/json; charset=utf-8
+      Expires:
+      - "-1"
+      Vary:
+      - Accept-Encoding
+      Server:
+      - Microsoft-IIS/7.5
+      Date:
+      - Sat, 04 Oct 2014 22:08:14 GMT
+      Content-Length:
+      - '1911'
+      Set-Cookie:
+      - snaptid=sac1prdc01ut05; path=/
+    body:
+      encoding: UTF-8
+      string: '[{"COUNTRY_NAME":"Aaland Islands"},{"COUNTRY_NAME":"Afghanistan"},{"COUNTRY_NAME":"Albania"},{"COUNTRY_NAME":"Algeria"},{"COUNTRY_NAME":"American
+        Samoa"},{"COUNTRY_NAME":"Andorra"},{"COUNTRY_NAME":"Angola"},{"COUNTRY_NAME":"Anguilla"},{"COUNTRY_NAME":"Antarctica"},{"COUNTRY_NAME":"Antigua
+        And Barbuda"},{"COUNTRY_NAME":"Argentina"},{"COUNTRY_NAME":"Armenia"},{"COUNTRY_NAME":"Aruba"},{"COUNTRY_NAME":"Australia"},{"COUNTRY_NAME":"Austria"},{"COUNTRY_NAME":"Azerbaijan"},{"COUNTRY_NAME":"Bahamas"},{"COUNTRY_NAME":"Bahrain"},{"COUNTRY_NAME":"Bangladesh"},{"COUNTRY_NAME":"Barbados"},{"COUNTRY_NAME":"Belarus"},{"COUNTRY_NAME":"Belgium"},{"COUNTRY_NAME":"Belize"},{"COUNTRY_NAME":"Benin"},{"COUNTRY_NAME":"Bermuda"},{"COUNTRY_NAME":"Bhutan"},{"COUNTRY_NAME":"Bolivia"},{"COUNTRY_NAME":"Bosnia
+        And Herzegowina"},{"COUNTRY_NAME":"Botswana"},{"COUNTRY_NAME":"Bouvet Island"},{"COUNTRY_NAME":"Brazil"},{"COUNTRY_NAME":"British
+        Indian Ocean Territory"},{"COUNTRY_NAME":"British Virgin Islands"},{"COUNTRY_NAME":"Brunei
+        Darussalam"},{"COUNTRY_NAME":"Bulgaria"},{"COUNTRY_NAME":"Burkina Faso"},{"COUNTRY_NAME":"Burundi"},{"COUNTRY_NAME":"Cambodia"},{"COUNTRY_NAME":"Cameroon"},{"COUNTRY_NAME":"Canada"},{"COUNTRY_NAME":"Cape
+        Verde"},{"COUNTRY_NAME":"Cayman Islands"},{"COUNTRY_NAME":"Central African
+        Republic"},{"COUNTRY_NAME":"Chad"},{"COUNTRY_NAME":"Chile"},{"COUNTRY_NAME":"China"},{"COUNTRY_NAME":"Christmas
+        Island"},{"COUNTRY_NAME":"Cocos (Keeling) Islands"},{"COUNTRY_NAME":"Colombia"},{"COUNTRY_NAME":"Comoros"},{"COUNTRY_NAME":"Congo,
+        Democratic Republic Of"},{"COUNTRY_NAME":"Congo, Republic Of"},{"COUNTRY_NAME":"Cook
+        Islands"},{"COUNTRY_NAME":"Costa Rica"},{"COUNTRY_NAME":"Cote D''ivoire"},{"COUNTRY_NAME":"Croatia"},{"COUNTRY_NAME":"Cuba"},{"COUNTRY_NAME":"Cyprus"},{"COUNTRY_NAME":"Czech
+        Republic"},{"COUNTRY_NAME":"Denmark"},{"COUNTRY_NAME":"Djibouti"},{"COUNTRY_NAME":"Dominica"},{"COUNTRY_NAME":"Dominican
+        Republic"},{"COUNTRY_NAME":"Ecuador"},{"COUNTRY_NAME":"Egypt"},{"COUNTRY_NAME":"El
+        Salvador"},{"COUNTRY_NAME":"Equatorial Guinea"},{"COUNTRY_NAME":"Eritrea"},{"COUNTRY_NAME":"Estonia"},{"COUNTRY_NAME":"Ethiopia"},{"COUNTRY_NAME":"Falkland
+        Islands"},{"COUNTRY_NAME":"Faroe Islands"},{"COUNTRY_NAME":"Fiji"},{"COUNTRY_NAME":"Finland"},{"COUNTRY_NAME":"France"},{"COUNTRY_NAME":"French
+        Guiana"},{"COUNTRY_NAME":"French Polynesia"},{"COUNTRY_NAME":"French Southern
+        Territories"},{"COUNTRY_NAME":"Gabon"},{"COUNTRY_NAME":"Gambia"},{"COUNTRY_NAME":"Georgia"},{"COUNTRY_NAME":"Germany"},{"COUNTRY_NAME":"Ghana"},{"COUNTRY_NAME":"Gibraltar"},{"COUNTRY_NAME":"Greece"},{"COUNTRY_NAME":"Greenland"},{"COUNTRY_NAME":"Grenada"},{"COUNTRY_NAME":"Guadeloupe"},{"COUNTRY_NAME":"Guam"},{"COUNTRY_NAME":"Guatemala"},{"COUNTRY_NAME":"Guinea"},{"COUNTRY_NAME":"Guinea-Bissau"},{"COUNTRY_NAME":"Guyana"},{"COUNTRY_NAME":"Haiti"},{"COUNTRY_NAME":"Heard
+        And Mc Donald Islands"},{"COUNTRY_NAME":"Honduras"},{"COUNTRY_NAME":"Hong
+        Kong"},{"COUNTRY_NAME":"Hungary"},{"COUNTRY_NAME":"Iceland"},{"COUNTRY_NAME":"India"},{"COUNTRY_NAME":"Indonesia"},{"COUNTRY_NAME":"Iran"},{"COUNTRY_NAME":"Iraq"},{"COUNTRY_NAME":"Ireland"},{"COUNTRY_NAME":"Israel"},{"COUNTRY_NAME":"Italy"},{"COUNTRY_NAME":"Jamaica"},{"COUNTRY_NAME":"Japan"},{"COUNTRY_NAME":"Jordan"},{"COUNTRY_NAME":"Kazakhstan"},{"COUNTRY_NAME":"Kenya"},{"COUNTRY_NAME":"Kiribati"},{"COUNTRY_NAME":"Kuwait"},{"COUNTRY_NAME":"Kyrgyzstan"},{"COUNTRY_NAME":"Lao"},{"COUNTRY_NAME":"Latvia"},{"COUNTRY_NAME":"Lebanon"},{"COUNTRY_NAME":"Lesotho"},{"COUNTRY_NAME":"Liberia"},{"COUNTRY_NAME":"Libya"},{"COUNTRY_NAME":"Liechtenstein"},{"COUNTRY_NAME":"Lithuania"},{"COUNTRY_NAME":"Luxembourg"},{"COUNTRY_NAME":"Macau"},{"COUNTRY_NAME":"Macedonia"},{"COUNTRY_NAME":"Madagascar"},{"COUNTRY_NAME":"Malawi"},{"COUNTRY_NAME":"Malaysia"},{"COUNTRY_NAME":"Maldives"},{"COUNTRY_NAME":"Mali"},{"COUNTRY_NAME":"Malta"},{"COUNTRY_NAME":"Marshall
+        Islands"},{"COUNTRY_NAME":"Martinique"},{"COUNTRY_NAME":"Mauritania"},{"COUNTRY_NAME":"Mauritius"},{"COUNTRY_NAME":"Mayotte"},{"COUNTRY_NAME":"Mexico"},{"COUNTRY_NAME":"Micronesia"},{"COUNTRY_NAME":"Moldova"},{"COUNTRY_NAME":"Monaco"},{"COUNTRY_NAME":"Mongolia"},{"COUNTRY_NAME":"Montenegro"},{"COUNTRY_NAME":"Montserrat"},{"COUNTRY_NAME":"Morocco"},{"COUNTRY_NAME":"Mozambique"},{"COUNTRY_NAME":"Myanmar"},{"COUNTRY_NAME":"Namibia"},{"COUNTRY_NAME":"Nauru"},{"COUNTRY_NAME":"Nepal"},{"COUNTRY_NAME":"Netherlands"},{"COUNTRY_NAME":"Netherlands
+        Antilles"},{"COUNTRY_NAME":"New Caledonia"},{"COUNTRY_NAME":"New Zealand"},{"COUNTRY_NAME":"Nicaragua"},{"COUNTRY_NAME":"Niger"},{"COUNTRY_NAME":"Nigeria"},{"COUNTRY_NAME":"Niue"},{"COUNTRY_NAME":"Norfolk
+        Island"},{"COUNTRY_NAME":"North Korea"},{"COUNTRY_NAME":"Northern Mariana
+        Islands"},{"COUNTRY_NAME":"Norway"},{"COUNTRY_NAME":"Oman"},{"COUNTRY_NAME":"Pakistan"},{"COUNTRY_NAME":"Palau"},{"COUNTRY_NAME":"Palestinian
+        Territory"},{"COUNTRY_NAME":"Panama"},{"COUNTRY_NAME":"Papua New Guinea"},{"COUNTRY_NAME":"Paraguay"},{"COUNTRY_NAME":"Peru"},{"COUNTRY_NAME":"Philippines"},{"COUNTRY_NAME":"Pitcairn"},{"COUNTRY_NAME":"Poland"},{"COUNTRY_NAME":"Portugal"},{"COUNTRY_NAME":"Puerto
+        Rico"},{"COUNTRY_NAME":"Qatar"},{"COUNTRY_NAME":"Reunion"},{"COUNTRY_NAME":"Romania"},{"COUNTRY_NAME":"Russia"},{"COUNTRY_NAME":"Rwanda"},{"COUNTRY_NAME":"Saint
+        Helena"},{"COUNTRY_NAME":"Saint Kitts And Nevis"},{"COUNTRY_NAME":"Saint Lucia"},{"COUNTRY_NAME":"Saint
+        Pierre And Miquelon"},{"COUNTRY_NAME":"Saint Vincent And The Grenadines"},{"COUNTRY_NAME":"Samoa"},{"COUNTRY_NAME":"San
+        Marino"},{"COUNTRY_NAME":"Sao Tome And Principe"},{"COUNTRY_NAME":"Saudi Arabia"},{"COUNTRY_NAME":"Senegal"},{"COUNTRY_NAME":"Serbia"},{"COUNTRY_NAME":"Seychelles"},{"COUNTRY_NAME":"Sierra
+        Leone"},{"COUNTRY_NAME":"Singapore"},{"COUNTRY_NAME":"Slovakia"},{"COUNTRY_NAME":"Slovenia"},{"COUNTRY_NAME":"Solomon
+        Islands"},{"COUNTRY_NAME":"Somalia"},{"COUNTRY_NAME":"South Africa"},{"COUNTRY_NAME":"South
+        Georgia"},{"COUNTRY_NAME":"South Korea"},{"COUNTRY_NAME":"Spain"},{"COUNTRY_NAME":"Sri
+        Lanka"},{"COUNTRY_NAME":"Sudan"},{"COUNTRY_NAME":"Suriname"},{"COUNTRY_NAME":"Svalbard
+        And Jan Mayen Islands"},{"COUNTRY_NAME":"Swaziland"},{"COUNTRY_NAME":"Sweden"},{"COUNTRY_NAME":"Switzerland"},{"COUNTRY_NAME":"Syria"},{"COUNTRY_NAME":"Taiwan"},{"COUNTRY_NAME":"Tajikistan"},{"COUNTRY_NAME":"Tanzania"},{"COUNTRY_NAME":"Thailand"},{"COUNTRY_NAME":"Timor-Leste"},{"COUNTRY_NAME":"Togo"},{"COUNTRY_NAME":"Tokelau"},{"COUNTRY_NAME":"Tonga"},{"COUNTRY_NAME":"Trinidad
+        And Tobago"},{"COUNTRY_NAME":"Tunisia"},{"COUNTRY_NAME":"Turkey"},{"COUNTRY_NAME":"Turkmenistan"},{"COUNTRY_NAME":"Turks
+        And Caicos Islands"},{"COUNTRY_NAME":"Tuvalu"},{"COUNTRY_NAME":"Uganda"},{"COUNTRY_NAME":"Ukraine"},{"COUNTRY_NAME":"United
+        Arab Emirates"},{"COUNTRY_NAME":"United Kingdom"},{"COUNTRY_NAME":"United
+        States"},{"COUNTRY_NAME":"United States Minor Outlying Islands"},{"COUNTRY_NAME":"United
+        States Virgin Islands"},{"COUNTRY_NAME":"Uruguay"},{"COUNTRY_NAME":"Uzbekistan"},{"COUNTRY_NAME":"Vanuatu"},{"COUNTRY_NAME":"Vatican
+        City"},{"COUNTRY_NAME":"Venezuela"},{"COUNTRY_NAME":"Vietnam"},{"COUNTRY_NAME":"Wallis
+        And Futuna Islands"},{"COUNTRY_NAME":"Western Sahara"},{"COUNTRY_NAME":"Yemen"},{"COUNTRY_NAME":"Zambia"},{"COUNTRY_NAME":"Zimbabwe"}]'
+    http_version: 
+  recorded_at: Sat, 04 Oct 2014 22:08:06 GMT
+recorded_with: VCR 2.9.0

@@ -2,7 +2,6 @@ require 'spec_helper'
 
 describe Insightly::DSL::Contacts do
   let(:contact_id) { 70653019 }
-  # TODO - Record error state cassettes. Not just success cassettes.
 
   # GET /v2.1/Contacts/{id}
   describe '#get_contact' do
