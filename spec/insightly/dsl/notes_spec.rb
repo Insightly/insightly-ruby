@@ -64,7 +64,7 @@ describe Insightly::DSL::Notes do
     end
   end
 
-  # # PUT /v2.1/Notes
+  # PUT /v2.1/Notes
   describe '#update_note' do
     it 'updates and returns a note' do
       VCR.use_cassette('update_note') do
