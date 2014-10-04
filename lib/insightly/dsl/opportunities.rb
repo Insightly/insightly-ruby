@@ -85,7 +85,7 @@ module Insightly
     # @param [String, Fixnum] id An opportunity's ID.
     # @param [String] filename A name of a file.
     # @raise [ArgumentError] If the method arguments are blank.
-    # @return [RestClient::Response]
+    # @return [Faraday::Response]
     def create_opportunity_image(id:, filename:)
       raise ArgumentError, "ID cannot be blank" if id.blank?
       raise ArgumentError, "Filename cannot be blank" if filename.blank?
@@ -106,7 +106,7 @@ module Insightly
     # @param [String, Fixnum] id An opportunity's ID.
     # @param [String] filename A name of a file.
     # @raise [ArgumentError] If the method arguments are blank.
-    # @return [RestClient::Response].
+    # @return [Faraday::Response].
     def update_opportunity_image(id:, filename:)
       raise ArgumentError, "ID cannot be blank" if id.blank?
       raise ArgumentError, "Filename cannot be blank" if filename.blank?
@@ -116,7 +116,7 @@ module Insightly
     # DELETE /v2.1/Opportunities/{id}
     # @param [String, Fixnum] id An opportunity's ID.
     # @raise [ArgumentError] If the method arguments are blank.
-    # @return [RestClient::Response].
+    # @return [Faraday::Response].
     def delete_opportunity(id:)
       raise ArgumentError, "ID cannot be blank" if id.blank?
       request(:delete, "Opportunities/#{id}")
@@ -125,7 +125,7 @@ module Insightly
     # DELETE /v2.1/Opportunities/{c_id}/Image
     # @param [String, Fixnum] id An opportunity's ID.
     # @raise [ArgumentError] If the method arguments are blank.
-    # @return [RestClient::Response].
+    # @return [Faraday::Response].
     def delete_opportunity_image(id:)
       raise ArgumentError, "ID cannot be blank" if id.blank?
       request(:delete, "Opportunities/#{id}/Image")

@@ -80,7 +80,7 @@ module Insightly
     # @param [String, Fixnum] id The ID of the contact.
     # @param [String] filename The name of image file to be attached to the contact.
     # @raise [ArgumentError] If the method arguments are blank.
-    # @return [RestClient::Response].
+    # @return [Faraday::Response].
     def create_contact_image(id:, filename:)
       raise ArgumentError, "ID cannot be blank" if id.blank?
       raise ArgumentError, "Filename cannot be blank" if filename.blank?
@@ -102,7 +102,7 @@ module Insightly
     # @param [String, Fixnum] id The ID of the contact.
     # @param [String] filename The name of image file to be attached to the contact.
     # @raise [ArgumentError] If the method arguments are blank.
-    # @return [RestClient::Response].
+    # @return [Faraday::Response].
     def update_contact_image(id:, filename:)
       raise ArgumentError, "ID cannot be blank" if id.blank?
       raise ArgumentError, "Filename cannot be blank" if filename.blank?
@@ -113,7 +113,7 @@ module Insightly
     # Deletes a contact.
     # @param [String, Fixnum] id The ID of the contact to delete.
     # @raise [ArgumentError] If the method arguments are blank.
-    # @return [RestClient::Response].
+    # @return [Faraday::Response].
     def delete_contact(id:)
       raise ArgumentError, "ID cannot be blank" if id.blank?
       request(:delete, "Contacts/#{id}")
@@ -123,7 +123,7 @@ module Insightly
     # Deletes a contact's image.
     # @param [String, Fixnum] id The ID of the contact with the image to delete.
     # @raise [ArgumentError] If the method arguments are blank.
-    # @return [RestClient::Response].
+    # @return [Faraday::Response].
     def delete_contact_image(id:)
       raise ArgumentError, "ID cannot be blank" if id.blank?
       request(:delete, "Contacts/#{id}/Image")

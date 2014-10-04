@@ -48,7 +48,7 @@ module Insightly
     # @param [String, Fixnum] id A Note's ID.
     # @param [String] filename The name of the file.
     # @raise [ArgumentError] If the method arguments are blank.
-    # @return [RestClient::Response].
+    # @return [Faraday::Response].
     def create_note_file(id:, filename:)
       raise ArgumentError, "ID cannot be blank" if id.blank?
       raise ArgumentError, "Filename cannot be blank" if filename.blank?
@@ -68,7 +68,7 @@ module Insightly
     # DELETE /v2.1/Notes/{id}
     # @param [String, Fixnum] id A note's ID.
     # @raise [ArgumentError] If the method arguments are blank.
-    # @return [RestClient::Response].
+    # @return [Faraday::Response].
     def delete_note(id:)
       raise ArgumentError, "ID cannot be blank" if id.blank?
       request(:delete, "Notes/#{id}")

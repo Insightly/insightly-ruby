@@ -67,7 +67,7 @@ module Insightly
     # Delete a task.
     # @param [String, Fixnum] id A Task's ID.
     # @raise [ArgumentError] If the method arguments are blank.
-    # @return [RestClient::Response].
+    # @return [Faraday::Response].
     def delete_task(id:)
       raise ArgumentError, "ID cannot be blank" if id.blank?
       request(:delete, "Tasks/#{id}")

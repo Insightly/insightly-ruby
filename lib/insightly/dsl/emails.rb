@@ -48,7 +48,7 @@ module Insightly
     # Deletes an email.
     # @param [String, Fixnum] id The ID of the email to delete.
     # @raise [ArgumentError] If the method arguments are blank.
-    # @return [RestClient::Response].
+    # @return [Faraday::Response].
     def delete_email(id:)
       raise ArgumentError, "ID cannot be blank" if id.blank?
       request(:delete, "Emails/#{id}")

@@ -43,7 +43,7 @@ module Insightly
     # Delete a project category.
     # @param [String, Fixnum] id A project category's ID.
     # @raise [ArgumentError] If the method arguments are blank.
-    # @return [RestClient::Response].
+    # @return [Faraday::Response].
     def delete_project_category(id:)
       raise ArgumentError, "ID cannot be blank" if id.blank?
       request(:delete, "ProjectCategories/#{id}")
