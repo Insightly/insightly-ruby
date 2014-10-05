@@ -25,10 +25,10 @@ module Insightly
     # GET /v2.1/Opportunities/{c_id}/Image
     # @param [String, Fixnum] id An opportunity's ID
     # @raise [ArgumentError] If the method arguments are blank.
-    # TODO - What does this return?
-    # def get_opportunity_image(id:)
-    #   Resources::Opportunity.parse(request(:get, "Opportunities/#{id}/Image"))
-    # end
+    # @return [Faraday::Response]
+    def get_opportunity_image(id:)
+      request(:get, "Opportunities/#{id}/Image")
+    end
 
     # GET /v2.1/Opportunities/{c_id}/Notes
     # Get an opportunity's notes.
