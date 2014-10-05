@@ -26,12 +26,11 @@ module Insightly
     # Get a project image.
     # @param [String, Fixnum] id A project's ID.
     # @raise [ArgumentError] If the method arguments are blank.
-    # @return [Insightly::Resources::Project].
-    # TODO - What does this return?
-    # def get_project_image(id:)
-    #   raise ArgumentError, "ID cannot be blank" if id.blank?
-    #   Resources::Project.parse(request(:get, "Projects/#{id}/Image"))
-    # end
+    # @return [Faraday::Response].
+    def get_project_image(id:)
+      raise ArgumentError, "ID cannot be blank" if id.blank?
+      request(:get, "Projects/#{id}/Image")
+    end
 
     # GET /v2.1/Projects/{c_id}/Notes
     # Get a projects notes.
