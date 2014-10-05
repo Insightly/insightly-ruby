@@ -1,0 +1,49 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://<INSIGHTLY_API_KEY>:@api.insight.ly/v2.1/Tasks/14694323
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - no-cache
+      Pragma:
+      - no-cache
+      Content-Type:
+      - application/json; charset=utf-8
+      Expires:
+      - "-1"
+      Vary:
+      - Accept-Encoding
+      Server:
+      - Microsoft-IIS/7.5
+      Date:
+      - Sun, 05 Oct 2014 17:22:28 GMT
+      Content-Length:
+      - '540'
+      Set-Cookie:
+      - snaptid=sac1prdc01ut06; path=/
+    body:
+      encoding: UTF-8
+      string: '{"TASK_ID":14694323,"Title":"Project Posted - Call or email requester","CATEGORY_ID":1947439,"DUE_DATE":"2013-11-18
+        00:00:00","COMPLETED_DATE_UTC":null,"PUBLICLY_VISIBLE":true,"COMPLETED":false,"PROJECT_ID":null,"DETAILS":"Project
+        Posted - Call or email requester","STATUS":"NOT STARTED","PRIORITY":null,"PERCENT_COMPLETE":0,"START_DATE":null,"ASSIGNED_BY_USER_ID":null,"PARENT_TASK_ID":null,"OWNER_VISIBLE":false,"RESPONSIBLE_USER_ID":607181,"OWNER_USER_ID":607181,"DATE_CREATED_UTC":"2014-07-31
+        16:43:47","DATE_UPDATED_UTC":"2014-07-31 16:43:47","TASKLINKS":[{"TASK_LINK_ID":13912965,"TASK_ID":14694323,"CONTACT_ID":null,"ORGANISATION_ID":null,"OPPORTUNITY_ID":4070111,"PROJECT_ID":null}]}'
+    http_version: 
+  recorded_at: Sun, 05 Oct 2014 17:22:21 GMT
+recorded_with: VCR 2.9.0
