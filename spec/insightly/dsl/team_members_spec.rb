@@ -26,7 +26,7 @@ describe Insightly::DSL::TeamMembers do
 
   # POST /v2.1/TeamMembers
   describe '#create_team_member' do
-    it 'returns a team_member' do
+    it 'creates and returns a team_member' do
       VCR.use_cassette('create_team_member') do
         team_member = Insightly.client.get_team_member(id: team_member_id)
         expect(Insightly.client.create_team_member(team_member: team_member)).to be_a(TeamMember)
@@ -36,7 +36,7 @@ describe Insightly::DSL::TeamMembers do
 
   # PUT /v2.1/TeamMembers
   describe '#update_team_member' do
-    it 'returns a team_member' do
+    it 'updates and returns a team_member' do
       VCR.use_cassette('update_team_member') do
         team_member = Insightly.client.get_team_member(id: team_member_id)
         expect(Insightly.client.update_team_member(team_member: team_member)).to be_a(TeamMember)
