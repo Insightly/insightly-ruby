@@ -1,7 +1,11 @@
 require 'spec_helper'
 
 describe Insightly::Resources::Task do
-  subject(:task) { Insightly.client.get_task(id: 1) }
+  subject(:task) do
+    VCR.use_cassette('get_task') do
+      Insightly.client.get_task(id: 14694323)
+    end
+  end
 
   describe 'instance' do
     it 'is decorated with Task object' do
