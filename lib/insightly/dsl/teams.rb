@@ -44,7 +44,7 @@ module Insightly
     # Delete a team.
     # @param [String, Fixnum] id A Team's ID.
     # @raise [ArgumentError] If the method arguments are blank.
-    # @return [RestClient::Response].
+    # @return [Faraday::Response].
     def delete_team(id:)
       raise ArgumentError, "ID cannot be blank" if id.blank?
       request(:delete, "Teams/#{id}")

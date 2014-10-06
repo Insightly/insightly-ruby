@@ -1,33 +1,20 @@
-SPEC_ROOT = File.expand_path('../..', __FILE__)
-$LOAD_PATH.unshift File.join(SPEC_ROOT, 'lib')
 require 'webmock/rspec'
 require 'insightly'
+require 'vcr'
 include Insightly::Resources
+
+APP_ROOT = File.expand_path(File.join(File.dirname(__FILE__), '..'))
+cnf = YAML::load_file(File.join(APP_ROOT, 'config/gem_secret.yml'))
+insightly_api_key = cnf['insightly_api_key']
+
+VCR.configure do |c|
+  c.cassette_library_dir = 'spec/fixtures/vcr_cassettes'
+  c.hook_into :webmock
+  c.filter_sensitive_data('<INSIGHTLY_API_KEY>') { insightly_api_key }
+end
 
 RSpec.configure do |config|
   config.before do
-    file_name = File.join(SPEC_ROOT, 'spec/fixtures')
-    base_url = 'https://api.insight.ly/v2.1/'
-    api_version = '/v2.1/'
-    file_extension = '.json'
-    stub_request(:get, /#{Regexp.escape(base_url)}(.+)/).to_return(
-      body: lambda { |request|
-        file_name += "/GET/#{request.uri.path.gsub(api_version, '').underscore.downcase}#{file_extension}"
-        File.read(file_name)
-      }
-    )
-    stub_request(:post, /#{Regexp.escape(base_url)}(.+)/).to_return(
-      body: lambda { |request|
-        file_name += "/POST/#{request.uri.path.gsub(api_version, '').underscore.downcase}#{file_extension}"
-        File.read(file_name)
-      }
-    )
-    stub_request(:put, /#{Regexp.escape(base_url)}(.+)/).to_return(
-      body: lambda { |request|
-        file_name += "/PUT/#{request.uri.path.gsub(api_version, '').underscore.downcase}#{file_extension}"
-        File.read(file_name)
-      }
-    )
-    stub_request(:delete, /#{Regexp.escape(base_url)}(.+)/).to_return(status: 202)
+    Insightly.api_key = insightly_api_key
   end
 end

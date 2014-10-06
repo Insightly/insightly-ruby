@@ -1,0 +1,97 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://<INSIGHTLY_API_KEY>:@api.insight.ly/v2.1/Events/2402366
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - no-cache
+      Pragma:
+      - no-cache
+      Content-Type:
+      - application/json; charset=utf-8
+      Expires:
+      - "-1"
+      Vary:
+      - Accept-Encoding
+      Server:
+      - Microsoft-IIS/7.5
+      Date:
+      - Sat, 04 Oct 2014 22:45:18 GMT
+      Content-Length:
+      - '446'
+      Set-Cookie:
+      - snaptid=sac1prdc01ut04; path=/
+    body:
+      encoding: UTF-8
+      string: '{"EVENT_ID":2402366,"TITLE":"A tornado of sharks","LOCATION":null,"DETAILS":null,"START_DATE_UTC":"2014-10-04
+        23:00:00","END_DATE_UTC":"2014-10-05 00:00:00","ALL_DAY":false,"PUBLICLY_VISIBLE":true,"REMINDER_DATE_UTC":null,"REMINDER_SENT":false,"EVENTLINKS":[{"EVENT_LINK_ID":755567,"EVENT_ID":2402366,"CONTACT_ID":80192679,"ORGANISATION_ID":null,"OPPORTUNITY_ID":null,"PROJECT_ID":null}],"OWNER_USER_ID":607181,"DATE_CREATED_UTC":"2014-10-04
+        22:36:09","DATE_UPDATED_UTC":"2014-10-04 22:36:09"}'
+    http_version: 
+  recorded_at: Sat, 04 Oct 2014 22:45:11 GMT
+- request:
+    method: put
+    uri: https://<INSIGHTLY_API_KEY>:@api.insight.ly/v2.1/Events
+    body:
+      encoding: UTF-8
+      string: '{"EVENT_ID":2402366,"TITLE":"A tornado of sharks","LOCATION":null,"DETAILS":null,"START_DATE_UTC":"2014-10-04
+        23:00:00","END_DATE_UTC":"2014-10-05 00:00:00","ALL_DAY":false,"PUBLICLY_VISIBLE":true,"REMINDER_DATE_UTC":null,"REMINDER_SENT":false,"EVENTLINKS":[{"EVENT_LINK_ID":755567,"EVENT_ID":2402366,"CONTACT_ID":80192679,"ORGANISATION_ID":null,"OPPORTUNITY_ID":null,"PROJECT_ID":null}],"OWNER_USER_ID":607181,"DATE_CREATED_UTC":"2014-10-04
+        22:36:09","DATE_UPDATED_UTC":"2014-10-04 22:36:09"}'
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - no-cache
+      Pragma:
+      - no-cache
+      Content-Type:
+      - application/json; charset=utf-8
+      Expires:
+      - "-1"
+      Location:
+      - https://api.insight.ly/v2.1/Events/2402366
+      Vary:
+      - Accept-Encoding
+      Server:
+      - Microsoft-IIS/7.5
+      Date:
+      - Sat, 04 Oct 2014 22:45:18 GMT
+      Content-Length:
+      - '452'
+      Set-Cookie:
+      - snaptid=sac1prdc01ut05; path=/
+    body:
+      encoding: UTF-8
+      string: '{"EVENT_ID":2402366,"TITLE":"A tornado of sharks","LOCATION":null,"DETAILS":null,"START_DATE_UTC":"2014-10-04
+        23:00:00","END_DATE_UTC":"2014-10-05 00:00:00","ALL_DAY":false,"PUBLICLY_VISIBLE":true,"REMINDER_DATE_UTC":null,"REMINDER_SENT":false,"EVENTLINKS":[{"EVENT_LINK_ID":755567,"EVENT_ID":2402366,"CONTACT_ID":80192679,"ORGANISATION_ID":null,"OPPORTUNITY_ID":null,"PROJECT_ID":null}],"OWNER_USER_ID":607181,"DATE_CREATED_UTC":"2014-10-04
+        22:36:09","DATE_UPDATED_UTC":"2014-10-04 22:45:19"}'
+    http_version: 
+  recorded_at: Sat, 04 Oct 2014 22:45:11 GMT
+recorded_with: VCR 2.9.0

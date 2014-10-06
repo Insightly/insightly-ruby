@@ -1,43 +1,56 @@
 require 'spec_helper'
 
 describe Insightly::DSL::Emails do
+  let(:email_id) { 17683283 }
+
   # GET /v2.1/Emails/{id}
   describe '#get_email' do
     it 'returns an email' do
-      expect(Insightly.client.get_email(id: 1)).to be_a(Email)
+      VCR.use_cassette('get_email') do
+        expect(Insightly.client.get_email(id: email_id)).to be_a(Email)
+      end
     end
   end
 
   # GET /v2.1/Emails?ids={ids}&tag={tag}
   describe '#get_emails' do
-    xit 'returns an array of emails' do
-      emails = Insightly.client.get_emails
-      expect(emails).to be_a(Array)
-      expect(emails.first).to be_a(Email)
+    it 'returns an array of emails' do
+      VCR.use_cassette('get_emails') do
+        emails = Insightly.client.get_emails
+        expect(emails).to be_a(Array)
+        expect(emails.first).to be_a(Email)
+      end
     end
   end
 
   # GET /v2.1/Emails/{c_id}/Comments
   describe '#get_email_comments' do
-    xit 'returns an array of comments' do
-      emails = Insightly.client.get_email_comments(id: 1)
-      expect(emails).to be_a(Array)
-      expect(emails.first).to be_a(Comment)
+    it 'returns an array of comments' do
+      VCR.use_cassette('get_email_comments') do
+        comments = Insightly.client.get_email_comments(id: email_id)
+        expect(comments).to be_a(Array)
+        expect(comments.first).to be_a(Comment)
+      end
     end
   end
 
   # POST /v2.1/Emails/{c_id}/Comments
-  describe '#create_email_comments' do
-    xit 'creates and returns comment' do
-      expect(Insightly.client.create_email_comments(id: 1, comment: {title: ''})).to be_a(Comment)
+  describe '#create_email_comment' do
+    it 'returns a response with code 201' do
+      VCR.use_cassette('create_email_comment') do
+        response = Insightly.client.create_email_comment(id: email_id, comment: {title: 'Sharknado'})
+        expect(response.status).to eq(201)
+      end
     end
   end
 
   # DELETE /v2.1/Emails/{id}
   describe '#delete_email' do
     it 'returns a response with code 202' do
-      response = Insightly.client.delete_email(id: 1)
-      expect(response.code).to eq(202)
+      VCR.use_cassette('delete_email') do
+        response = Insightly.client.delete_email(id: email_id)
+        expect(response.status).to eq(202)
+      end
     end
   end
 end

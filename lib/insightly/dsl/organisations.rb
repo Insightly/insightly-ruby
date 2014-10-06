@@ -26,11 +26,10 @@ module Insightly
     # Get an organisations image.
     # @param [String, Fixnum] id An organisation's ID
     # @raise [ArgumentError] If the method arguments are blank.
-    # @return [Insightly::Resources::Organisation]
-    # TODO - What does this return?
-    # def get_organisation_image(id:)
-    #   Resources::Organisation.parse(request(:get, "Organisations/#{id}/Image"))
-    # end
+    # @return [Faraday::Response].
+    def get_organisation_image(id:)
+      request(:get, "Organisations/#{id}/Image")
+    end
 
     # GET /v2.1/Organisations/{c_id}/Notes
     # Get an organisations notes.
@@ -58,7 +57,7 @@ module Insightly
     # @param [String] tag The tag an organisation has been tagged with (optional).
     # @return [Array, nil].
     def get_organisations(ids: [], domain: '', tag: '')
-      url = UrlHelper.build_url(path: "Organisations", params: {ids: ids.join(','), domain: domain, tag: tag})
+      url = Utils::UrlHelper.build_url(path: "Organisations", params: {ids: ids.join(','), domain: domain, tag: tag})
       Resources::Organisation.parse(request(:get, url))
     end
 
@@ -77,7 +76,7 @@ module Insightly
     # @param [String, Fixnum] id The organisation's ID.
     # @param [String] filename The name of the file.
     # @raise [ArgumentError] If the method arguments are blank.
-    # @return [RestClient::Response].
+    # @return [Faraday::Response].
     def create_organisation_image(id:, filename:)
       raise ArgumentError, "ID cannot be blank" if id.blank?
       raise ArgumentError, "Filename cannot be blank" if filename.blank?
@@ -99,7 +98,7 @@ module Insightly
     # @param [String, Fixnum] id An organisation's ID.
     # @param [String] filename name of the file.
     # @raise [ArgumentError] If the method arguments are blank.
-    # @return [RestClient::Response].
+    # @return [Faraday::Response].
     def update_organisation_image(id:, filename:)
       raise ArgumentError, "ID cannot be blank" if id.blank?
       raise ArgumentError, "Filename cannot be blank" if filename.blank?
@@ -110,7 +109,7 @@ module Insightly
     # Delete an organisation.
     # @param [String, Fixnum] id An organisation's ID.
     # @raise [ArgumentError] If the method arguments are blank.
-    # @return [RestClient::Response].
+    # @return [Faraday::Response].
     def delete_organisation(id:)
       raise ArgumentError, "ID cannot be blank" if id.blank?
       request(:delete, "Organisations/#{id}")
@@ -120,7 +119,7 @@ module Insightly
     # Delete an organisation image.
     # @param [String, Fixnum] id An organisation's ID.
     # @raise [ArgumentError] If the method arguments are blank.
-    # @return [RestClient::Response].
+    # @return [Faraday::Response].
     def delete_organisation_image(id:)
       raise ArgumentError, "ID cannot be blank" if id.blank?
       request(:delete, "Organisations/#{id}/Image")

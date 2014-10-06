@@ -1,0 +1,55 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://<INSIGHTLY_API_KEY>:@api.insight.ly/v2.1/Organisations/39831139
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - no-cache
+      Pragma:
+      - no-cache
+      Content-Type:
+      - application/json; charset=utf-8
+      Expires:
+      - "-1"
+      Vary:
+      - Accept-Encoding
+      Server:
+      - Microsoft-IIS/7.5
+      Date:
+      - Sun, 05 Oct 2014 07:01:29 GMT
+      Content-Length:
+      - '874'
+      Set-Cookie:
+      - snaptid=sac1prdc01ut03; path=/
+    body:
+      encoding: UTF-8
+      string: '{"ORGANISATION_ID":39831139,"ORGANISATION_NAME":"WeCellStuff.com","BACKGROUND":"We
+        are in the business of developing cell therapies for eventual clinical use,
+        not pushing research products or services with ridiculous profit margins.
+        Our product and service offerings have been developed as a side effect of
+        our ongoing research, and everything we sell is used on a regular basis by
+        our own staff scientists.  We make these products and services available at
+        the lowest cost possible to facilitate scientific discovery, and 100% of our
+        proceeds are used to help finance our own research programs. We thank you
+        for your support, and trust you will enjoy doing business with our team.","IMAGE_URL":"http://s3.amazonaws.com/insightly.userfiles/339351/","OWNER_USER_ID":607181,"DATE_CREATED_UTC":"2014-10-01
+        17:14:53","DATE_UPDATED_UTC":"2014-10-01 17:14:53","VISIBLE_TO":"EVERYONE","VISIBLE_TEAM_ID":null,"VISIBLE_USER_IDS":null,"CUSTOMFIELDS":[],"ADDRESSES":[],"CONTACTINFOS":[],"DATES":[],"TAGS":[],"LINKS":[],"ORGANISATIONLINKS":[],"EMAILLINKS":[{"EMAIL_LINK_ID":61058077,"EMAIL_ID":17684953,"CONTACT_ID":null,"ORGANISATION_ID":39831139,"OPPORTUNITY_ID":null,"PROJECT_ID":null}]}'
+    http_version: 
+  recorded_at: Sun, 05 Oct 2014 07:01:22 GMT
+recorded_with: VCR 2.9.0

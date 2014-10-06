@@ -27,7 +27,7 @@ module Insightly
     # @param [ids:] Array of task ids (optional).
     # @return [Insightly::Resources::Task, nil].
     def get_tasks(ids: [])
-      url = UrlHelper.build_url(path: "Tasks", params: {ids: ids.join(',')})
+      url = Utils::UrlHelper.build_url(path: "Tasks", params: {ids: ids.join(',')})
       Resources::Task.parse(request(:get, url))
     end
 
@@ -47,7 +47,7 @@ module Insightly
     # @param [Hash] comment The comment to create.
     # @raise [ArgumentError] If the method arguments are blank.
     # @return [Insightly::Resources::Comment, nil].
-    def create_task_comments(id:, comment:)
+    def create_task_comment(id:, comment:)
       raise ArgumentError, "ID cannot be blank" if id.blank?
       raise ArgumentError, "Comment cannot be blank" if comment.blank?
       Resources::Comment.parse(request(:post, "Tasks/#{id}/Comments", comment))
@@ -67,7 +67,7 @@ module Insightly
     # Delete a task.
     # @param [String, Fixnum] id A Task's ID.
     # @raise [ArgumentError] If the method arguments are blank.
-    # @return [RestClient::Response].
+    # @return [Faraday::Response].
     def delete_task(id:)
       raise ArgumentError, "ID cannot be blank" if id.blank?
       request(:delete, "Tasks/#{id}")

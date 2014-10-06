@@ -17,7 +17,7 @@ module Insightly
     # @param [String, Fixnum] id A comment's ID.
     # @param [String] filename The name of the attachment.
     # @raise [ArgumentError] If the method arguments are blank.
-    # @return [RestClient::Response].
+    # @return [Faraday::Response].
     def create_comment_attachment(id:, filename:)
       raise ArgumentError, "ID cannot be blank" if id.blank?
       raise ArgumentError, "Filename cannot be blank" if filename.blank?
@@ -38,7 +38,7 @@ module Insightly
     # Deletes a comment.
     # @param [String, Fixnum] id A comment's ID.
     # @raise [ArgumentError] If the method arguments are blank.
-    # @return [RestClient::Response].
+    # @return [Faraday::Response].
     def delete_comment(id:)
       raise ArgumentError, "ID cannot be blank" if id.blank?
       request(:delete, "Comments/#{id}")

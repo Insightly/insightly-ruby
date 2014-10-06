@@ -1,0 +1,92 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://<INSIGHTLY_API_KEY>:@api.insight.ly/v2.1/Teams/2063767
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - no-cache
+      Pragma:
+      - no-cache
+      Content-Type:
+      - application/json; charset=utf-8
+      Expires:
+      - "-1"
+      Vary:
+      - Accept-Encoding
+      Server:
+      - Microsoft-IIS/7.5
+      Date:
+      - Sun, 05 Oct 2014 17:44:52 GMT
+      Content-Length:
+      - '250'
+      Set-Cookie:
+      - snaptid=sac1prdc01ut04; path=/
+    body:
+      encoding: UTF-8
+      string: '{"TEAM_ID":2063767,"TEAM_NAME":"Team Cobra","ANONYMOUS_TEAM":false,"DATE_CREATED_UTC":"2014-10-05
+        17:31:29","DATE_UPDATED_UTC":"2014-10-05 17:31:29","TEAMMEMBERS":[]}'
+    http_version: 
+  recorded_at: Sun, 05 Oct 2014 17:44:44 GMT
+- request:
+    method: post
+    uri: https://<INSIGHTLY_API_KEY>:@api.insight.ly/v2.1/Teams
+    body:
+      encoding: UTF-8
+      string: '{"TEAM_ID":2063767,"TEAM_NAME":"Team Cobra","ANONYMOUS_TEAM":false,"DATE_CREATED_UTC":"2014-10-05
+        17:31:29","DATE_UPDATED_UTC":"2014-10-05 17:31:29","TEAMMEMBERS":[]}'
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Cache-Control:
+      - no-cache
+      Pragma:
+      - no-cache
+      Content-Type:
+      - application/json; charset=utf-8
+      Expires:
+      - "-1"
+      Location:
+      - https://api.insight.ly/v2.1/Teams/2063776
+      Server:
+      - Microsoft-IIS/7.5
+      Date:
+      - Sun, 05 Oct 2014 17:44:52 GMT
+      Content-Length:
+      - '166'
+      Set-Cookie:
+      - snaptid=sac1prdc01ut04; path=/
+    body:
+      encoding: UTF-8
+      string: '{"TEAM_ID":2063776,"TEAM_NAME":"Team Cobra","ANONYMOUS_TEAM":false,"DATE_CREATED_UTC":"2014-10-05
+        17:44:52","DATE_UPDATED_UTC":"2014-10-05 17:44:52","TEAMMEMBERS":[]}'
+    http_version: 
+  recorded_at: Sun, 05 Oct 2014 17:44:44 GMT
+recorded_with: VCR 2.9.0

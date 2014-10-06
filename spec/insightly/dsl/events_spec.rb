@@ -1,41 +1,55 @@
 require 'spec_helper'
 
 describe Insightly::DSL::Events do
+  let(:event_id) { 2402366 }
+
   # GET /v2.1/Events/{id}
   describe '#get_event' do
     it 'returns an event' do
-      expect(Insightly.client.get_event(id: 1)).to be_a(Event)
+      VCR.use_cassette('get_event') do
+        expect(Insightly.client.get_event(id: event_id)).to be_a(Event)
+      end
     end
   end
 
   # GET /v2.1/Events
   describe '#get_events' do
     it 'returns an array of events' do
-      events = Insightly.client.get_events
-      expect(events).to be_a(Array)
-      expect(events.first).to be_a(Event)
+      VCR.use_cassette('get_events') do
+        events = Insightly.client.get_events
+        expect(events).to be_a(Array)
+        expect(events.first).to be_a(Event)
+      end
     end
   end
 
   # POST /v2.1/Events
   describe '#create_event' do
-    xit 'creates and returns event' do
-      expect(Insightly.client.create_event(event: {})).to be_a(Event)
+    it 'creates and returns event' do
+      VCR.use_cassette('create_event') do
+        event = Insightly.client.get_event(id: event_id)
+        expect(Insightly.client.create_event(event: event)).to be_a(Event)
+      end
     end
   end
 
   # PUT /v2.1/Events
   describe '#update_event' do
-    xit 'updates and returns event' do
-      expect(Insightly.client.update_event(event: {id: 1})).to be_a(Event)
+    it 'updates and returns event' do
+      VCR.use_cassette('update_event') do
+        event = Insightly.client.get_event(id: event_id)
+        expect(Insightly.client.update_event(event: event)).to be_a(Event)
+      end
     end
   end
 
   # DELETE /v2.1/Events/{id}
   describe '#delete_event' do
     it 'returns a response with code 202' do
-      response = Insightly.client.delete_event(id: 1)
-      expect(response.code).to eq(202)
+      VCR.use_cassette('delete_event') do
+        response = Insightly.client.delete_event(id: event_id)
+        expect(response.status).to eq(202)
+      end
     end
   end
 end
