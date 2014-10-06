@@ -1,0 +1,98 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://<INSIGHTLY_API_KEY>:@api.insight.ly/v2.1/Opportunities/4070112
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - no-cache
+      Pragma:
+      - no-cache
+      Content-Type:
+      - application/json; charset=utf-8
+      Expires:
+      - "-1"
+      Vary:
+      - Accept-Encoding
+      Server:
+      - Microsoft-IIS/7.5
+      Date:
+      - Sun, 05 Oct 2014 00:48:43 GMT
+      Content-Length:
+      - '839'
+      Set-Cookie:
+      - snaptid=sac1prdc01ut03; path=/
+    body:
+      encoding: UTF-8
+      string: '{"OPPORTUNITY_ID":4070112,"OPPORTUNITY_NAME":"#030031: Immunohistochemistry","OPPORTUNITY_DETAILS":"---Begin
+        Synced Data---\r\n<b>Project Url:</b> https://www.scienceexchange.com/projects/30031\r\n<b>Estimate
+        Deadline:</b> May  6, 2014\r\n---End Synced Data---","PROBABILITY":null,"BID_CURRENCY":"CAD","BID_AMOUNT":null,"BID_TYPE":null,"BID_DURATION":null,"FORECAST_CLOSE_DATE":null,"CATEGORY_ID":null,"PIPELINE_ID":124170,"STAGE_ID":377385,"OPPORTUNITY_STATE":"Open","IMAGE_URL":"http://s3.amazonaws.com/insightly.userfiles/339351/","RESPONSIBLE_USER_ID":null,"OWNER_USER_ID":607181,"DATE_CREATED_UTC":"2014-07-31
+        16:42:07","DATE_UPDATED_UTC":"2014-10-05 00:17:03","VISIBLE_TO":"EVERYONE","VISIBLE_TEAM_ID":null,"VISIBLE_USER_IDS":null,"CUSTOMFIELDS":[],"TAGS":[],"LINKS":[{"LINK_ID":45984204,"CONTACT_ID":null,"OPPORTUNITY_ID":4070112,"ORGANISATION_ID":35343476,"PROJECT_ID":null,"SECOND_PROJECT_ID":null,"SECOND_OPPORTUNITY_ID":null,"ROLE":null,"DETAILS":null},{"LINK_ID":45984205,"CONTACT_ID":70653014,"OPPORTUNITY_ID":4070112,"ORGANISATION_ID":null,"PROJECT_ID":null,"SECOND_PROJECT_ID":null,"SECOND_OPPORTUNITY_ID":null,"ROLE":null,"DETAILS":null},{"LINK_ID":45984206,"CONTACT_ID":70653014,"OPPORTUNITY_ID":4070112,"ORGANISATION_ID":null,"PROJECT_ID":null,"SECOND_PROJECT_ID":null,"SECOND_OPPORTUNITY_ID":null,"ROLE":null,"DETAILS":null}],"EMAILLINKS":[{"EMAIL_LINK_ID":61055125,"EMAIL_ID":17684953,"CONTACT_ID":null,"ORGANISATION_ID":null,"OPPORTUNITY_ID":4070112,"PROJECT_ID":null}]}'
+    http_version: 
+  recorded_at: Sun, 05 Oct 2014 00:48:35 GMT
+- request:
+    method: post
+    uri: https://<INSIGHTLY_API_KEY>:@api.insight.ly/v2.1/Opportunities
+    body:
+      encoding: UTF-8
+      string: '{"OPPORTUNITY_ID":4070112,"OPPORTUNITY_NAME":"#030031: Immunohistochemistry","OPPORTUNITY_DETAILS":"---Begin
+        Synced Data---\r\n<b>Project Url:</b> https://www.scienceexchange.com/projects/30031\r\n<b>Estimate
+        Deadline:</b> May  6, 2014\r\n---End Synced Data---","PROBABILITY":null,"BID_CURRENCY":"CAD","BID_AMOUNT":null,"BID_TYPE":null,"BID_DURATION":null,"FORECAST_CLOSE_DATE":null,"CATEGORY_ID":null,"PIPELINE_ID":124170,"STAGE_ID":377385,"OPPORTUNITY_STATE":"Open","IMAGE_URL":"http://s3.amazonaws.com/insightly.userfiles/339351/","RESPONSIBLE_USER_ID":null,"OWNER_USER_ID":607181,"DATE_CREATED_UTC":"2014-07-31
+        16:42:07","DATE_UPDATED_UTC":"2014-10-05 00:17:03","VISIBLE_TO":"EVERYONE","VISIBLE_TEAM_ID":null,"VISIBLE_USER_IDS":null,"CUSTOMFIELDS":[],"TAGS":[],"LINKS":[{"LINK_ID":45984204,"CONTACT_ID":null,"OPPORTUNITY_ID":4070112,"ORGANISATION_ID":35343476,"PROJECT_ID":null,"SECOND_PROJECT_ID":null,"SECOND_OPPORTUNITY_ID":null,"ROLE":null,"DETAILS":null},{"LINK_ID":45984205,"CONTACT_ID":70653014,"OPPORTUNITY_ID":4070112,"ORGANISATION_ID":null,"PROJECT_ID":null,"SECOND_PROJECT_ID":null,"SECOND_OPPORTUNITY_ID":null,"ROLE":null,"DETAILS":null},{"LINK_ID":45984206,"CONTACT_ID":70653014,"OPPORTUNITY_ID":4070112,"ORGANISATION_ID":null,"PROJECT_ID":null,"SECOND_PROJECT_ID":null,"SECOND_OPPORTUNITY_ID":null,"ROLE":null,"DETAILS":null}],"EMAILLINKS":[{"EMAIL_LINK_ID":61055125,"EMAIL_ID":17684953,"CONTACT_ID":null,"ORGANISATION_ID":null,"OPPORTUNITY_ID":4070112,"PROJECT_ID":null}]}'
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Cache-Control:
+      - no-cache
+      Pragma:
+      - no-cache
+      Content-Type:
+      - application/json; charset=utf-8
+      Expires:
+      - "-1"
+      Location:
+      - https://api.insight.ly/v2.1/Opportunities/4070112
+      Server:
+      - Microsoft-IIS/7.5
+      Date:
+      - Sun, 05 Oct 2014 00:48:43 GMT
+      Content-Length:
+      - '1491'
+      Set-Cookie:
+      - snaptid=sac1prdc01ut06; path=/
+    body:
+      encoding: UTF-8
+      string: '{"OPPORTUNITY_ID":4070112,"OPPORTUNITY_NAME":"#030031: Immunohistochemistry","OPPORTUNITY_DETAILS":"---Begin
+        Synced Data---\r\n<b>Project Url:</b> https://www.scienceexchange.com/projects/30031\r\n<b>Estimate
+        Deadline:</b> May  6, 2014\r\n---End Synced Data---","PROBABILITY":null,"BID_CURRENCY":"CAD","BID_AMOUNT":null,"BID_TYPE":null,"BID_DURATION":null,"FORECAST_CLOSE_DATE":null,"CATEGORY_ID":null,"PIPELINE_ID":124170,"STAGE_ID":377385,"OPPORTUNITY_STATE":"Open","IMAGE_URL":"http://s3.amazonaws.com/insightly.userfiles/339351/","RESPONSIBLE_USER_ID":null,"OWNER_USER_ID":607181,"DATE_CREATED_UTC":"2014-07-31
+        16:42:07","DATE_UPDATED_UTC":"2014-10-05 00:48:43","VISIBLE_TO":"EVERYONE","VISIBLE_TEAM_ID":null,"VISIBLE_USER_IDS":null,"CUSTOMFIELDS":[],"TAGS":[],"LINKS":[{"LINK_ID":45984204,"CONTACT_ID":null,"OPPORTUNITY_ID":4070112,"ORGANISATION_ID":35343476,"PROJECT_ID":null,"SECOND_PROJECT_ID":null,"SECOND_OPPORTUNITY_ID":null,"ROLE":null,"DETAILS":null},{"LINK_ID":45984205,"CONTACT_ID":70653014,"OPPORTUNITY_ID":4070112,"ORGANISATION_ID":null,"PROJECT_ID":null,"SECOND_PROJECT_ID":null,"SECOND_OPPORTUNITY_ID":null,"ROLE":null,"DETAILS":null},{"LINK_ID":45984206,"CONTACT_ID":70653014,"OPPORTUNITY_ID":4070112,"ORGANISATION_ID":null,"PROJECT_ID":null,"SECOND_PROJECT_ID":null,"SECOND_OPPORTUNITY_ID":null,"ROLE":null,"DETAILS":null}],"EMAILLINKS":[{"EMAIL_LINK_ID":61055125,"EMAIL_ID":17684953,"CONTACT_ID":null,"ORGANISATION_ID":null,"OPPORTUNITY_ID":4070112,"PROJECT_ID":null}]}'
+    http_version: 
+  recorded_at: Sun, 05 Oct 2014 00:48:36 GMT
+recorded_with: VCR 2.9.0

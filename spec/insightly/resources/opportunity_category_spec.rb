@@ -1,7 +1,11 @@
 require 'spec_helper'
 
 describe Insightly::Resources::OpportunityCategory do
-  subject(:opportunity_category) { Insightly.client.get_opportunity_category(id: 1) }
+  subject(:opportunity_category) do
+    VCR.use_cassette('get_opportunity_category') do
+      Insightly.client.get_opportunity_category(id: 2175382)
+    end
+  end
 
   describe 'instance' do
     it 'is decorated with OpportunityCategory object' do

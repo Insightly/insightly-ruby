@@ -1,0 +1,89 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://<INSIGHTLY_API_KEY>:@api.insight.ly/v2.1/FileCategories/1947439
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - no-cache
+      Pragma:
+      - no-cache
+      Content-Type:
+      - application/json; charset=utf-8
+      Expires:
+      - "-1"
+      Vary:
+      - Accept-Encoding
+      Server:
+      - Microsoft-IIS/7.5
+      Date:
+      - Sat, 04 Oct 2014 23:10:02 GMT
+      Content-Length:
+      - '210'
+      Set-Cookie:
+      - snaptid=sac1prdc01ut03; path=/
+    body:
+      encoding: UTF-8
+      string: '{"CATEGORY_ID":1947439,"CATEGORY_NAME":"Follow-up","ACTIVE":true,"BACKGROUND_COLOR":"2f9a84"}'
+    http_version: 
+  recorded_at: Sat, 04 Oct 2014 23:09:55 GMT
+- request:
+    method: post
+    uri: https://<INSIGHTLY_API_KEY>:@api.insight.ly/v2.1/FileCategories
+    body:
+      encoding: UTF-8
+      string: '{"CATEGORY_ID":1947439,"CATEGORY_NAME":"Follow-up","ACTIVE":true,"BACKGROUND_COLOR":"2f9a84"}'
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Cache-Control:
+      - no-cache
+      Pragma:
+      - no-cache
+      Content-Type:
+      - application/json; charset=utf-8
+      Expires:
+      - "-1"
+      Location:
+      - https://api.insight.ly/v2.1/FileCategories/2175382
+      Server:
+      - Microsoft-IIS/7.5
+      Date:
+      - Sat, 04 Oct 2014 23:10:03 GMT
+      Content-Length:
+      - '93'
+      Set-Cookie:
+      - snaptid=sac1prdc01ut06; path=/
+    body:
+      encoding: UTF-8
+      string: '{"CATEGORY_ID":2175382,"CATEGORY_NAME":"Follow-up","ACTIVE":true,"BACKGROUND_COLOR":"2f9a84"}'
+    http_version: 
+  recorded_at: Sat, 04 Oct 2014 23:09:55 GMT
+recorded_with: VCR 2.9.0

@@ -1,7 +1,11 @@
 require 'spec_helper'
 
 describe Insightly::Resources::TaskCategory do
-  subject(:task_category) { Insightly.client.get_task_category(id: 1) }
+  subject(:task_category) do
+    VCR.use_cassette('get_task_category') do
+      Insightly.client.get_task_category(id: 1947437)
+    end
+  end
 
   describe 'instance' do
     it 'is decorated with TaskCategory object' do

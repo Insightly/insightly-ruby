@@ -1,0 +1,100 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://<INSIGHTLY_API_KEY>:@api.insight.ly/v2.1/Notes/15377334
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - no-cache
+      Pragma:
+      - no-cache
+      Content-Type:
+      - application/json; charset=utf-8
+      Expires:
+      - "-1"
+      Vary:
+      - Accept-Encoding
+      Server:
+      - Microsoft-IIS/7.5
+      Date:
+      - Sat, 04 Oct 2014 23:33:19 GMT
+      Content-Length:
+      - '581'
+      Set-Cookie:
+      - snaptid=sac1prdc01ut03; path=/
+    body:
+      encoding: UTF-8
+      string: '{"NOTE_ID":15377334,"TITLE":"Don''t mess with the nado","BODY":"\r\n<p>It''s
+        indeed not advisable to mess with the nado.</p>\r\n","LINK_SUBJECT_ID":80192679,"LINK_SUBJECT_TYPE":"Contact","OWNER_USER_ID":607181,"DATE_CREATED_UTC":"2014-10-04
+        23:15:39","DATE_UPDATED_UTC":"2014-10-04 23:15:39","VISIBLE_TO":"EVERYONE","VISIBLE_TEAM_ID":null,"VISIBLE_USER_IDS":null,"FILE_ATTACHMENTS":[{"FILE_ID":33105986,"FILE_NAME":"1.jpg","CONTENT_TYPE":"application/json","FILE_SIZE":0,"FILE_CATEGORY_ID":null,"OWNER_USER_ID":607181,"DATE_CREATED_UTC":"2014-10-04
+        23:31:50","DATE_UPDATED_UTC":"2014-10-04 23:31:50","URL":"/fileattachments/33105986"}],"NOTELINKS":[{"NOTE_LINK_ID":16815716,"NOTE_ID":15377334,"CONTACT_ID":80192679,"ORGANISATION_ID":null,"OPPORTUNITY_ID":null,"PROJECT_ID":null}]}'
+    http_version: 
+  recorded_at: Sat, 04 Oct 2014 23:33:12 GMT
+- request:
+    method: put
+    uri: https://<INSIGHTLY_API_KEY>:@api.insight.ly/v2.1/Notes
+    body:
+      encoding: UTF-8
+      string: '{"NOTE_ID":15377334,"TITLE":"Don''t mess with the nado","BODY":"\r\n<p>It''s
+        indeed not advisable to mess with the nado.</p>\r\n","LINK_SUBJECT_ID":80192679,"LINK_SUBJECT_TYPE":"Contact","OWNER_USER_ID":607181,"DATE_CREATED_UTC":"2014-10-04
+        23:15:39","DATE_UPDATED_UTC":"2014-10-04 23:15:39","VISIBLE_TO":"EVERYONE","VISIBLE_TEAM_ID":null,"VISIBLE_USER_IDS":null,"FILE_ATTACHMENTS":[{"FILE_ID":33105986,"FILE_NAME":"1.jpg","CONTENT_TYPE":"application/json","FILE_SIZE":0,"FILE_CATEGORY_ID":null,"OWNER_USER_ID":607181,"DATE_CREATED_UTC":"2014-10-04
+        23:31:50","DATE_UPDATED_UTC":"2014-10-04 23:31:50","URL":"/fileattachments/33105986"}],"NOTELINKS":[{"NOTE_LINK_ID":16815716,"NOTE_ID":15377334,"CONTACT_ID":80192679,"ORGANISATION_ID":null,"OPPORTUNITY_ID":null,"PROJECT_ID":null}]}'
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - no-cache
+      Pragma:
+      - no-cache
+      Content-Type:
+      - application/json; charset=utf-8
+      Expires:
+      - "-1"
+      Location:
+      - https://api.insight.ly/v2.1/Notes/15377334
+      Vary:
+      - Accept-Encoding
+      Server:
+      - Microsoft-IIS/7.5
+      Date:
+      - Sat, 04 Oct 2014 23:33:19 GMT
+      Content-Length:
+      - '586'
+      Set-Cookie:
+      - snaptid=sac1prdc01ut03; path=/
+    body:
+      encoding: UTF-8
+      string: '{"NOTE_ID":15377334,"TITLE":"Don''t mess with the nado","BODY":"\r\n<p>It''s
+        indeed not advisable to mess with the nado.</p>\r\n","LINK_SUBJECT_ID":80192679,"LINK_SUBJECT_TYPE":"Contact","OWNER_USER_ID":607181,"DATE_CREATED_UTC":"2014-10-04
+        23:15:39","DATE_UPDATED_UTC":"2014-10-04 23:33:20","VISIBLE_TO":"EVERYONE","VISIBLE_TEAM_ID":null,"VISIBLE_USER_IDS":null,"FILE_ATTACHMENTS":[{"FILE_ID":33105986,"FILE_NAME":"1.jpg","CONTENT_TYPE":"application/json","FILE_SIZE":0,"FILE_CATEGORY_ID":null,"OWNER_USER_ID":607181,"DATE_CREATED_UTC":"2014-10-04
+        23:31:50","DATE_UPDATED_UTC":"2014-10-04 23:31:50","URL":"/fileattachments/33105986"}],"NOTELINKS":[{"NOTE_LINK_ID":16815716,"NOTE_ID":15377334,"CONTACT_ID":80192679,"ORGANISATION_ID":null,"OPPORTUNITY_ID":null,"PROJECT_ID":null}]}'
+    http_version: 
+  recorded_at: Sat, 04 Oct 2014 23:33:12 GMT
+recorded_with: VCR 2.9.0

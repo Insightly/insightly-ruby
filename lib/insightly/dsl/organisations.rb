@@ -26,11 +26,10 @@ module Insightly
     # Get an organisations image.
     # @param [String, Fixnum] id An organisation's ID
     # @raise [ArgumentError] If the method arguments are blank.
-    # @return [Insightly::Resources::Organisation]
-    # TODO - What does this return?
-    # def get_organisation_image(id:)
-    #   Resources::Organisation.parse(request(:get, "Organisations/#{id}/Image"))
-    # end
+    # @return [Faraday::Response].
+    def get_organisation_image(id:)
+      request(:get, "Organisations/#{id}/Image")
+    end
 
     # GET /v2.1/Organisations/{c_id}/Notes
     # Get an organisations notes.

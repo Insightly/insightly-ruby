@@ -1,0 +1,52 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://<INSIGHTLY_API_KEY>:@api.insight.ly/v2.1/Notes
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - no-cache
+      Pragma:
+      - no-cache
+      Content-Type:
+      - application/json; charset=utf-8
+      Expires:
+      - "-1"
+      Vary:
+      - Accept-Encoding
+      Server:
+      - Microsoft-IIS/7.5
+      Date:
+      - Sat, 04 Oct 2014 23:18:02 GMT
+      Content-Length:
+      - '654'
+      Set-Cookie:
+      - snaptid=sac1prdc01ut04; path=/
+    body:
+      encoding: UTF-8
+      string: '[{"NOTE_ID":13358505,"TITLE":"Quote Submitted","BODY":"Quote Submitted","LINK_SUBJECT_ID":4070116,"LINK_SUBJECT_TYPE":"OPPORTUNITY","OWNER_USER_ID":607181,"DATE_CREATED_UTC":"2014-07-31
+        16:42:38","DATE_UPDATED_UTC":"2014-07-31 16:42:38","VISIBLE_TO":"EVERYONE","VISIBLE_TEAM_ID":null,"VISIBLE_USER_IDS":null,"FILE_ATTACHMENTS":[],"NOTELINKS":[{"NOTE_LINK_ID":14760811,"NOTE_ID":13358505,"CONTACT_ID":null,"ORGANISATION_ID":null,"OPPORTUNITY_ID":4070116,"PROJECT_ID":null}]},{"NOTE_ID":15377202,"TITLE":"Notey","BODY":"\r\n<p>Note
+        note.</p>\r\n","LINK_SUBJECT_ID":70653013,"LINK_SUBJECT_TYPE":"Contact","OWNER_USER_ID":607181,"DATE_CREATED_UTC":"2014-10-04
+        22:20:56","DATE_UPDATED_UTC":"2014-10-04 22:20:56","VISIBLE_TO":"EVERYONE","VISIBLE_TEAM_ID":null,"VISIBLE_USER_IDS":null,"FILE_ATTACHMENTS":[],"NOTELINKS":[{"NOTE_LINK_ID":16815583,"NOTE_ID":15377202,"CONTACT_ID":70653013,"ORGANISATION_ID":null,"OPPORTUNITY_ID":null,"PROJECT_ID":null}]},{"NOTE_ID":15377334,"TITLE":"Don''t
+        mess with the nado","BODY":"\r\n<p>It''s indeed not advisable to mess with
+        the nado.</p>\r\n","LINK_SUBJECT_ID":80192679,"LINK_SUBJECT_TYPE":"Contact","OWNER_USER_ID":607181,"DATE_CREATED_UTC":"2014-10-04
+        23:15:39","DATE_UPDATED_UTC":"2014-10-04 23:15:39","VISIBLE_TO":"EVERYONE","VISIBLE_TEAM_ID":null,"VISIBLE_USER_IDS":null,"FILE_ATTACHMENTS":[],"NOTELINKS":[{"NOTE_LINK_ID":16815716,"NOTE_ID":15377334,"CONTACT_ID":80192679,"ORGANISATION_ID":null,"OPPORTUNITY_ID":null,"PROJECT_ID":null}]}]'
+    http_version: 
+  recorded_at: Sat, 04 Oct 2014 23:17:55 GMT
+recorded_with: VCR 2.9.0

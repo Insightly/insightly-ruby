@@ -1,0 +1,83 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://<INSIGHTLY_API_KEY>:@api.insight.ly/v2.1/Opportunities/4070112/StateHistory
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 500
+      message: Internal Server Error
+    headers:
+      Cache-Control:
+      - private
+      Content-Type:
+      - text/html; charset=utf-8
+      Server:
+      - Microsoft-IIS/7.5
+      Date:
+      - Sun, 05 Oct 2014 00:27:54 GMT
+      Content-Length:
+      - '3424'
+      Set-Cookie:
+      - snaptid=sac1prdc01ut04; path=/
+    body:
+      encoding: UTF-8
+      string: "<!DOCTYPE html>\r\n<html>\r\n    <head>\r\n        <title>Runtime Error</title>\r\n
+        \       <meta name=\"viewport\" content=\"width=device-width\" />\r\n        <style>\r\n
+        \        body {font-family:\"Verdana\";font-weight:normal;font-size: .7em;color:black;}
+        \r\n         p {font-family:\"Verdana\";font-weight:normal;color:black;margin-top:
+        -5px}\r\n         b {font-family:\"Verdana\";font-weight:bold;color:black;margin-top:
+        -5px}\r\n         H1 { font-family:\"Verdana\";font-weight:normal;font-size:18pt;color:red
+        }\r\n         H2 { font-family:\"Verdana\";font-weight:normal;font-size:14pt;color:maroon
+        }\r\n         pre {font-family:\"Consolas\",\"Lucida Console\",Monospace;font-size:11pt;margin:0;padding:0.5em;line-height:14pt}\r\n
+        \        .marker {font-weight: bold; color: black;text-decoration: none;}\r\n
+        \        .version {color: gray;}\r\n         .error {margin-bottom: 10px;}\r\n
+        \        .expandable { text-decoration:underline; font-weight:bold; color:navy;
+        cursor:hand; }\r\n         @media screen and (max-width: 639px) {\r\n          pre
+        { width: 440px; overflow: auto; white-space: pre-wrap; word-wrap: break-word;
+        }\r\n         }\r\n         @media screen and (max-width: 479px) {\r\n          pre
+        { width: 280px; }\r\n         }\r\n        </style>\r\n    </head>\r\n\r\n
+        \   <body bgcolor=\"white\">\r\n\r\n            <span><H1>Server Error in
+        '/v2.1' Application.<hr width=100% size=1 color=silver></H1>\r\n\r\n            <h2>
+        <i>Runtime Error</i> </h2></span>\r\n\r\n            <font face=\"Arial, Helvetica,
+        Geneva, SunSans-Regular, sans-serif \">\r\n\r\n            <b> Description:
+        </b>An application error occurred on the server. The current custom error
+        settings for this application prevent the details of the application error
+        from being viewed remotely (for security reasons). It could, however, be viewed
+        by browsers running on the local server machine.\r\n            <br><br>\r\n\r\n
+        \           <b>Details:</b> To enable the details of this specific error message
+        to be viewable on remote machines, please create a &lt;customErrors&gt; tag
+        within a &quot;web.config&quot; configuration file located in the root directory
+        of the current web application. This &lt;customErrors&gt; tag should then
+        have its &quot;mode&quot; attribute set to &quot;Off&quot;.<br><br>\r\n\r\n
+        \           <table width=100% bgcolor=\"#ffffcc\">\r\n               <tr>\r\n
+        \                 <td>\r\n                      <code><pre>\r\n\r\n&lt;!--
+        Web.Config Configuration File --&gt;\r\n\r\n&lt;configuration&gt;\r\n    &lt;system.web&gt;\r\n
+        \       &lt;customErrors mode=&quot;Off&quot;/&gt;\r\n    &lt;/system.web&gt;\r\n&lt;/configuration&gt;</pre></code>\r\n\r\n
+        \                 </td>\r\n               </tr>\r\n            </table>\r\n\r\n
+        \           <br>\r\n\r\n            <b>Notes:</b> The current error page you
+        are seeing can be replaced by a custom error page by modifying the &quot;defaultRedirect&quot;
+        attribute of the application&#39;s &lt;customErrors&gt; configuration tag
+        to point to a custom error page URL.<br><br>\r\n\r\n            <table width=100%
+        bgcolor=\"#ffffcc\">\r\n               <tr>\r\n                  <td>\r\n
+        \                     <code><pre>\r\n\r\n&lt;!-- Web.Config Configuration
+        File --&gt;\r\n\r\n&lt;configuration&gt;\r\n    &lt;system.web&gt;\r\n        &lt;customErrors
+        mode=&quot;RemoteOnly&quot; defaultRedirect=&quot;mycustompage.htm&quot;/&gt;\r\n
+        \   &lt;/system.web&gt;\r\n&lt;/configuration&gt;</pre></code>\r\n\r\n                  </td>\r\n
+        \              </tr>\r\n            </table>\r\n\r\n            <br>\r\n\r\n
+        \   </body>\r\n</html>\r\n"
+    http_version: 
+  recorded_at: Sun, 05 Oct 2014 00:27:47 GMT
+recorded_with: VCR 2.9.0

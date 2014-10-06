@@ -1,7 +1,11 @@
 require 'spec_helper'
 
 describe Insightly::Resources::Event do
-  subject(:event) { Insightly.client.get_event(id: 1) }
+  subject(:event) do
+    VCR.use_cassette('get_event') do
+      Insightly.client.get_event(id: 2402366)
+    end
+  end
 
   describe 'instance' do
     it 'is decorated with Event object' do

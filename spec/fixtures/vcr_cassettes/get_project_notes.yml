@@ -1,0 +1,47 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://<INSIGHTLY_API_KEY>:@api.insight.ly/v2.1/Projects/1657941/Notes
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - no-cache
+      Pragma:
+      - no-cache
+      Content-Type:
+      - application/json; charset=utf-8
+      Expires:
+      - "-1"
+      Vary:
+      - Accept-Encoding
+      Server:
+      - Microsoft-IIS/7.5
+      Date:
+      - Sun, 05 Oct 2014 17:00:56 GMT
+      Content-Length:
+      - '421'
+      Set-Cookie:
+      - snaptid=sac1prdc01ut05; path=/
+    body:
+      encoding: UTF-8
+      string: '[{"NOTE_ID":15379217,"TITLE":"I love lamp","BODY":null,"LINK_SUBJECT_ID":1657941,"LINK_SUBJECT_TYPE":"Project","OWNER_USER_ID":607181,"DATE_CREATED_UTC":"2014-10-05
+        16:54:43","DATE_UPDATED_UTC":"2014-10-05 16:54:43","VISIBLE_TO":"EVERYONE","VISIBLE_TEAM_ID":null,"VISIBLE_USER_IDS":null,"FILE_ATTACHMENTS":[],"NOTELINKS":[{"NOTE_LINK_ID":16817612,"NOTE_ID":15379217,"CONTACT_ID":null,"ORGANISATION_ID":null,"OPPORTUNITY_ID":null,"PROJECT_ID":1657941}]}]'
+    http_version: 
+  recorded_at: Sun, 05 Oct 2014 17:00:49 GMT
+recorded_with: VCR 2.9.0

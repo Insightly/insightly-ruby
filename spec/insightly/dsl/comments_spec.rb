@@ -2,7 +2,6 @@ require 'spec_helper'
 
 describe Insightly::DSL::Comments do
   let(:comment_id) { 3469515 }
-  # TODO - Record error state cassettes. Not just success cassettes.
 
   # GET /v2.1/Comments/{id}
   describe '#get_comment' do

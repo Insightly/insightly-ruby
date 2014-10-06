@@ -1,7 +1,11 @@
 require 'spec_helper'
 
 describe Insightly::Resources::ProjectCategory do
-  subject(:project_category) { Insightly.client.get_project_category(id: 1) }
+  subject(:project_category) do
+    VCR.use_cassette('get_project_category') do
+      Insightly.client.get_project_category(id: 1947441)
+    end
+  end
 
   describe 'instance' do
     it 'is decorated with ProjectCategory object' do

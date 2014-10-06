@@ -1,7 +1,11 @@
 require 'spec_helper'
 
 describe Insightly::Resources::Comment do
-  subject(:comment) { Insightly.client.get_comment(id: 1) }
+  subject(:comment) do
+    VCR.use_cassette('get_comment') do
+      Insightly.client.get_comment(id: 3469515)
+    end
+  end
 
   describe 'instance' do
     it 'is decorated with Comment object' do

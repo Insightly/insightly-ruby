@@ -1,7 +1,11 @@
 require 'spec_helper'
 
 describe Insightly::Resources::CustomField do
-  subject(:CustomField) { Insightly.client.get_custom_field(id: 1) }
+  subject(:custom_field) do
+    VCR.use_cassette('get_custom_field') do
+      Insightly.client.get_custom_field(id: 'CONTACT_FIELD_1')
+    end
+  end
 
   describe 'instance' do
     it 'is decorated with CustomField object' do

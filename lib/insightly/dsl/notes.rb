@@ -40,8 +40,16 @@ module Insightly
     end
 
     # POST /v2.1/Notes/{c_id}/Comments
-    # API is not well defined.
-    # https://api.insight.ly/v2.1/Help/Api/POST-Notes-c_id-Comments
+    # Create a comment for a note.
+    # @param [String, Fixnum] id A Note's ID.
+    # @param [String] comment The comment to add to the note.
+    # @raise [ArgumentError] If the method arguments are blank.
+    # @return [Faraday::Response].
+    def create_note_comment(id:, comment:)
+      raise ArgumentError, "ID cannot be blank" if id.blank?
+      raise ArgumentError, "Comment cannot be blank" if comment.blank?
+      request(:post, "Notes/#{id}/Comments", comment)
+    end
 
     # POST /v2.1/Notes?c_id={c_id}&filename={filename}
     # Adds a File Attachment to a Note.
