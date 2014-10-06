@@ -4,6 +4,7 @@ module Insightly
   autoload :Client, 'insightly/client'
   autoload :DSL, 'insightly/dsl'
   autoload :Resources, 'insightly/resources'
+  autoload :Errors, 'insightly/errors'
 
   class << self
     # @return [String]

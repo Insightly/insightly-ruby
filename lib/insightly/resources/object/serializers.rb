@@ -54,25 +54,27 @@ module Insightly
               end
           end
 
+          # Deserialize a Faraday response.
           # @param [Faraday::Response] response.
-          # @return [Object].
+          # @raise [ArgumentError] If the response is blank.
+          # @return [Object, nil].
           def deserialize(response)
-            raise "Response #{response.class.name} to be a Faraday::Response" unless response.is_a?(Faraday::Response)
+            raise ArgumentError, "Response cannot be blank" if response.blank?
 
             attributes = response.body
             begin
               attributes = JSON.parse(response.body)
+              case attributes
+                when Array
+                  return attributes.map { |object| new(object) }
+                when Hash
+                  return new(attributes)
+              end
             rescue JSON::ParserError
               logger = Logger.new(STDOUT)
               logger.error("Could not parse: #{response.body}")
             end
-
-            case attributes
-            when Array
-              attributes.map { |object| new(object) }
-            when Hash
-              new(attributes)
-            end
+            nil
           end
 
           alias_method :parse, :deserialize
