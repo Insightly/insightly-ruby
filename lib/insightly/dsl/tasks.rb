@@ -47,7 +47,7 @@ module Insightly
     # @param [Hash] comment The comment to create.
     # @raise [ArgumentError] If the method arguments are blank.
     # @return [Insightly::Resources::Comment, nil].
-    def create_task_comments(id:, comment:)
+    def create_task_comment(id:, comment:)
       raise ArgumentError, "ID cannot be blank" if id.blank?
       raise ArgumentError, "Comment cannot be blank" if comment.blank?
       Resources::Comment.parse(request(:post, "Tasks/#{id}/Comments", comment))

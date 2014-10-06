@@ -1,0 +1,49 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://<INSIGHTLY_API_KEY>:@api.insight.ly/v2.1/PipelineStages
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - no-cache
+      Pragma:
+      - no-cache
+      Content-Type:
+      - application/json; charset=utf-8
+      Expires:
+      - "-1"
+      Vary:
+      - Accept-Encoding
+      Server:
+      - Microsoft-IIS/7.5
+      Date:
+      - Sun, 05 Oct 2014 16:31:17 GMT
+      Content-Length:
+      - '301'
+      Set-Cookie:
+      - snaptid=sac1prdc01ut03; path=/
+    body:
+      encoding: UTF-8
+      string: '[{"PIPELINE_ID":124170,"STAGE_ID":377384,"STAGE_NAME":"Awaiting quotes","STAGE_ORDER":1,"OWNER_USER_ID":607181},{"PIPELINE_ID":124170,"STAGE_ID":377385,"STAGE_NAME":"Pending
+        decision","STAGE_ORDER":2,"OWNER_USER_ID":607181},{"PIPELINE_ID":124170,"STAGE_ID":377386,"STAGE_NAME":"Active","STAGE_ORDER":3,"OWNER_USER_ID":607181},{"PIPELINE_ID":124170,"STAGE_ID":377388,"STAGE_NAME":"Lab
+        Completed","STAGE_ORDER":4,"OWNER_USER_ID":607181},{"PIPELINE_ID":124170,"STAGE_ID":377390,"STAGE_NAME":"Researcher
+        Completed","STAGE_ORDER":5,"OWNER_USER_ID":607181}]'
+    http_version: 
+  recorded_at: Sun, 05 Oct 2014 16:31:08 GMT
+recorded_with: VCR 2.9.0

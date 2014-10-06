@@ -1,0 +1,81 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://<INSIGHTLY_API_KEY>:@api.insight.ly/v2.1/Opportunities
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - no-cache
+      Pragma:
+      - no-cache
+      Content-Type:
+      - application/json; charset=utf-8
+      Expires:
+      - "-1"
+      Vary:
+      - Accept-Encoding
+      Server:
+      - Microsoft-IIS/7.5
+      Date:
+      - Sun, 05 Oct 2014 00:43:54 GMT
+      Content-Length:
+      - '1669'
+      Set-Cookie:
+      - snaptid=sac1prdc01ut03; path=/
+    body:
+      encoding: UTF-8
+      string: '[{"OPPORTUNITY_ID":4070111,"OPPORTUNITY_NAME":"#029344: RNA microarray","OPPORTUNITY_DETAILS":"---Begin
+        Synced Data---\n<b>Project Url:</b> https://www.scienceexchange.com/projects/29344\n<b>Estimate
+        Deadline:</b> November 29, 2013\n---End Synced Data---","PROBABILITY":null,"BID_CURRENCY":"USD","BID_AMOUNT":null,"BID_TYPE":null,"BID_DURATION":null,"FORECAST_CLOSE_DATE":null,"CATEGORY_ID":null,"PIPELINE_ID":null,"STAGE_ID":null,"OPPORTUNITY_STATE":"Open","IMAGE_URL":"http://s3.amazonaws.com/insightly.userfiles/339351/","RESPONSIBLE_USER_ID":null,"OWNER_USER_ID":607181,"DATE_CREATED_UTC":"2014-07-31
+        16:42:07","DATE_UPDATED_UTC":"2014-07-31 16:42:07","VISIBLE_TO":"EVERYONE","VISIBLE_TEAM_ID":null,"VISIBLE_USER_IDS":null,"CUSTOMFIELDS":[],"TAGS":[],"LINKS":[{"LINK_ID":45984201,"CONTACT_ID":null,"OPPORTUNITY_ID":4070111,"ORGANISATION_ID":35343491,"PROJECT_ID":null,"SECOND_PROJECT_ID":null,"SECOND_OPPORTUNITY_ID":null,"ROLE":null,"DETAILS":null},{"LINK_ID":45984202,"CONTACT_ID":70653020,"OPPORTUNITY_ID":4070111,"ORGANISATION_ID":null,"PROJECT_ID":null,"SECOND_PROJECT_ID":null,"SECOND_OPPORTUNITY_ID":null,"ROLE":null,"DETAILS":null},{"LINK_ID":45984203,"CONTACT_ID":70653020,"OPPORTUNITY_ID":4070111,"ORGANISATION_ID":null,"PROJECT_ID":null,"SECOND_PROJECT_ID":null,"SECOND_OPPORTUNITY_ID":null,"ROLE":null,"DETAILS":null}],"EMAILLINKS":null},{"OPPORTUNITY_ID":4070112,"OPPORTUNITY_NAME":"#030031:
+        Immunohistochemistry","OPPORTUNITY_DETAILS":"---Begin Synced Data---\r\n<b>Project
+        Url:</b> https://www.scienceexchange.com/projects/30031\r\n<b>Estimate Deadline:</b>
+        May  6, 2014\r\n---End Synced Data---","PROBABILITY":null,"BID_CURRENCY":"CAD","BID_AMOUNT":null,"BID_TYPE":null,"BID_DURATION":null,"FORECAST_CLOSE_DATE":null,"CATEGORY_ID":null,"PIPELINE_ID":124170,"STAGE_ID":377385,"OPPORTUNITY_STATE":"Open","IMAGE_URL":"http://s3.amazonaws.com/insightly.userfiles/339351/","RESPONSIBLE_USER_ID":null,"OWNER_USER_ID":607181,"DATE_CREATED_UTC":"2014-07-31
+        16:42:07","DATE_UPDATED_UTC":"2014-10-05 00:17:03","VISIBLE_TO":"EVERYONE","VISIBLE_TEAM_ID":null,"VISIBLE_USER_IDS":null,"CUSTOMFIELDS":[],"TAGS":[],"LINKS":[{"LINK_ID":45984204,"CONTACT_ID":null,"OPPORTUNITY_ID":4070112,"ORGANISATION_ID":35343476,"PROJECT_ID":null,"SECOND_PROJECT_ID":null,"SECOND_OPPORTUNITY_ID":null,"ROLE":null,"DETAILS":null},{"LINK_ID":45984205,"CONTACT_ID":70653014,"OPPORTUNITY_ID":4070112,"ORGANISATION_ID":null,"PROJECT_ID":null,"SECOND_PROJECT_ID":null,"SECOND_OPPORTUNITY_ID":null,"ROLE":null,"DETAILS":null},{"LINK_ID":45984206,"CONTACT_ID":70653014,"OPPORTUNITY_ID":4070112,"ORGANISATION_ID":null,"PROJECT_ID":null,"SECOND_PROJECT_ID":null,"SECOND_OPPORTUNITY_ID":null,"ROLE":null,"DETAILS":null}],"EMAILLINKS":null},{"OPPORTUNITY_ID":4070113,"OPPORTUNITY_NAME":"#030034:
+        Immunohistochemistry","OPPORTUNITY_DETAILS":"---Begin Synced Data---\n<b>Project
+        Url:</b> https://www.scienceexchange.com/projects/30034\n<b>Estimate Deadline:</b>
+        May  6, 2014\n---End Synced Data---","PROBABILITY":null,"BID_CURRENCY":"USD","BID_AMOUNT":null,"BID_TYPE":null,"BID_DURATION":null,"FORECAST_CLOSE_DATE":null,"CATEGORY_ID":null,"PIPELINE_ID":null,"STAGE_ID":null,"OPPORTUNITY_STATE":"Open","IMAGE_URL":"http://s3.amazonaws.com/insightly.userfiles/339351/","RESPONSIBLE_USER_ID":null,"OWNER_USER_ID":607181,"DATE_CREATED_UTC":"2014-07-31
+        16:42:08","DATE_UPDATED_UTC":"2014-07-31 16:42:08","VISIBLE_TO":"EVERYONE","VISIBLE_TEAM_ID":null,"VISIBLE_USER_IDS":null,"CUSTOMFIELDS":[],"TAGS":[],"LINKS":[{"LINK_ID":45984207,"CONTACT_ID":null,"OPPORTUNITY_ID":4070113,"ORGANISATION_ID":35343476,"PROJECT_ID":null,"SECOND_PROJECT_ID":null,"SECOND_OPPORTUNITY_ID":null,"ROLE":null,"DETAILS":null},{"LINK_ID":45984208,"CONTACT_ID":70653013,"OPPORTUNITY_ID":4070113,"ORGANISATION_ID":null,"PROJECT_ID":null,"SECOND_PROJECT_ID":null,"SECOND_OPPORTUNITY_ID":null,"ROLE":null,"DETAILS":null},{"LINK_ID":45984209,"CONTACT_ID":70653013,"OPPORTUNITY_ID":4070113,"ORGANISATION_ID":null,"PROJECT_ID":null,"SECOND_PROJECT_ID":null,"SECOND_OPPORTUNITY_ID":null,"ROLE":null,"DETAILS":null},{"LINK_ID":51750610,"CONTACT_ID":null,"OPPORTUNITY_ID":4070113,"ORGANISATION_ID":null,"PROJECT_ID":null,"SECOND_PROJECT_ID":null,"SECOND_OPPORTUNITY_ID":4070112,"ROLE":null,"DETAILS":null}],"EMAILLINKS":null},{"OPPORTUNITY_ID":4070114,"OPPORTUNITY_NAME":"#030790:
+        Immunohistochemistry","OPPORTUNITY_DETAILS":"---Begin Synced Data---\n<b>Project
+        Url:</b> https://www.scienceexchange.com/projects/30790\n<b>Estimate Deadline:</b>
+        May 16, 2014\n---End Synced Data---","PROBABILITY":null,"BID_CURRENCY":"CAD","BID_AMOUNT":null,"BID_TYPE":null,"BID_DURATION":null,"FORECAST_CLOSE_DATE":null,"CATEGORY_ID":null,"PIPELINE_ID":null,"STAGE_ID":null,"OPPORTUNITY_STATE":"Open","IMAGE_URL":"http://s3.amazonaws.com/insightly.userfiles/339351/","RESPONSIBLE_USER_ID":null,"OWNER_USER_ID":607181,"DATE_CREATED_UTC":"2014-07-31
+        16:42:08","DATE_UPDATED_UTC":"2014-07-31 16:42:08","VISIBLE_TO":"EVERYONE","VISIBLE_TEAM_ID":null,"VISIBLE_USER_IDS":null,"CUSTOMFIELDS":[],"TAGS":[],"LINKS":[{"LINK_ID":45984210,"CONTACT_ID":null,"OPPORTUNITY_ID":4070114,"ORGANISATION_ID":35343523,"PROJECT_ID":null,"SECOND_PROJECT_ID":null,"SECOND_OPPORTUNITY_ID":null,"ROLE":null,"DETAILS":null},{"LINK_ID":45984211,"CONTACT_ID":70653032,"OPPORTUNITY_ID":4070114,"ORGANISATION_ID":null,"PROJECT_ID":null,"SECOND_PROJECT_ID":null,"SECOND_OPPORTUNITY_ID":null,"ROLE":null,"DETAILS":null},{"LINK_ID":45984212,"CONTACT_ID":70653032,"OPPORTUNITY_ID":4070114,"ORGANISATION_ID":null,"PROJECT_ID":null,"SECOND_PROJECT_ID":null,"SECOND_OPPORTUNITY_ID":null,"ROLE":null,"DETAILS":null}],"EMAILLINKS":null},{"OPPORTUNITY_ID":4070115,"OPPORTUNITY_NAME":"#030795:
+        Immunohistochemistry","OPPORTUNITY_DETAILS":"---Begin Synced Data---\n<b>Project
+        Url:</b> https://www.scienceexchange.com/projects/30795\n<b>Estimate Deadline:</b>
+        May 17, 2014\n---End Synced Data---","PROBABILITY":null,"BID_CURRENCY":"CAD","BID_AMOUNT":null,"BID_TYPE":null,"BID_DURATION":null,"FORECAST_CLOSE_DATE":null,"CATEGORY_ID":null,"PIPELINE_ID":null,"STAGE_ID":null,"OPPORTUNITY_STATE":"Open","IMAGE_URL":"http://s3.amazonaws.com/insightly.userfiles/339351/","RESPONSIBLE_USER_ID":null,"OWNER_USER_ID":607181,"DATE_CREATED_UTC":"2014-07-31
+        16:42:09","DATE_UPDATED_UTC":"2014-07-31 16:42:09","VISIBLE_TO":"EVERYONE","VISIBLE_TEAM_ID":null,"VISIBLE_USER_IDS":null,"CUSTOMFIELDS":[],"TAGS":[],"LINKS":[{"LINK_ID":45984213,"CONTACT_ID":null,"OPPORTUNITY_ID":4070115,"ORGANISATION_ID":35343524,"PROJECT_ID":null,"SECOND_PROJECT_ID":null,"SECOND_OPPORTUNITY_ID":null,"ROLE":null,"DETAILS":null},{"LINK_ID":45984214,"CONTACT_ID":70653033,"OPPORTUNITY_ID":4070115,"ORGANISATION_ID":null,"PROJECT_ID":null,"SECOND_PROJECT_ID":null,"SECOND_OPPORTUNITY_ID":null,"ROLE":null,"DETAILS":null},{"LINK_ID":45984215,"CONTACT_ID":70653033,"OPPORTUNITY_ID":4070115,"ORGANISATION_ID":null,"PROJECT_ID":null,"SECOND_PROJECT_ID":null,"SECOND_OPPORTUNITY_ID":null,"ROLE":null,"DETAILS":null}],"EMAILLINKS":null},{"OPPORTUNITY_ID":4070116,"OPPORTUNITY_NAME":"#030796:
+        Immunohistochemistry","OPPORTUNITY_DETAILS":"---Begin Synced Data---\n<b>Project
+        Url:</b> https://www.scienceexchange.com/projects/30796\n<b>Estimate Deadline:</b>
+        May 17, 2014\n---End Synced Data---","PROBABILITY":null,"BID_CURRENCY":"USD","BID_AMOUNT":null,"BID_TYPE":null,"BID_DURATION":null,"FORECAST_CLOSE_DATE":null,"CATEGORY_ID":null,"PIPELINE_ID":null,"STAGE_ID":null,"OPPORTUNITY_STATE":"Open","IMAGE_URL":"http://s3.amazonaws.com/insightly.userfiles/339351/","RESPONSIBLE_USER_ID":null,"OWNER_USER_ID":607181,"DATE_CREATED_UTC":"2014-07-31
+        16:42:09","DATE_UPDATED_UTC":"2014-07-31 16:42:09","VISIBLE_TO":"EVERYONE","VISIBLE_TEAM_ID":null,"VISIBLE_USER_IDS":null,"CUSTOMFIELDS":[],"TAGS":[],"LINKS":[{"LINK_ID":45984216,"CONTACT_ID":null,"OPPORTUNITY_ID":4070116,"ORGANISATION_ID":35343523,"PROJECT_ID":null,"SECOND_PROJECT_ID":null,"SECOND_OPPORTUNITY_ID":null,"ROLE":null,"DETAILS":null},{"LINK_ID":45984217,"CONTACT_ID":70653031,"OPPORTUNITY_ID":4070116,"ORGANISATION_ID":null,"PROJECT_ID":null,"SECOND_PROJECT_ID":null,"SECOND_OPPORTUNITY_ID":null,"ROLE":null,"DETAILS":null},{"LINK_ID":45984218,"CONTACT_ID":70653031,"OPPORTUNITY_ID":4070116,"ORGANISATION_ID":null,"PROJECT_ID":null,"SECOND_PROJECT_ID":null,"SECOND_OPPORTUNITY_ID":null,"ROLE":null,"DETAILS":null}],"EMAILLINKS":null},{"OPPORTUNITY_ID":4070117,"OPPORTUNITY_NAME":"#030797:
+        Immunohistochemistry","OPPORTUNITY_DETAILS":"---Begin Synced Data---\n<b>Project
+        Url:</b> https://www.scienceexchange.com/projects/30797\n<b>Estimate Deadline:</b>
+        May 17, 2014\n---End Synced Data---","PROBABILITY":null,"BID_CURRENCY":"USD","BID_AMOUNT":null,"BID_TYPE":null,"BID_DURATION":null,"FORECAST_CLOSE_DATE":null,"CATEGORY_ID":null,"PIPELINE_ID":null,"STAGE_ID":null,"OPPORTUNITY_STATE":"Open","IMAGE_URL":"http://s3.amazonaws.com/insightly.userfiles/339351/","RESPONSIBLE_USER_ID":null,"OWNER_USER_ID":607181,"DATE_CREATED_UTC":"2014-07-31
+        16:42:10","DATE_UPDATED_UTC":"2014-07-31 16:42:10","VISIBLE_TO":"EVERYONE","VISIBLE_TEAM_ID":null,"VISIBLE_USER_IDS":null,"CUSTOMFIELDS":[],"TAGS":[],"LINKS":[{"LINK_ID":45984219,"CONTACT_ID":null,"OPPORTUNITY_ID":4070117,"ORGANISATION_ID":35343523,"PROJECT_ID":null,"SECOND_PROJECT_ID":null,"SECOND_OPPORTUNITY_ID":null,"ROLE":null,"DETAILS":null},{"LINK_ID":45984220,"CONTACT_ID":70653031,"OPPORTUNITY_ID":4070117,"ORGANISATION_ID":null,"PROJECT_ID":null,"SECOND_PROJECT_ID":null,"SECOND_OPPORTUNITY_ID":null,"ROLE":null,"DETAILS":null},{"LINK_ID":45984221,"CONTACT_ID":70653031,"OPPORTUNITY_ID":4070117,"ORGANISATION_ID":null,"PROJECT_ID":null,"SECOND_PROJECT_ID":null,"SECOND_OPPORTUNITY_ID":null,"ROLE":null,"DETAILS":null}],"EMAILLINKS":null},{"OPPORTUNITY_ID":4070118,"OPPORTUNITY_NAME":"#030797:
+        Immunohistochemistry","OPPORTUNITY_DETAILS":"---Begin Synced Data---\n<b>Project
+        Url:</b> https://www.scienceexchange.com/projects/30797\n<b>Estimate Deadline:</b>
+        May 17, 2014\n---End Synced Data---","PROBABILITY":null,"BID_CURRENCY":"USD","BID_AMOUNT":null,"BID_TYPE":null,"BID_DURATION":null,"FORECAST_CLOSE_DATE":null,"CATEGORY_ID":null,"PIPELINE_ID":null,"STAGE_ID":null,"OPPORTUNITY_STATE":"Open","IMAGE_URL":"http://s3.amazonaws.com/insightly.userfiles/339351/","RESPONSIBLE_USER_ID":null,"OWNER_USER_ID":607181,"DATE_CREATED_UTC":"2014-07-31
+        16:42:10","DATE_UPDATED_UTC":"2014-07-31 16:42:11","VISIBLE_TO":"EVERYONE","VISIBLE_TEAM_ID":null,"VISIBLE_USER_IDS":null,"CUSTOMFIELDS":[],"TAGS":[],"LINKS":[{"LINK_ID":45984222,"CONTACT_ID":null,"OPPORTUNITY_ID":4070118,"ORGANISATION_ID":35343524,"PROJECT_ID":null,"SECOND_PROJECT_ID":null,"SECOND_OPPORTUNITY_ID":null,"ROLE":null,"DETAILS":null},{"LINK_ID":45984223,"CONTACT_ID":70653034,"OPPORTUNITY_ID":4070118,"ORGANISATION_ID":null,"PROJECT_ID":null,"SECOND_PROJECT_ID":null,"SECOND_OPPORTUNITY_ID":null,"ROLE":null,"DETAILS":null},{"LINK_ID":45984224,"CONTACT_ID":70653034,"OPPORTUNITY_ID":4070118,"ORGANISATION_ID":null,"PROJECT_ID":null,"SECOND_PROJECT_ID":null,"SECOND_OPPORTUNITY_ID":null,"ROLE":null,"DETAILS":null}],"EMAILLINKS":null},{"OPPORTUNITY_ID":4070119,"OPPORTUNITY_NAME":"#031232:
+        Banked frozen tissue specimen","OPPORTUNITY_DETAILS":"---Begin Synced Data---\n<b>Project
+        Url:</b> https://www.scienceexchange.com/projects/31232\n<b>Estimate Deadline:</b>
+        July 25, 2014\n---End Synced Data---","PROBABILITY":null,"BID_CURRENCY":"CAD","BID_AMOUNT":null,"BID_TYPE":null,"BID_DURATION":null,"FORECAST_CLOSE_DATE":null,"CATEGORY_ID":null,"PIPELINE_ID":null,"STAGE_ID":null,"OPPORTUNITY_STATE":"Open","IMAGE_URL":"http://s3.amazonaws.com/insightly.userfiles/339351/","RESPONSIBLE_USER_ID":null,"OWNER_USER_ID":607181,"DATE_CREATED_UTC":"2014-07-31
+        16:42:11","DATE_UPDATED_UTC":"2014-07-31 16:42:11","VISIBLE_TO":"EVERYONE","VISIBLE_TEAM_ID":null,"VISIBLE_USER_IDS":null,"CUSTOMFIELDS":[],"TAGS":[],"LINKS":[{"LINK_ID":45984226,"CONTACT_ID":null,"OPPORTUNITY_ID":4070119,"ORGANISATION_ID":35343491,"PROJECT_ID":null,"SECOND_PROJECT_ID":null,"SECOND_OPPORTUNITY_ID":null,"ROLE":null,"DETAILS":null}],"EMAILLINKS":null}]'
+    http_version: 
+  recorded_at: Sun, 05 Oct 2014 00:43:46 GMT
+recorded_with: VCR 2.9.0
