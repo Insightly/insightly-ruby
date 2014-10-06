@@ -1,0 +1,109 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://<INSIGHTLY_API_KEY>:@api.insight.ly/v2.1/Projects/1657941
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - no-cache
+      Pragma:
+      - no-cache
+      Content-Type:
+      - application/json; charset=utf-8
+      Expires:
+      - "-1"
+      Vary:
+      - Accept-Encoding
+      Server:
+      - Microsoft-IIS/7.5
+      Date:
+      - Sun, 05 Oct 2014 17:07:35 GMT
+      Content-Length:
+      - '813'
+      Set-Cookie:
+      - snaptid=sac1prdc01ut04; path=/
+    body:
+      encoding: UTF-8
+      string: '{"PROJECT_ID":1657941,"PROJECT_NAME":"The leaves are lovely this time
+        of year","STATUS":"IN PROGRESS","PROJECT_DETAILS":"---Begin Synced Data---\n<b>Project
+        Url:</b> https://www.scienceexchange.com/projects/30034\n<b>Estimate Deadline:</b>
+        May  6, 2014\n---End Synced Data---","OPPORTUNITY_ID":4070113,"STARTED_DATE":"2014-10-05
+        00:00:00","COMPLETED_DATE":null,"IMAGE_URL":"http://s3.amazonaws.com/insightly.userfiles/339351/","RESPONSIBLE_USER_ID":null,"OWNER_USER_ID":607181,"DATE_CREATED_UTC":"2014-10-05
+        16:53:35","DATE_UPDATED_UTC":"2014-10-05 16:53:35","CATEGORY_ID":null,"PIPELINE_ID":null,"STAGE_ID":null,"VISIBLE_TO":"EVERYONE","VISIBLE_TEAM_ID":null,"VISIBLE_USER_IDS":null,"CUSTOMFIELDS":[],"TAGS":[],"LINKS":[{"LINK_ID":51931087,"CONTACT_ID":null,"OPPORTUNITY_ID":null,"ORGANISATION_ID":35343476,"PROJECT_ID":1657941,"SECOND_PROJECT_ID":null,"SECOND_OPPORTUNITY_ID":null,"ROLE":null,"DETAILS":null},{"LINK_ID":51931088,"CONTACT_ID":70653013,"OPPORTUNITY_ID":null,"ORGANISATION_ID":null,"PROJECT_ID":1657941,"SECOND_PROJECT_ID":null,"SECOND_OPPORTUNITY_ID":null,"ROLE":null,"DETAILS":null},{"LINK_ID":51931089,"CONTACT_ID":null,"OPPORTUNITY_ID":4070113,"ORGANISATION_ID":null,"PROJECT_ID":1657941,"SECOND_PROJECT_ID":null,"SECOND_OPPORTUNITY_ID":null,"ROLE":"Converted
+        Opportunity","DETAILS":null}],"EMAILLINKS":[{"EMAIL_LINK_ID":61065705,"EMAIL_ID":17684953,"CONTACT_ID":null,"ORGANISATION_ID":null,"OPPORTUNITY_ID":null,"PROJECT_ID":1657941}]}'
+    http_version: 
+  recorded_at: Sun, 05 Oct 2014 17:07:28 GMT
+- request:
+    method: put
+    uri: https://<INSIGHTLY_API_KEY>:@api.insight.ly/v2.1/Projects
+    body:
+      encoding: UTF-8
+      string: '{"PROJECT_ID":1657941,"PROJECT_NAME":"The leaves are lovely this time
+        of year","STATUS":"IN PROGRESS","PROJECT_DETAILS":"---Begin Synced Data---\n<b>Project
+        Url:</b> https://www.scienceexchange.com/projects/30034\n<b>Estimate Deadline:</b>
+        May  6, 2014\n---End Synced Data---","OPPORTUNITY_ID":4070113,"STARTED_DATE":"2014-10-05
+        00:00:00","COMPLETED_DATE":null,"IMAGE_URL":"http://s3.amazonaws.com/insightly.userfiles/339351/","RESPONSIBLE_USER_ID":null,"OWNER_USER_ID":607181,"DATE_CREATED_UTC":"2014-10-05
+        16:53:35","DATE_UPDATED_UTC":"2014-10-05 16:53:35","CATEGORY_ID":null,"PIPELINE_ID":null,"STAGE_ID":null,"VISIBLE_TO":"EVERYONE","VISIBLE_TEAM_ID":null,"VISIBLE_USER_IDS":null,"CUSTOMFIELDS":[],"TAGS":[],"LINKS":[{"LINK_ID":51931087,"CONTACT_ID":null,"OPPORTUNITY_ID":null,"ORGANISATION_ID":35343476,"PROJECT_ID":1657941,"SECOND_PROJECT_ID":null,"SECOND_OPPORTUNITY_ID":null,"ROLE":null,"DETAILS":null},{"LINK_ID":51931088,"CONTACT_ID":70653013,"OPPORTUNITY_ID":null,"ORGANISATION_ID":null,"PROJECT_ID":1657941,"SECOND_PROJECT_ID":null,"SECOND_OPPORTUNITY_ID":null,"ROLE":null,"DETAILS":null},{"LINK_ID":51931089,"CONTACT_ID":null,"OPPORTUNITY_ID":4070113,"ORGANISATION_ID":null,"PROJECT_ID":1657941,"SECOND_PROJECT_ID":null,"SECOND_OPPORTUNITY_ID":null,"ROLE":"Converted
+        Opportunity","DETAILS":null}],"EMAILLINKS":[{"EMAIL_LINK_ID":61065705,"EMAIL_ID":17684953,"CONTACT_ID":null,"ORGANISATION_ID":null,"OPPORTUNITY_ID":null,"PROJECT_ID":1657941}]}'
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - no-cache
+      Pragma:
+      - no-cache
+      Content-Type:
+      - application/json; charset=utf-8
+      Expires:
+      - "-1"
+      Location:
+      - https://api.insight.ly/v2.1/Projects/1657941
+      Vary:
+      - Accept-Encoding
+      Server:
+      - Microsoft-IIS/7.5
+      Date:
+      - Sun, 05 Oct 2014 17:07:36 GMT
+      Content-Length:
+      - '822'
+      Set-Cookie:
+      - snaptid=sac1prdc01ut05; path=/
+    body:
+      encoding: UTF-8
+      string: '{"PROJECT_ID":1657941,"PROJECT_NAME":"The leaves are lovely this time
+        of year","STATUS":"IN PROGRESS","PROJECT_DETAILS":"---Begin Synced Data---\n<b>Project
+        Url:</b> https://www.scienceexchange.com/projects/30034\n<b>Estimate Deadline:</b>
+        May  6, 2014\n---End Synced Data---","OPPORTUNITY_ID":4070113,"STARTED_DATE":"2014-10-05
+        00:00:00","COMPLETED_DATE":null,"IMAGE_URL":"http://s3.amazonaws.com/insightly.userfiles/339351/","RESPONSIBLE_USER_ID":null,"OWNER_USER_ID":607181,"DATE_CREATED_UTC":"2014-10-05
+        16:53:35","DATE_UPDATED_UTC":"2014-10-05 17:07:36","CATEGORY_ID":null,"PIPELINE_ID":null,"STAGE_ID":null,"VISIBLE_TO":"EVERYONE","VISIBLE_TEAM_ID":null,"VISIBLE_USER_IDS":null,"CUSTOMFIELDS":[],"TAGS":[],"LINKS":[{"LINK_ID":51931087,"CONTACT_ID":null,"OPPORTUNITY_ID":null,"ORGANISATION_ID":35343476,"PROJECT_ID":1657941,"SECOND_PROJECT_ID":null,"SECOND_OPPORTUNITY_ID":null,"ROLE":null,"DETAILS":null},{"LINK_ID":51931088,"CONTACT_ID":70653013,"OPPORTUNITY_ID":null,"ORGANISATION_ID":null,"PROJECT_ID":1657941,"SECOND_PROJECT_ID":null,"SECOND_OPPORTUNITY_ID":null,"ROLE":null,"DETAILS":null},{"LINK_ID":51931089,"CONTACT_ID":null,"OPPORTUNITY_ID":4070113,"ORGANISATION_ID":null,"PROJECT_ID":1657941,"SECOND_PROJECT_ID":null,"SECOND_OPPORTUNITY_ID":null,"ROLE":"Converted
+        Opportunity","DETAILS":null}],"EMAILLINKS":[{"EMAIL_LINK_ID":61065705,"EMAIL_ID":17684953,"CONTACT_ID":null,"ORGANISATION_ID":null,"OPPORTUNITY_ID":null,"PROJECT_ID":1657941}]}'
+    http_version: 
+  recorded_at: Sun, 05 Oct 2014 17:07:28 GMT
+recorded_with: VCR 2.9.0

@@ -16,7 +16,7 @@ module Insightly
     # Get a list of pipeline stages.
     # @return [Array, nil]
     def get_pipeline_stages
-      Resources::PipelineStage.parse(request(:get, 'PipelineStages'))
+      Resources::PipelineStage.parse(request(:get, "PipelineStages"))
     end
   end
 end

@@ -1,7 +1,11 @@
 require 'spec_helper'
 
 describe Insightly::Resources::PipelineStage do
-  subject(:pipeline_stage) { Insightly.client.get_pipeline_stage(id: 1) }
+  subject(:pipeline_stage) do
+    VCR.use_cassette('get_pipeline_stage') do
+      Insightly.client.get_pipeline_stage(id: 377384)
+    end
+  end
 
   describe 'instance' do
     it 'is decorated with PipelineStage object' do
