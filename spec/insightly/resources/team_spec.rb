@@ -1,7 +1,11 @@
 require 'spec_helper'
 
 describe Insightly::Resources::Team do
-  subject(:team) { Insightly.client.get_team(id: 1) }
+  subject(:team) do
+    VCR.use_cassette('get_team') do
+      Insightly.client.get_team(id: 2063767)
+    end
+  end
 
   describe 'instance' do
     it 'is decorated with Team object' do

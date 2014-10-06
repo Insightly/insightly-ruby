@@ -1,7 +1,11 @@
 require 'spec_helper'
 
 describe Insightly::Resources::Note do
-  subject(:note) { Insightly.client.get_note(id: 1) }
+  subject(:note) do
+    VCR.use_cassette('get_note') do
+      Insightly.client.get_note(id: 15377334)
+    end
+  end
 
   describe 'instance' do
     it 'is decorated with Note object' do
