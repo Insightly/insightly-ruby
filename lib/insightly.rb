@@ -5,6 +5,7 @@ module Insightly
   autoload :DSL, 'insightly/dsl'
   autoload :Resources, 'insightly/resources'
   autoload :Errors, 'insightly/errors'
+  autoload :Utils, 'insightly/utils'
 
   class << self
     # @return [String]

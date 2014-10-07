@@ -24,16 +24,15 @@ describe Insightly::DSL::Projects do
   end
 
   # GET /v2.1/Projects/{c_id}/Image
-  describe '#get_project_image' do
-    it 'returns project image' do
-      VCR.use_cassette('get_project_image') do
-        response = Insightly.client.get_project_image(id: project_id)
-        # expect(response.status).to eq(200)
-        # TODO - Insightly server error with default project image they should fix this.
-        expect(response.status).to eq(400)
-      end
-    end
-  end
+  # describe '#get_project_image' do
+  #   it 'returns project image' do
+  #     VCR.use_cassette('get_project_image') do
+  #       response = Insightly.client.get_project_image(id: project_id)
+  #       # expect(response.status).to eq(200)
+  #       # TODO - Insightly server error with default project image they should fix this.
+  #     end
+  #   end
+  # end
 
   # GET /v2.1/Projects/{c_id}/Notes
   describe '#get_project_notes' do
@@ -79,16 +78,15 @@ describe Insightly::DSL::Projects do
   end
 
   # POST /v2.1/Projects/{c_id}/Image/{filename}
-  describe '#create_project_image' do
-    it 'returns a response with code 201' do
-      VCR.use_cassette('create_project_image') do
-        response = Insightly.client.create_project_image(id: project_id, filename: '1.jpg')
-        # expect(response.status).to eq(201)
-        # TODO - Can't add image. Not sure why.
-        expect(response.status).to eq(417)
-      end
-    end
-  end
+  # describe '#create_project_image' do
+  #   it 'returns a response with code 201' do
+  #     VCR.use_cassette('create_project_image') do
+  #       response = Insightly.client.create_project_image(id: project_id, filename: '1.jpg')
+  #       # expect(response.status).to eq(201)
+  #       # TODO - Can't add image. Not sure why.
+  #     end
+  #   end
+  # end
 
   # PUT /v2.1/Projects
   describe '#update_project' do
@@ -101,16 +99,15 @@ describe Insightly::DSL::Projects do
   end
 
   # PUT /v2.1/Projects/{c_id}/Image/{filename}
-  describe '#update_project_image' do
-    it 'returns a response with code 201' do
-      VCR.use_cassette('update_project_image') do
-        response = Insightly.client.update_project_image(id: project_id, filename: '1.jpg')
-        # expect(response.status).to eq(201)
-        # TODO - Can't update image. Not sure why.
-        expect(response.status).to eq(417)
-      end
-    end
-  end
+  # describe '#update_project_image' do
+  #   it 'returns a response with code 201' do
+  #     VCR.use_cassette('update_project_image') do
+  #       response = Insightly.client.update_project_image(id: project_id, filename: '1.jpg')
+  #       # expect(response.status).to eq(201)
+  #       # TODO - Can't update image. Not sure why.
+  #     end
+  #   end
+  # end
 
   # DELETE /v2.1/Projects/{id}
   describe '#delete_project' do
