@@ -24,16 +24,15 @@ describe Insightly::DSL::Organisations do
   end
 
   # GET /v2.1/Organisations/{c_id}/Image
-  describe '#get_organisation_image' do
-    it 'returns organisation image' do
-      VCR.use_cassette('get_organisation_image') do
-        response = Insightly.client.get_organisation_image(id: organisation_id)
-        #expect(response.status).to eq(200)
-        # TODO - Insightly server error with default organisation image they should fix this.
-        expect(response.status).to eq(400)
-      end
-    end
-  end
+  # describe '#get_organisation_image' do
+  #   it 'returns organisation image' do
+  #     VCR.use_cassette('get_organisation_image') do
+  #       response = Insightly.client.get_organisation_image(id: organisation_id)
+  #       #expect(response.status).to eq(200)
+  #       # TODO - Insightly server error with default organisation image they should fix this.
+  #     end
+  #   end
+  # end
 
   # GET /v2.1/Organisations/{c_id}/Notes
   describe '#get_organisation_notes' do
@@ -79,16 +78,15 @@ describe Insightly::DSL::Organisations do
   end
 
   # POST /v2.1/Organisations/{c_id}/Image/{filename}
-  describe '#create_organisation_image' do
-    it 'returns a response with code 201' do
-      VCR.use_cassette('create_organisation_image') do
-        response = Insightly.client.create_organisation_image(id: organisation_id, filename: '1.jpg')
-        #expect(response.status).to eq(201)
-        # TODO - Can't add image. Not sure why.
-        expect(response.status).to eq(417)
-      end
-    end
-  end
+  # describe '#create_organisation_image' do
+  #   it 'returns a response with code 201' do
+  #     VCR.use_cassette('create_organisation_image') do
+  #       response = Insightly.client.create_organisation_image(id: organisation_id, filename: '1.jpg')
+  #       #expect(response.status).to eq(201)
+  #       # TODO - Can't add image. Not sure why.
+  #     end
+  #   end
+  # end
 
   # PUT /v2.1/Organisations
   describe '#update_organisation' do
@@ -101,16 +99,15 @@ describe Insightly::DSL::Organisations do
   end
 
   # PUT /v2.1/Organisations/{c_id}/Image/{filename}
-  describe '#update_organisation_image' do
-    it 'returns a response with code 201' do
-      VCR.use_cassette('update_organisation_image') do
-        response = Insightly.client.update_organisation_image(id: organisation_id, filename: '1.jpg')
-        #expect(response.status).to eq(201)
-        # TODO - Can't update image. Not sure why.
-        expect(response.status).to eq(417)
-      end
-    end
-  end
+  # describe '#update_organisation_image' do
+  #   it 'returns a response with code 201' do
+  #     VCR.use_cassette('update_organisation_image') do
+  #       response = Insightly.client.update_organisation_image(id: organisation_id, filename: '1.jpg')
+  #       #expect(response.status).to eq(201)
+  #       # TODO - Can't update image. Not sure why.
+  #     end
+  #   end
+  # end
 
   # DELETE /v2.1/Organisations/{id}
   describe '#delete_organisation' do
