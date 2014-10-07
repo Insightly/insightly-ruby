@@ -1,9 +1,8 @@
+require 'insightly/errors/client_error'
+
 module Insightly
   module Errors
-    class ResourceNotFoundError < StandardError
-      def initialize(response:)
-        @response = response
-      end
+    class ResourceNotFoundError < ClientError
     end
   end
 end
