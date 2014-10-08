@@ -33,7 +33,7 @@ module Insightly
     # @param [Hash] headers request headers (optional).
     # @raise [ArgumentError] If the response is blank.
     # @raise [ResourceNotFoundError] If the response code is 404.
-    # @raise [ResourceNotFoundError] If the response code is not in the success range.
+    # @raise [ClientError] If the response code is not in the success range.
     # @return [Faraday::Response] server response.
     def request(method, path, query = {}, headers = HEADERS)
       raise ArgumentError, "Unsupported method #{method.inspect}. Only :get, :post, :put, :delete are allowed" unless REQUESTS.include?(method)
