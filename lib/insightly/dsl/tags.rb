@@ -7,7 +7,7 @@ module Insightly
     # @param [String, Fixnum] id A Tag's ID.
     # @raise [ArgumentError] If the method arguments are blank.
     # @return [Insightly::Resources::Tag, nil].
-    def get_tag(id)
+    def get_tag(id:)
       raise ArgumentError, "ID cannot be blank" if id.blank?
       Resources::Tag.parse(request(:get, "Tags/#{id}"))
     end

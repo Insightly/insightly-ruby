@@ -22,7 +22,7 @@ module Insightly
       @connection ||= Faraday.new do |builder|
         builder.basic_auth @api_key, ''
         builder.request :url_encoded
-        builder.response :logger
+        builder.response :logger if Insightly.logger
         builder.adapter Faraday.default_adapter
       end
     end
