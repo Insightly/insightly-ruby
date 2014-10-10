@@ -10,6 +10,7 @@ module Insightly
   class << self
     # @return [String]
     attr_accessor :api_key
+    attr_accessor :logger
   end
 
   module_function
