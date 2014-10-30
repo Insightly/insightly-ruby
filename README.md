@@ -23,23 +23,23 @@ The gem requires Ruby 2.0.0 and above.
 ## Sample Code
 
 Set client the API key.
-```
+```ruby
 Insightly.api_key = <your API key>
 ```
 
 Get contacts.
-```
+```ruby
 contacts = Insightly.client.get_contacts
 ```
 
 Get a contact.
-```
+```ruby
 contact = Insightly.client.get_contact(id: 1)
 ```
 
 Create a contact.
 
-```
+```ruby
 # Build JSON serialized attributes.
 # The gem won't do this for you. You need to build a serializer that meets your needs."
 contact_attributes = {
@@ -59,7 +59,7 @@ contact = Insightly.client.create_contact(contact: contact_attributes)
 ```
 
 Update a contact.
-```
+```ruby
 # Build JSON serialized attributes.
 # The gem won't do this for you. You need to build a serializer that meets your needs."
 # contact_attributes = <same as create>
@@ -69,7 +69,7 @@ contact = Insightly.client.update_contact(contact: contact_attributes)
 ```
 
 Delete a contact.
-```
+```ruby
 Insightly.client.delete_contact(id: 1)
 ```
 
@@ -80,7 +80,7 @@ an ```Insightly::Errors::ResourceNotFoundError``` if the target resource cannot 
 
 Depending on your implementation you may want to rescue these errors as follows:
 
-```
+```ruby
 begin
   Insightly.client.delete_contact(id: 1)  
 rescue Insightly::Errors::ResourceNotFoundError => e
@@ -91,7 +91,7 @@ end
 ```    
 If you don't care whether or not the resource is found you can simply do the following:
 
-```
+```ruby
 begin
   Insightly.client.delete_contact(id: 1)
 rescue Insightly::Errors::ClientError => e
