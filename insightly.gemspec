@@ -4,11 +4,11 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require 'insightly/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = 'insightly'
+  spec.name          = 'insightly-2.1'
   spec.version       = Insightly::VERSION
   spec.authors       = ['Alexander Semyonov', 'Michael Kompanets', 'David Iorns']
   spec.email         = ['al@semyonov.us', 'michael@scienceexchange.com', 'david@scienceexchange.com']
-  spec.summary       = 'A Ruby wrapper for the Insightly API'
+  spec.summary       = 'A Ruby wrapper for the Insightly v2.1 API https://api.insight.ly/v2.1/Help'
   spec.homepage      = 'https://github.com/insightly/ruby'
 
   spec.files         = `git ls-files -z`.split("\x0")
