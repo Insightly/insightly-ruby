@@ -1,13 +1,13 @@
 require 'spec_helper'
 
-describe Insightly::DSL::Projects do
+describe Insightly2::DSL::Projects do
   let(:project_id) { 1657941 }
 
   # GET /v2.1/Projects/{id}
   describe '#get_project' do
     it 'returns a project' do
       VCR.use_cassette('get_project') do
-        expect(Insightly.client.get_project(id: project_id)).to be_a(Project)
+        expect(Insightly2.client.get_project(id: project_id)).to be_a(Project)
       end
     end
   end
@@ -16,7 +16,7 @@ describe Insightly::DSL::Projects do
   describe '#get_project_emails' do
     it 'returns project emails' do
       VCR.use_cassette('get_project_emails') do
-        response = Insightly.client.get_project_emails(id: project_id)
+        response = Insightly2.client.get_project_emails(id: project_id)
         expect(response).to be_a(Array)
         expect(response.first).to be_a(Email)
       end
@@ -27,9 +27,9 @@ describe Insightly::DSL::Projects do
   # describe '#get_project_image' do
   #   it 'returns project image' do
   #     VCR.use_cassette('get_project_image') do
-  #       response = Insightly.client.get_project_image(id: project_id)
+  #       response = Insightly2.client.get_project_image(id: project_id)
   #       # expect(response.status).to eq(200)
-  #       # TODO - Insightly server error with default project image they should fix this.
+  #       # TODO - Insightly2 server error with default project image they should fix this.
   #     end
   #   end
   # end
@@ -38,7 +38,7 @@ describe Insightly::DSL::Projects do
   describe '#get_project_notes' do
     it 'returns project notes' do
       VCR.use_cassette('get_project_notes') do
-        response = Insightly.client.get_project_notes(id: project_id)
+        response = Insightly2.client.get_project_notes(id: project_id)
         expect(response).to be_a(Array)
         expect(response.first).to be_a(Note)
       end
@@ -49,7 +49,7 @@ describe Insightly::DSL::Projects do
   describe '#get_project_tasks' do
     it 'returns project tasks' do
       VCR.use_cassette('get_project_tasks') do
-        response = Insightly.client.get_project_tasks(id: project_id)
+        response = Insightly2.client.get_project_tasks(id: project_id)
         expect(response).to be_a(Array)
         expect(response.first).to be_a(Task)
       end
@@ -60,7 +60,7 @@ describe Insightly::DSL::Projects do
   describe '#get_projects' do
     it 'returns an array of projects' do
       VCR.use_cassette('get_projects') do
-        projects = Insightly.client.get_projects
+        projects = Insightly2.client.get_projects
         expect(projects).to be_a(Array)
         expect(projects.first).to be_a(Project)
       end
@@ -71,8 +71,8 @@ describe Insightly::DSL::Projects do
   describe '#create_project' do
     it 'creates and returns a project' do
       VCR.use_cassette('create_project') do
-        project = Insightly.client.get_project(id: project_id)
-        expect(Insightly.client.create_project(project: project)).to be_a(Project)
+        project = Insightly2.client.get_project(id: project_id)
+        expect(Insightly2.client.create_project(project: project)).to be_a(Project)
       end
     end
   end
@@ -81,7 +81,7 @@ describe Insightly::DSL::Projects do
   # describe '#create_project_image' do
   #   it 'returns a response with code 201' do
   #     VCR.use_cassette('create_project_image') do
-  #       response = Insightly.client.create_project_image(id: project_id, filename: '1.jpg')
+  #       response = Insightly2.client.create_project_image(id: project_id, filename: '1.jpg')
   #       # expect(response.status).to eq(201)
   #       # TODO - Can't add image. Not sure why.
   #     end
@@ -92,8 +92,8 @@ describe Insightly::DSL::Projects do
   describe '#update_project' do
     it 'updates and returns a project' do
       VCR.use_cassette('update_project') do
-        project = Insightly.client.get_project(id: project_id)
-        expect(Insightly.client.update_project(project: project)).to be_a(Project)
+        project = Insightly2.client.get_project(id: project_id)
+        expect(Insightly2.client.update_project(project: project)).to be_a(Project)
       end
     end
   end
@@ -102,7 +102,7 @@ describe Insightly::DSL::Projects do
   # describe '#update_project_image' do
   #   it 'returns a response with code 201' do
   #     VCR.use_cassette('update_project_image') do
-  #       response = Insightly.client.update_project_image(id: project_id, filename: '1.jpg')
+  #       response = Insightly2.client.update_project_image(id: project_id, filename: '1.jpg')
   #       # expect(response.status).to eq(201)
   #       # TODO - Can't update image. Not sure why.
   #     end
@@ -113,7 +113,7 @@ describe Insightly::DSL::Projects do
   describe '#delete_project' do
     it 'returns a response with code 202' do
       VCR.use_cassette('delete_project') do
-        response = Insightly.client.delete_project(id: project_id)
+        response = Insightly2.client.delete_project(id: project_id)
         expect(response.status).to eq(202)
       end
     end
@@ -123,7 +123,7 @@ describe Insightly::DSL::Projects do
   describe '#delete_project_image' do
     it 'returns a response with code 202' do
       VCR.use_cassette('delete_project_image') do
-        response = Insightly.client.delete_project_image(id: project_id)
+        response = Insightly2.client.delete_project_image(id: project_id)
         expect(response.status).to eq(202)
       end
     end

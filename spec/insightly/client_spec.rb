@@ -1,7 +1,7 @@
 require 'spec_helper'
 
-describe Insightly::Client do
-  subject(:client) { Insightly::Client.new }
+describe Insightly2::Client do
+  subject(:client) { Insightly2::Client.new }
 
   it 'makes request to api.insight.ly' do
     VCR.use_cassette('z_insightly_client_status_check') do

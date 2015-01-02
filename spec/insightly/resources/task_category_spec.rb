@@ -1,9 +1,9 @@
 require 'spec_helper'
 
-describe Insightly::Resources::TaskCategory do
+describe Insightly2::Resources::TaskCategory do
   subject(:task_category) do
     VCR.use_cassette('get_task_category') do
-      Insightly.client.get_task_category(id: 1947437)
+      Insightly2.client.get_task_category(id: 1947437)
     end
   end
 

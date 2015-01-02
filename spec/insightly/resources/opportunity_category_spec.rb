@@ -1,9 +1,9 @@
 require 'spec_helper'
 
-describe Insightly::Resources::OpportunityCategory do
+describe Insightly2::Resources::OpportunityCategory do
   subject(:opportunity_category) do
     VCR.use_cassette('get_opportunity_category') do
-      Insightly.client.get_opportunity_category(id: 2175382)
+      Insightly2.client.get_opportunity_category(id: 2175382)
     end
   end
 

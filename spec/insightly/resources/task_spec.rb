@@ -1,9 +1,9 @@
 require 'spec_helper'
 
-describe Insightly::Resources::Task do
+describe Insightly2::Resources::Task do
   subject(:task) do
     VCR.use_cassette('get_task') do
-      Insightly.client.get_task(id: 14694323)
+      Insightly2.client.get_task(id: 14694323)
     end
   end
 

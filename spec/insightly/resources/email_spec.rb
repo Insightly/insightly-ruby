@@ -1,9 +1,9 @@
 require 'spec_helper'
 
-describe Insightly::Resources::Email do
+describe Insightly2::Resources::Email do
   subject(:email) do
     VCR.use_cassette('get_email') do
-      Insightly.client.get_email(id: 17683283)
+      Insightly2.client.get_email(id: 17683283)
     end
   end
 

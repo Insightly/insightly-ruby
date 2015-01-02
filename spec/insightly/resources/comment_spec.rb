@@ -1,9 +1,9 @@
 require 'spec_helper'
 
-describe Insightly::Resources::Comment do
+describe Insightly2::Resources::Comment do
   subject(:comment) do
     VCR.use_cassette('get_comment') do
-      Insightly.client.get_comment(id: 3469515)
+      Insightly2.client.get_comment(id: 3469515)
     end
   end
 
