@@ -1,9 +1,9 @@
 require 'spec_helper'
 
-describe Insightly::Resources::FileCategory do
+describe Insightly2::Resources::FileCategory do
   subject(:file_category) do
     VCR.use_cassette('get_file_category') do
-      Insightly.client.get_file_category(id: 1947439)
+      Insightly2.client.get_file_category(id: 1947439)
     end
   end
 

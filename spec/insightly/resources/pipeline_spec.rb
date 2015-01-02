@@ -1,9 +1,9 @@
 require 'spec_helper'
 
-describe Insightly::Resources::Pipeline do
+describe Insightly2::Resources::Pipeline do
   subject(:pipeline) do
     VCR.use_cassette('get_pipeline') do
-      Insightly.client.get_pipeline(id: 124170)
+      Insightly2.client.get_pipeline(id: 124170)
     end
   end
 

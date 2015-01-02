@@ -1,9 +1,9 @@
 require 'spec_helper'
 
-describe Insightly::Resources::TeamMember do
+describe Insightly2::Resources::TeamMember do
   subject(:team_member) do
     VCR.use_cassette('get_team_member') do
-      Insightly.client.get_team_member(id: 5016224)
+      Insightly2.client.get_team_member(id: 5016224)
     end
   end
 

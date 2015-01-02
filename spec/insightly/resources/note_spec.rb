@@ -1,9 +1,9 @@
 require 'spec_helper'
 
-describe Insightly::Resources::Note do
+describe Insightly2::Resources::Note do
   subject(:note) do
     VCR.use_cassette('get_note') do
-      Insightly.client.get_note(id: 15377334)
+      Insightly2.client.get_note(id: 15377334)
     end
   end
 

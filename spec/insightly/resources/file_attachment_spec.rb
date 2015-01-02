@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe Insightly::Resources::FileAttachment do
+describe Insightly2::Resources::FileAttachment do
   # TODO - I don't believe it's possible to get a file attachment
   # in a parseable format directly from the file attachment end point.
   # You have to extract it from another resources array of file attachment
@@ -10,7 +10,7 @@ describe Insightly::Resources::FileAttachment do
 
   # subject(:file_attachment) do
     # VCR.use_cassette('get_email_comments') do
-    #   comments = Insightly.client.get_email_comments(id: 17683283)
+    #   comments = Insightly2.client.get_email_comments(id: 17683283)
     #   comment = comments.last
     #   file_attachment = comment['FILE_ATTACHMENTS'].last
     #   FileAttachment.parse(file_attachment)

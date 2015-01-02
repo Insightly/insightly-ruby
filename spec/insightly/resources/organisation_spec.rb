@@ -1,9 +1,9 @@
 require 'spec_helper'
 
-describe Insightly::Resources::Organisation do
+describe Insightly2::Resources::Organisation do
   subject(:organisation) do
     VCR.use_cassette('get_organisation') do
-      Insightly.client.get_organisation(id: 39831139)
+      Insightly2.client.get_organisation(id: 39831139)
     end
   end
 

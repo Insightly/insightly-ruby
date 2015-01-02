@@ -1,9 +1,9 @@
 require 'spec_helper'
 
-describe Insightly::Resources::ProjectCategory do
+describe Insightly2::Resources::ProjectCategory do
   subject(:project_category) do
     VCR.use_cassette('get_project_category') do
-      Insightly.client.get_project_category(id: 1947441)
+      Insightly2.client.get_project_category(id: 1947441)
     end
   end
 
