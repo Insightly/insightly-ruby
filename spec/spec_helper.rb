@@ -1,7 +1,7 @@
 require 'webmock/rspec'
-require 'insightly'
+require 'insightly2'
 require 'vcr'
-include Insightly::Resources
+include Insightly2::Resources
 
 APP_ROOT = File.expand_path(File.join(File.dirname(__FILE__), '..'))
 cnf = YAML::load_file(File.join(APP_ROOT, 'config/gem_secret.yml'))
@@ -15,6 +15,6 @@ end
 
 RSpec.configure do |config|
   config.before do
-    Insightly.api_key = insightly_api_key
+    Insightly2.api_key = insightly_api_key
   end
 end

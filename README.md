@@ -1,4 +1,4 @@
-# Insightly
+# Insightly2
 
 Ruby Library for the Insightly REST API.
 
@@ -7,7 +7,7 @@ Ruby Library for the Insightly REST API.
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'insightly'
+gem 'insightly2'
 ```
 
 And then execute:
@@ -16,7 +16,7 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install insightly
+    $ gem install insightly2
     
 The gem requires Ruby 2.0.0 and above.    
 
@@ -24,17 +24,17 @@ The gem requires Ruby 2.0.0 and above.
 
 Set client the API key.
 ```ruby
-Insightly.api_key = <your API key>
+Insightly2.api_key = <your API key>
 ```
 
 Get contacts.
 ```ruby
-contacts = Insightly.client.get_contacts
+contacts = Insightly2.client.get_contacts
 ```
 
 Get a contact.
 ```ruby
-contact = Insightly.client.get_contact(id: 1)
+contact = Insightly2.client.get_contact(id: 1)
 ```
 
 Create a contact.
@@ -55,7 +55,7 @@ contact_attributes = {
 }
 
 # Create the contact.
-contact = Insightly.client.create_contact(contact: contact_attributes)
+contact = Insightly2.client.create_contact(contact: contact_attributes)
 ```
 
 Update a contact.
@@ -65,40 +65,40 @@ Update a contact.
 # contact_attributes = <same as create>
 
 # Update the contact.
-contact = Insightly.client.update_contact(contact: contact_attributes)
+contact = Insightly2.client.update_contact(contact: contact_attributes)
 ```
 
 Delete a contact.
 ```ruby
-Insightly.client.delete_contact(id: 1)
+Insightly2.client.delete_contact(id: 1)
 ```
 
 ## Error handling
 
-The client will raise an ```Insightly::Errors::ClientError``` if the action failed or 
-an ```Insightly::Errors::ResourceNotFoundError``` if the target resource cannot be found in the API.
+The client will raise an ```Insightly2::Errors::ClientError``` if the action failed or
+an ```Insightly2::Errors::ResourceNotFoundError``` if the target resource cannot be found in the API.
 
 Depending on your implementation you may want to rescue these errors as follows:
 
 ```ruby
 begin
-  Insightly.client.delete_contact(id: 1)  
-rescue Insightly::Errors::ResourceNotFoundError => e
-  Rails.logger.error "Insightly contact not found: #{e.inspect}"
-rescue Insightly::Errors::ClientError => e
-  Rails.logger.error "Insightly contact delete failed: #{e.inspect}"
+  Insightly2.client.delete_contact(id: 1)
+rescue Insightly2::Errors::ResourceNotFoundError => e
+  Rails.logger.error "Insightly contact not found: #{e.response}"
+rescue Insightly2::Errors::ClientError => e
+  Rails.logger.error "Insightly contact delete failed: #{e.response}"
 end
 ```    
 If you don't care whether or not the resource is found you can simply do the following:
 
 ```ruby
 begin
-  Insightly.client.delete_contact(id: 1)
-rescue Insightly::Errors::ClientError => e
-  Rails.logger.error "Insightly contact delete failed: #{e.inspect}"
+  Insightly2.client.delete_contact(id: 1)
+rescue Insightly2::Errors::ClientError => e
+  Rails.logger.error "Insightly contact delete failed: #{e.response}"
 end
 ```
-This will also catch ```Insightly::Errors::ResourceNotFoundError``` but is less specific.
+This will also catch ```Insightly2::Errors::ResourceNotFoundError``` but is less specific.
 
 ## API docs
 
