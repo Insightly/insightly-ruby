@@ -21,12 +21,14 @@ module Insightly2
         end
 
         module Time
+          # Insightly only accepts time in the following format.
           def self.serialize(value)
-            value.utc.xmlschema
+            value.strftime('%Y-%m-%d %H:%M:%S')
           end
 
           def self.deserialize(value)
-            ::Time.parse(value)
+            # Returning value that was sent to insightly.
+            ::Time.parse(value).strftime('%Y-%m-%d %H:%M:%S')
           end
         end
 
