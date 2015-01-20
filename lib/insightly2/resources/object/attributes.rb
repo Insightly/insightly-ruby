@@ -25,7 +25,6 @@ module Insightly2::Resources::Object::Attributes
 
     def attribute(name, type = String)
       attributes[name] = type
-
       define_attribute_accessor(name, type)
     end
 
@@ -48,7 +47,7 @@ module Insightly2::Resources::Object::Attributes
 
   def method_missing(name, *args, &block)
     attribute = name.to_s.upcase
-    if __getobj__.key?(attribute)
+    if __getobj__.key?(name.to_s.upcase) || __getobj__.key?(name.to_s.camelcase)
       self.class.define_attribute_accessor(name)
       deserialize_attribute(name, self.class.attributes[name.to_sym])
     else
@@ -59,13 +58,13 @@ module Insightly2::Resources::Object::Attributes
   private
 
   def respond_to_missing?(name, include_all = false)
-    __getobj__.key?(name.to_s.upcase) || super(name, include_all)
+    __getobj__.key?(name.to_s.upcase) || __getobj__.key?(name.to_s.camelcase) || super(name, include_all)
   end
 
   # @param [String, Symbol] name
   # @param [Class, #to_s] type
   def deserialize_attribute(name, type)
-    raw = __getobj__[name.to_s.upcase]
+    raw = __getobj__[name.to_s.upcase] || __getobj__[name.to_s.camelcase]
     self.class.serializer_for(type).deserialize(raw)
   end
 end
