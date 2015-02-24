@@ -4,6 +4,7 @@ require 'openssl'
 require 'active_support/all'
 require 'insightly2/dsl'
 require 'insightly2/errors'
+require 'logger'
 
 module Insightly2
   class Client
@@ -13,6 +14,7 @@ module Insightly2
     URL = 'https://api.insight.ly/v2.1/'
     REQUESTS = [:get, :post, :put, :delete]
     HEADERS = {'Accept' => 'application/json', 'Content-Type' => 'application/json'}
+    LOGGER = Logger.new(STDOUT)
 
     # @param [String] api_key
     def initialize(api_key = Insightly2.api_key)
@@ -37,6 +39,10 @@ module Insightly2
     # @return [Faraday::Response] server response.
     def request(method, path, query = {}, headers = HEADERS)
       raise ArgumentError, "Unsupported method #{method.inspect}. Only :get, :post, :put, :delete are allowed" unless REQUESTS.include?(method)
+
+      payload_logger_message = query.empty? ? "with no payload" : "with payload: #{query.inspect}"
+      logger_info_message = "INSIGHTLY starting [#{method.to_s}] request to [#{path.to_s}] #{payload_logger_message}"
+      LOGGER.info(logger_info_message)
 
       payload = !query.empty? ? JSON.generate(query) : ''
       response = @connection.run_request(method, "#{URL}#{path}", payload, headers)
