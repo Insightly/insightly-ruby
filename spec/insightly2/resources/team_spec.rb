@@ -17,11 +17,5 @@ describe Insightly2::Resources::Team do
         expect(subject).to respond_to(method)
       end
     end
-
-    %w(date_created_utc date_updated_utc).each do |method|
-      it "deserialize attribute #{method} as time" do
-        expect(subject.public_send(method)).to be_a(Time)
-      end
-    end
   end
 end
