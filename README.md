@@ -46,7 +46,7 @@ contact_attributes = {
   "first_name"=>"Tyler", 
   "last_name"=>"Durden", 
   "image_url"=>"https://fakedomain.imgix.net/user_photos/man.jpg?crop=faces&fit=crop&h=96&w=96", 
-  "contactinfos"=>[{"contact_id"=>0, "type"=>"Email", "subtype"=>"", "label"=>"Work", "detail"=>"tylerdurden@ucsv.edu"}], 
+  "contactinfos"=>[{"contact_info_id"=>0, "type"=>"Email", "subtype"=>"", "label"=>"Work", "detail"=>"tylerdurden@ucsv.edu"}], 
   "links"=>[], 
   "tags"=>[], 
   "date_created_utc"=>"2014-10-11 23:20:04", 
