@@ -7,7 +7,7 @@ module Insightly2
     # @param [String, Fixnum] id An opportunity category's ID.
     # @raise [ArgumentError] If the method arguments are blank.
     # @return [Insightly2::Resources::OpportunityCategory, nil].
-    def get_opportunity_category(id:)
+    def get_opportunity_category(id: nil)
       raise ArgumentError, "ID cannot be blank" if id.blank?
       Resources::OpportunityCategory.parse(request(:get, "OpportunityCategories/#{id}"))
     end
@@ -24,7 +24,7 @@ module Insightly2
     # @param [Hash] category The opportunity category to create.
     # @raise [ArgumentError] If the method arguments are blank.
     # @return [Insightly2::Resources::OpportunityCategory, nil].
-    def create_opportunity_category(category:)
+    def create_opportunity_category(category: nil)
       raise ArgumentError, "Category cannot be blank" if category.blank?
       Resources::OpportunityCategory.parse(request(:post, "OpportunityCategories", category))
     end
@@ -34,7 +34,7 @@ module Insightly2
     # @param [Hash] category The opportunity category to update.
     # @raise [ArgumentError] If the method arguments are blank.
     # @return [Insightly2::Resources::OpportunityCategory, nil].
-    def update_opportunity_category(category:)
+    def update_opportunity_category(category: nil)
       raise ArgumentError, "Category cannot be blank" if category.blank?
       Resources::OpportunityCategory.parse(request(:put, "OpportunityCategories", category))
     end
@@ -44,7 +44,7 @@ module Insightly2
     # @param [String, Fixnum] id A OpportunityCategory's ID.
     # @raise [ArgumentError] If the method arguments are blank.
     # @return [Faraday::Response].
-    def delete_opportunity_category(id:)
+    def delete_opportunity_category(id: nil)
       raise ArgumentError, "ID cannot be blank" if id.blank?
       request(:delete, "OpportunityCategories/#{id}")
     end
