@@ -8,7 +8,7 @@ module Insightly2
     # @param [String, Fixnum] id A team's ID.
     # @raise [ArgumentError] If the method arguments are blank.
     # @return [Insightly2::Resources::Team].
-    def get_team(id:)
+    def get_team(id: nil)
       raise ArgumentError, "ID cannot be blank" if id.blank?
       Resources::Team.parse(request(:get, "Teams/#{id}"))
     end
@@ -25,7 +25,7 @@ module Insightly2
     # @param [Hash] team The team we're creating.
     # @raise [ArgumentError] If the method arguments are blank.
     # @return [Insightly2::Resources::Team, nil].
-    def create_team(team:)
+    def create_team(team: nil)
       raise ArgumentError, "Team cannot be blank" if team.blank?
       Resources::Team.parse(request(:post, "Teams", team))
     end
@@ -35,7 +35,7 @@ module Insightly2
     # @param [Hash] team The team we're updating.
     # @raise [ArgumentError] If the method arguments are blank.
     # @return [Insightly2::Resources::Team, nil].
-    def update_team(team:)
+    def update_team(team: nil)
       raise ArgumentError, "Team cannot be blank" if team.blank?
       Resources::Team.parse(request(:put, 'Teams', team))
     end
@@ -45,7 +45,7 @@ module Insightly2
     # @param [String, Fixnum] id A Team's ID.
     # @raise [ArgumentError] If the method arguments are blank.
     # @return [Faraday::Response].
-    def delete_team(id:)
+    def delete_team(id: nil)
       raise ArgumentError, "ID cannot be blank" if id.blank?
       request(:delete, "Teams/#{id}")
     end

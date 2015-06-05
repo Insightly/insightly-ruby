@@ -7,7 +7,7 @@ module Insightly2
     # @param [String, Fixnum] id The ID of the email.
     # @raise [ArgumentError] If the method arguments are blank.
     # @return [Insightly2::Resources::Email, nil]
-    def get_email(id:)
+    def get_email(id: nil)
       raise ArgumentError, "ID cannot be blank" if id.blank?
       Resources::Email.parse(request(:get, "Emails/#{id}"))
     end
@@ -17,7 +17,7 @@ module Insightly2
     # @param [String, Fixnum] id The ID of the email.
     # @raise [ArgumentError] If the method arguments are blank.
     # @return [Array, nil].
-    def get_email_comments(id:)
+    def get_email_comments(id: nil)
       raise ArgumentError, "ID cannot be blank" if id.blank?
       Resources::Comment.parse(request(:get, "Emails/#{id}/Comments"))
     end
@@ -38,7 +38,7 @@ module Insightly2
     # @param [Hash] comment The comment to create.
     # @raise [ArgumentError] If the method arguments are blank.
     # @return [Faraday::Response].
-    def create_email_comment(id:, comment:)
+    def create_email_comment(id: nil, comment: nil)
       raise ArgumentError, "ID cannot be blank" if id.blank?
       raise ArgumentError, "Comment cannot be blank" if comment.blank?
       request(:post, "Emails/#{id}/Comments", comment)
@@ -49,7 +49,7 @@ module Insightly2
     # @param [String, Fixnum] id The ID of the email to delete.
     # @raise [ArgumentError] If the method arguments are blank.
     # @return [Faraday::Response].
-    def delete_email(id:)
+    def delete_email(id: nil)
       raise ArgumentError, "ID cannot be blank" if id.blank?
       request(:delete, "Emails/#{id}")
     end

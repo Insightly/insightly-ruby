@@ -7,7 +7,7 @@ module Insightly2
     # @param [String, Fixnum] id A task category's ID.
     # @raise [ArgumentError] If the method arguments are blank.
     # @return [Insightly2::Resources::TaskCategory, nil].
-    def get_task_category(id:)
+    def get_task_category(id: nil)
       raise ArgumentError, "ID cannot be blank" if id.blank?
       Resources::TaskCategory.parse(request(:get, "TaskCategories/#{id}"))
     end
@@ -24,7 +24,7 @@ module Insightly2
     # @param [Hash] category The task category to create.
     # @raise [ArgumentError] If the method arguments are blank.
     # @return [Insightly2::Resources::TaskCategory, nil].
-    def create_task_category(category:)
+    def create_task_category(category: nil)
       raise ArgumentError, "Category cannot be blank" if category.blank?
       Resources::TaskCategory.parse(request(:post, "TaskCategories", category))
     end
@@ -34,7 +34,7 @@ module Insightly2
     # @param [Hash] category The task category to update.
     # @raise [ArgumentError] If the method arguments are blank.
     # @return [Insightly2::Resources::TaskCategory, nil].
-    def update_task_category(category:)
+    def update_task_category(category: nil)
       raise ArgumentError, "Category cannot be blank" if category.blank?
       Resources::TaskCategory.parse(request(:put, "TaskCategories", category))
     end
@@ -44,7 +44,7 @@ module Insightly2
     # @param [String, Fixnum] id A task category's ID.
     # @raise [ArgumentError] If the method arguments are blank.
     # @return [Faraday::Response].
-    def delete_task_category(id:)
+    def delete_task_category(id: nil)
       raise ArgumentError, "ID cannot be blank" if id.blank?
       request(:delete, "TaskCategories/#{id}")
     end

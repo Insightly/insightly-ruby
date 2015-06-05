@@ -7,7 +7,7 @@ module Insightly2
     # @param [String, Fixnum] id A project category's ID.
     # @raise [ArgumentError] If the method arguments are blank.
     # @return [Insightly2::Resources::ProjectCategory, nil].
-    def get_project_category(id:)
+    def get_project_category(id: nil)
       raise ArgumentError, "ID cannot be blank" if id.blank?
       Resources::ProjectCategory.parse(request(:get, "ProjectCategories/#{id}"))
     end
@@ -24,7 +24,7 @@ module Insightly2
     # @param [Hash] category: The project category to create.
     # @raise [ArgumentError] If the method arguments are blank.
     # @return [Insightly2::Resources::ProjectCategory, nil].
-    def create_project_category(category:)
+    def create_project_category(category: nil)
       raise ArgumentError, "Category cannot be blank" if category.blank?
       Resources::ProjectCategory.parse(request(:post, "ProjectCategories", category))
     end
@@ -34,7 +34,7 @@ module Insightly2
     # @param [Hash] category The project category to update.
     # @raise [ArgumentError] If the method arguments are blank.
     # @return [Insightly2::Resources::ProjectCategory, nil]
-    def update_project_category(category:)
+    def update_project_category(category: nil)
       raise ArgumentError, "Category cannot be blank" if category.blank?
       Resources::ProjectCategory.parse(request(:put, "ProjectCategories", category))
     end
@@ -44,7 +44,7 @@ module Insightly2
     # @param [String, Fixnum] id A project category's ID.
     # @raise [ArgumentError] If the method arguments are blank.
     # @return [Faraday::Response].
-    def delete_project_category(id:)
+    def delete_project_category(id: nil)
       raise ArgumentError, "ID cannot be blank" if id.blank?
       request(:delete, "ProjectCategories/#{id}")
     end

@@ -7,7 +7,7 @@ module Insightly2
     # @param [String, Fixnum] id A pipeline stage's ID.
     # @raise [ArgumentError] If the method arguments are blank.
     # @return [Insightly2::Resources::PipelineStage, nil].
-    def get_pipeline_stage(id:)
+    def get_pipeline_stage(id: nil)
       raise ArgumentError, "ID cannot be blank" if id.blank?
       Resources::PipelineStage.parse(request(:get, "PipelineStages/#{id}"))
     end

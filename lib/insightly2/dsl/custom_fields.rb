@@ -7,7 +7,7 @@ module Insightly2
     # @param [String, Fixnum] id A CustomField's ID.
     # @raise [ArgumentError] If the method arguments are blank.
     # @return [Insightly2::Resources::CustomField, nil].
-    def get_custom_field(id:)
+    def get_custom_field(id: nil)
       raise ArgumentError, "ID cannot be blank" if id.blank?
       Resources::CustomField.parse(request(:get, "CustomFields/#{id}"))
     end

@@ -7,7 +7,7 @@ module Insightly2
     # @param [String, Fixnum] id A note's ID.
     # @raise [ArgumentError] If the method arguments are blank.
     # @return [Insightly2::Resources::Note, nil].
-    def get_note(id:)
+    def get_note(id: nil)
       raise ArgumentError, "ID cannot be blank" if id.blank?
       Resources::Note.parse(request(:get, "Notes/#{id}"))
     end
@@ -17,7 +17,7 @@ module Insightly2
     # @param [String, Fixnum] id A note's ID.
     # @raise [ArgumentError] If the method arguments are blank.
     # @return [Array, nil].
-    def get_note_comments(id:)
+    def get_note_comments(id: nil)
       raise ArgumentError, "ID cannot be blank" if id.blank?
       Resources::Comment.parse(request(:get, "Notes/#{id}/Comments"))
     end
@@ -34,7 +34,7 @@ module Insightly2
     # @param [Hash] note The note to create.
     # @raise [ArgumentError] If the method arguments are blank.
     # @return [Insightly2::Resources::Note, nil].
-    def create_note(note:)
+    def create_note(note: nil)
       raise ArgumentError, "Note cannot be blank" if note.blank?
       Resources::Note.parse(request(:post, "Notes", note))
     end
@@ -45,7 +45,7 @@ module Insightly2
     # @param [String] comment The comment to add to the note.
     # @raise [ArgumentError] If the method arguments are blank.
     # @return [Faraday::Response].
-    def create_note_comment(id:, comment:)
+    def create_note_comment(id: nil, comment: nil)
       raise ArgumentError, "ID cannot be blank" if id.blank?
       raise ArgumentError, "Comment cannot be blank" if comment.blank?
       request(:post, "Notes/#{id}/Comments", comment)
@@ -57,7 +57,7 @@ module Insightly2
     # @param [String] filename The name of the file.
     # @raise [ArgumentError] If the method arguments are blank.
     # @return [Faraday::Response].
-    def create_note_file(id:, filename:)
+    def create_note_file(id: nil, filename: nil)
       raise ArgumentError, "ID cannot be blank" if id.blank?
       raise ArgumentError, "Filename cannot be blank" if filename.blank?
       request(:post, "Notes?c_id=#{id}&filename=#{filename}")
@@ -68,7 +68,7 @@ module Insightly2
     # @param [Hash] note The note to update.
     # @raise [ArgumentError] If the method arguments are blank.
     # @return [Insightly2::Resources::Note, nil].
-    def update_note(note:)
+    def update_note(note: nil)
       raise ArgumentError, "Note cannot be blank" if note.blank?
       Resources::Note.parse(request(:put, "Notes", note))
     end
@@ -77,7 +77,7 @@ module Insightly2
     # @param [String, Fixnum] id A note's ID.
     # @raise [ArgumentError] If the method arguments are blank.
     # @return [Faraday::Response].
-    def delete_note(id:)
+    def delete_note(id: nil)
       raise ArgumentError, "ID cannot be blank" if id.blank?
       request(:delete, "Notes/#{id}")
     end

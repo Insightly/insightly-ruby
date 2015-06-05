@@ -7,7 +7,7 @@ module Insightly2
     # @param [String, Fixnum] id A team member's ID.
     # @raise [ArgumentError] If the method arguments are blank.
     # @return [Insightly2::Resources::TeamMember, nil].
-    def get_team_member(id:)
+    def get_team_member(id: nil)
       raise ArgumentError, "ID cannot be blank" if id.blank?
       Resources::TeamMember.parse(request(:get, "TeamMembers/#{id}"))
     end
@@ -16,7 +16,7 @@ module Insightly2
     # Get a list of team members.
     # @param [String, Fixnum] team_id: The ID of the team we're getting members for (optional).
     # @return [Array, nil]
-    def get_team_members(team_id:)
+    def get_team_members(team_id: nil)
       Resources::TeamMember.parse(request(:get, "TeamMembers/?teamid=#{team_id}"))
     end
 
@@ -25,7 +25,7 @@ module Insightly2
     # @param [Hash] team_member The team_member we're creating.
     # @raise [ArgumentError] If the method arguments are blank.
     # @return [Insightly2::Resources::TeamMember, nil].
-    def create_team_member(team_member:)
+    def create_team_member(team_member: nil)
       raise ArgumentError, "Team member cannot be blank" if team_member.blank?
       Resources::TeamMember.parse(request(:post, "TeamMembers", team_member))
     end
@@ -35,7 +35,7 @@ module Insightly2
     # @param [Hash] team_member The team_member we're updating.
     # @raise [ArgumentError] If the method arguments are blank.
     # @return [Insightly2::Resources::TeamMember, nil].
-    def update_team_member(team_member:)
+    def update_team_member(team_member: nil)
       raise ArgumentError, "Team member cannot be blank" if team_member.blank?
       Resources::TeamMember.parse(request(:put, "TeamMembers", team_member))
     end
@@ -45,7 +45,7 @@ module Insightly2
     # @param [String, Fixnum] id A team member's ID.
     # @raise [ArgumentError] If the method arguments are blank.
     # @return [Faraday::Response].
-    def delete_team_member(id:)
+    def delete_team_member(id: nil)
       raise ArgumentError, "ID cannot be blank" if id.blank?
       request(:delete, "TeamMembers/#{id}")
     end

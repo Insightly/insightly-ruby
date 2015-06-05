@@ -7,7 +7,7 @@ module Insightly2
     # @param [String, Fixnum] id An opportunity's ID.
     # @raise [ArgumentError] If the method arguments are blank.
     # @return [Insightly2::Resources::Opportunity, nil].
-    def get_opportunity(id:)
+    def get_opportunity(id: nil)
       raise ArgumentError, "ID cannot be blank" if id.blank?
       Resources::Opportunity.parse(request(:get, "Opportunities/#{id}"))
     end
@@ -17,7 +17,7 @@ module Insightly2
     # @param [String, Fixnum] id An opportunity's ID.
     # @raise [ArgumentError] If the method arguments are blank.
     # @return [Array, nil].
-    def get_opportunity_emails(id:)
+    def get_opportunity_emails(id: nil)
       raise ArgumentError, "ID cannot be blank" if id.blank?
       Resources::Email.parse(request(:get, "Opportunities/#{id}/Emails"))
     end
@@ -26,7 +26,7 @@ module Insightly2
     # @param [String, Fixnum] id An opportunity's ID
     # @raise [ArgumentError] If the method arguments are blank.
     # @return [Faraday::Response]
-    def get_opportunity_image(id:)
+    def get_opportunity_image(id: nil)
       request(:get, "Opportunities/#{id}/Image")
     end
 
@@ -35,7 +35,7 @@ module Insightly2
     # @param [String, Fixnum] id An opportunity's ID.
     # @raise [ArgumentError] If the method arguments are blank.
     # @return [Array, nil].
-    def get_opportunity_notes(id:)
+    def get_opportunity_notes(id: nil)
       raise ArgumentError, "ID cannot be blank" if id.blank?
       Resources::Note.parse(request(:get, "Opportunities/#{id}/Notes"))
     end
@@ -45,7 +45,7 @@ module Insightly2
     # @param [String, Fixnum] id An opportunity's ID.
     # @raise [ArgumentError] If the method arguments are blank.
     # @return [Array, nil].
-    def get_opportunity_state_history(id:)
+    def get_opportunity_state_history(id: nil)
       raise ArgumentError, "ID cannot be blank" if id.blank?
       Resources::OpportunityStateReason.parse(request(:get, "Opportunities/#{id}/StateHistory"))
     end
@@ -55,7 +55,7 @@ module Insightly2
     # @param [String, Fixnum] id An opportunity's ID.
     # @raise [ArgumentError] If the method arguments are blank.
     # @return [Array, nil].
-    def get_opportunity_tasks(id:)
+    def get_opportunity_tasks(id: nil)
       raise ArgumentError, "ID cannot be blank" if id.blank?
       Resources::Task.parse(request(:get, "Opportunities/#{id}/Tasks"))
     end
@@ -75,7 +75,7 @@ module Insightly2
     # @param [Hash] opportunity The opportunity to create.
     # @raise [ArgumentError] If the method arguments are blank.
     # @return [Insightly2::Resources::Opportunity, nil].
-    def create_opportunity(opportunity:)
+    def create_opportunity(opportunity: nil)
       raise ArgumentError, "Opportunity cannot be blank" if opportunity.blank?
       Resources::Opportunity.parse(request(:post, "Opportunities", opportunity))
     end
@@ -86,7 +86,7 @@ module Insightly2
     # @param [String] filename A name of a file.
     # @raise [ArgumentError] If the method arguments are blank.
     # @return [Faraday::Response]
-    def create_opportunity_image(id:, filename:)
+    def create_opportunity_image(id: nil, filename: nil)
       raise ArgumentError, "ID cannot be blank" if id.blank?
       raise ArgumentError, "Filename cannot be blank" if filename.blank?
       request(:post, "Opportunities/#{id}/Image/#{filename}")
@@ -97,7 +97,7 @@ module Insightly2
     # @param [Hash] opportunity The opportunity to update.
     # @raise [ArgumentError] If the method arguments are blank.
     # @return [Insightly2::Resources::Opportunity, nil]
-    def update_opportunity(opportunity:)
+    def update_opportunity(opportunity: nil)
       raise ArgumentError, "Opportunity cannot be blank" if opportunity.blank?
       Resources::Opportunity.parse(request(:put, "Opportunities", opportunity))
     end
@@ -107,7 +107,7 @@ module Insightly2
     # @param [String] filename A name of a file.
     # @raise [ArgumentError] If the method arguments are blank.
     # @return [Faraday::Response].
-    def update_opportunity_image(id:, filename:)
+    def update_opportunity_image(id: nil, filename: nil)
       raise ArgumentError, "ID cannot be blank" if id.blank?
       raise ArgumentError, "Filename cannot be blank" if filename.blank?
       request(:put, "Opportunities/#{id}/Image/#{filename}")
@@ -117,7 +117,7 @@ module Insightly2
     # @param [String, Fixnum] id An opportunity's ID.
     # @raise [ArgumentError] If the method arguments are blank.
     # @return [Faraday::Response].
-    def delete_opportunity(id:)
+    def delete_opportunity(id: nil)
       raise ArgumentError, "ID cannot be blank" if id.blank?
       request(:delete, "Opportunities/#{id}")
     end
@@ -126,7 +126,7 @@ module Insightly2
     # @param [String, Fixnum] id An opportunity's ID.
     # @raise [ArgumentError] If the method arguments are blank.
     # @return [Faraday::Response].
-    def delete_opportunity_image(id:)
+    def delete_opportunity_image(id: nil)
       raise ArgumentError, "ID cannot be blank" if id.blank?
       request(:delete, "Opportunities/#{id}/Image")
     end
