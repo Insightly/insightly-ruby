@@ -7,7 +7,7 @@ module Insightly2
     # @param [String, Fixnum] id An event's ID.
     # @raise [ArgumentError] If the method arguments are blank.
     # @return [Insightly2::Resources::Event, nil].
-    def get_event(id:)
+    def get_event(id: nil)
       raise ArgumentError, "ID cannot be blank" if id.blank?
       Resources::Event.parse(request(:get, "Events/#{id}"))
     end
@@ -24,7 +24,7 @@ module Insightly2
     # @param [Hash] event The event to create.
     # @raise [ArgumentError] If the method arguments are blank.
     # @return [Insightly2::Resources::Event, nil]
-    def create_event(event:)
+    def create_event(event: nil)
       raise ArgumentError, "Event cannot be blank" if event.blank?
       Resources::Event.parse(request(:post, "Events", event))
     end
@@ -34,7 +34,7 @@ module Insightly2
     # @param [Hash] event The event to update.
     # @raise [ArgumentError] If the method arguments are blank.
     # @return [Insightly2::Resources::Event, nil]
-    def update_event(event:)
+    def update_event(event: nil)
       raise ArgumentError, "Event cannot be blank" if event.blank?
       Resources::Event.parse(request(:put, "Events", event))
     end
@@ -44,7 +44,7 @@ module Insightly2
     # @param [String, Fixnum] id An event's ID.
     # @raise [ArgumentError] If the method arguments are blank.
     # @return [Faraday::Response].
-    def delete_event(id:)
+    def delete_event(id: nil)
       raise ArgumentError, "ID cannot be blank" if id.blank?
       request(:delete, "Events/#{id}")
     end

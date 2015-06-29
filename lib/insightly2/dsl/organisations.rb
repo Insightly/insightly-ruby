@@ -7,7 +7,7 @@ module Insightly2
     # @param [String, Fixnum] id An organisation's ID.
     # @raise [ArgumentError] If the method arguments are blank.
     # @return [Insightly2::Resources::Organisation, nil].
-    def get_organisation(id:)
+    def get_organisation(id: nil)
       raise ArgumentError, "ID cannot be blank" if id.blank?
       Resources::Organisation.parse(request(:get, "Organisations/#{id}"))
     end
@@ -17,7 +17,7 @@ module Insightly2
     # @param [String, Fixnum] id An organisation's ID.
     # @raise [ArgumentError] If the method arguments are blank.
     # @return [Array, nil].
-    def get_organisation_emails(id:)
+    def get_organisation_emails(id: nil)
       raise ArgumentError, "ID cannot be blank" if id.blank?
       Resources::Email.parse(request(:get, "Organisations/#{id}/Emails"))
     end
@@ -27,7 +27,7 @@ module Insightly2
     # @param [String, Fixnum] id An organisation's ID
     # @raise [ArgumentError] If the method arguments are blank.
     # @return [Faraday::Response].
-    def get_organisation_image(id:)
+    def get_organisation_image(id: nil)
       request(:get, "Organisations/#{id}/Image")
     end
 
@@ -36,7 +36,7 @@ module Insightly2
     # @param [String, Fixnum] id An organisation's ID.
     # @raise [ArgumentError] If the method arguments are blank.
     # @return [Array, nil].
-    def get_organisation_notes(id:)
+    def get_organisation_notes(id: nil)
       raise ArgumentError, "ID cannot be blank" if id.blank?
       Resources::Note.parse(request(:get, "Organisations/#{id}/Notes"))
     end
@@ -46,7 +46,7 @@ module Insightly2
     # @param [String, Fixnum] id An organisation's ID.
     # @raise [ArgumentError] If the method arguments are blank.
     # @return [Array, nil].
-    def get_organisation_tasks(id:)
+    def get_organisation_tasks(id: nil)
       raise ArgumentError, "ID cannot be blank" if id.blank?
       Resources::Task.parse(request(:get, "Organisations/#{id}/Tasks"))
     end
@@ -66,7 +66,7 @@ module Insightly2
     # @param [Hash] organisation The organisation to create.
     # @raise [ArgumentError] If the method arguments are blank.
     # @return [Insightly2::Resources::Organisation].
-    def create_organisation(organisation:)
+    def create_organisation(organisation: nil)
       raise ArgumentError, "Organisation cannot be blank" if organisation.blank?
       Resources::Organisation.parse(request(:post, "Organisations", organisation))
     end
@@ -77,7 +77,7 @@ module Insightly2
     # @param [String] filename The name of the file.
     # @raise [ArgumentError] If the method arguments are blank.
     # @return [Faraday::Response].
-    def create_organisation_image(id:, filename:)
+    def create_organisation_image(id: nil, filename: nil)
       raise ArgumentError, "ID cannot be blank" if id.blank?
       raise ArgumentError, "Filename cannot be blank" if filename.blank?
       request(:post, "Organisations/#{id}/Image/#{filename}")
@@ -88,7 +88,7 @@ module Insightly2
     # @param [Hash] organisation The organisation to update.
     # @raise [ArgumentError] If the method arguments are blank.
     # @return [Insightly2::Resources::Organisation, nil].
-    def update_organisation(organisation:)
+    def update_organisation(organisation: nil)
       raise ArgumentError, "Organisation cannot be blank" if organisation.blank?
       Resources::Organisation.parse(request(:put, "Organisations", organisation))
     end
@@ -99,7 +99,7 @@ module Insightly2
     # @param [String] filename name of the file.
     # @raise [ArgumentError] If the method arguments are blank.
     # @return [Faraday::Response].
-    def update_organisation_image(id:, filename:)
+    def update_organisation_image(id: nil, filename: nil)
       raise ArgumentError, "ID cannot be blank" if id.blank?
       raise ArgumentError, "Filename cannot be blank" if filename.blank?
       request(:put, "Organisations/#{id}/Image/#{filename}")
@@ -110,7 +110,7 @@ module Insightly2
     # @param [String, Fixnum] id An organisation's ID.
     # @raise [ArgumentError] If the method arguments are blank.
     # @return [Faraday::Response].
-    def delete_organisation(id:)
+    def delete_organisation(id: nil)
       raise ArgumentError, "ID cannot be blank" if id.blank?
       request(:delete, "Organisations/#{id}")
     end
@@ -120,7 +120,7 @@ module Insightly2
     # @param [String, Fixnum] id An organisation's ID.
     # @raise [ArgumentError] If the method arguments are blank.
     # @return [Faraday::Response].
-    def delete_organisation_image(id:)
+    def delete_organisation_image(id: nil)
       raise ArgumentError, "ID cannot be blank" if id.blank?
       request(:delete, "Organisations/#{id}/Image")
     end

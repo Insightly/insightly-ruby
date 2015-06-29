@@ -6,7 +6,7 @@ module Insightly2
     # @param [String, Fixnum] id A file attachment's ID.
     # @raise [ArgumentError] If the method arguments are blank.
     # @return [Faraday::Response].
-    def get_file_attachment(id:)
+    def get_file_attachment(id: nil)
       raise ArgumentError, "ID cannot be blank" if id.blank?
       request(:get, "FileAttachments/#{id}")
     end

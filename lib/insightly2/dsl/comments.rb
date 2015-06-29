@@ -7,7 +7,7 @@ module Insightly2
     # @param [String, Fixnum] id A comment's ID.
     # @raise [ArgumentError] If the method arguments are blank.
     # @return [Insightly2::Resources::Comment, nil].
-    def get_comment(id:)
+    def get_comment(id: nil)
       raise ArgumentError, "ID cannot be blank" if id.blank?
       Resources::Comment.parse(request(:get, "Comments/#{id}"))
     end
@@ -18,7 +18,7 @@ module Insightly2
     # @param [String] filename The name of the attachment.
     # @raise [ArgumentError] If the method arguments are blank.
     # @return [Faraday::Response].
-    def create_comment_attachment(id:, filename:)
+    def create_comment_attachment(id: nil, filename: nil)
       raise ArgumentError, "ID cannot be blank" if id.blank?
       raise ArgumentError, "Filename cannot be blank" if filename.blank?
       request(:post, "Comments/?c_id=#{id}&filename=#{filename}")
@@ -29,7 +29,7 @@ module Insightly2
     # @param [Hash] comment The comment to update.
     # @raise [ArgumentError] If the method arguments are blank.
     # @return [Insightly2::Resources::Comment, nil].
-    def update_comment(comment:)
+    def update_comment(comment: nil)
       raise ArgumentError, "Comment cannot be blank" if comment.blank?
       Resources::Comment.parse(request(:put, "Comments", comment))
     end
@@ -39,7 +39,7 @@ module Insightly2
     # @param [String, Fixnum] id A comment's ID.
     # @raise [ArgumentError] If the method arguments are blank.
     # @return [Faraday::Response].
-    def delete_comment(id:)
+    def delete_comment(id: nil)
       raise ArgumentError, "ID cannot be blank" if id.blank?
       request(:delete, "Comments/#{id}")
     end
