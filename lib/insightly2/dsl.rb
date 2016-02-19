@@ -14,6 +14,7 @@ require 'insightly2/dsl/emails'
 require 'insightly2/dsl/events'
 require 'insightly2/dsl/file_attachments'
 require 'insightly2/dsl/file_categories'
+require 'insightly2/dsl/leads'
 require 'insightly2/dsl/notes'
 require 'insightly2/dsl/opportunities'
 require 'insightly2/dsl/opportunity_categories'
@@ -60,6 +61,7 @@ module Insightly2
     include Teams
     include Users
     include Utils
+    include Leads
   end
 end
 
