@@ -15,6 +15,7 @@ require 'insightly2/dsl/events'
 require 'insightly2/dsl/file_attachments'
 require 'insightly2/dsl/file_categories'
 require 'insightly2/dsl/leads'
+require 'insightly2/dsl/lead_statuses'
 require 'insightly2/dsl/notes'
 require 'insightly2/dsl/opportunities'
 require 'insightly2/dsl/opportunity_categories'
@@ -45,6 +46,8 @@ module Insightly2
     include FileAttachments
     include FileCategories
     include Leads
+    include LeadSources
+    include LeadStatuses
     include Notes
     include Opportunities
     include OpportunityCategories
