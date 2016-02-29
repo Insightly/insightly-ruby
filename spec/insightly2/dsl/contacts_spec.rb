@@ -71,7 +71,7 @@ describe Insightly2::DSL::Contacts do
   describe '#create_contact' do
     it 'creates and returns contact' do
       VCR.use_cassette('create_contact') do
-        expect(Insightly2.client.create_contact(contact: {first_name: 'Shark', last_name: 'Nado'})).to be_a(Contact)
+        expect(Insightly2.client.create_contact(contact: { first_name: 'Shark', last_name: 'Nado' })).to be_a(Contact)
       end
     end
   end

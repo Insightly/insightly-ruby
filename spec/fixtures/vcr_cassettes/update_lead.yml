@@ -1,0 +1,104 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://<INSIGHTLY_API_KEY>:@api.insight.ly/v2.1/Leads/7246484
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.2
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - no-cache
+      Pragma:
+      - no-cache
+      Content-Type:
+      - application/json; charset=utf-8
+      Expires:
+      - "-1"
+      Vary:
+      - Accept-Encoding
+      Server:
+      - Microsoft-IIS/7.5
+      X-Powered-By:
+      - ASP.NET
+      Date:
+      - Mon, 29 Feb 2016 10:10:40 GMT
+      Content-Length:
+      - '687'
+      Set-Cookie:
+      - snaptid=sac1prdc01ut05; path=/; HttpOnly; Secure
+    body:
+      encoding: ASCII-8BIT
+      string: '{"LEAD_ID":7246484,"SALUTATION":null,"TITLE":null,"FIRST_NAME":null,"LAST_NAME":"Test","ORGANIZATION_NAME":"Test
+        Org","PHONE_NUMBER":null,"MOBILE_PHONE_NUMBER":null,"FAX_NUMBER":null,"EMAIL_ADDRESS":null,"WEBSITE_URL":null,"OWNER_USER_ID":1067519,"DATE_CREATED_UTC":"2016-02-29
+        10:03:52","DATE_UPDATED_UTC":"2016-02-29 10:03:52","CONVERTED":false,"CONVERTED_DATE_UTC":null,"CONVERTED_CONTACT_ID":null,"CONVERTED_ORGANIZATION_ID":null,"CONVERTED_OPPORTUNITY_ID":null,"VISIBLE_TO":"EVERYONE","RESPONSIBLE_USER_ID":1067519,"INDUSTRY":null,"LEAD_STATUS_ID":841784,"LEAD_SOURCE_ID":841088,"VISIBLE_TEAM_ID":null,"EMPLOYEE_COUNT":null,"LEAD_RATING":null,"LEAD_DESCRIPTION":null,"VISIBLE_USER_IDS":null,"CUSTOMFIELDS":[],"ADDRESS_STREET":null,"ADDRESS_CITY":null,"ADDRESS_STATE":null,"ADDRESS_POSTCODE":null,"ADDRESS_COUNTRY":"South
+        Africa","TAGS":[],"EMAIL_LINKS":[],"EVENT_LINKS":[],"TASK_LINKS":[],"NOTE_LINKS":[],"FILE_ATTACHMENTS":[],"IMAGE_URL":"http://s3.amazonaws.com/insightly.userfiles/626712/"}'
+    http_version: 
+  recorded_at: Mon, 29 Feb 2016 10:10:52 GMT
+- request:
+    method: put
+    uri: https://<INSIGHTLY_API_KEY>:@api.insight.ly/v2.1/Leads
+    body:
+      encoding: UTF-8
+      string: '{"LEAD_ID":7246484,"SALUTATION":null,"TITLE":null,"FIRST_NAME":null,"LAST_NAME":"Test","ORGANIZATION_NAME":"Test
+        Org","PHONE_NUMBER":null,"MOBILE_PHONE_NUMBER":null,"FAX_NUMBER":null,"EMAIL_ADDRESS":null,"WEBSITE_URL":null,"OWNER_USER_ID":1067519,"DATE_CREATED_UTC":"2016-02-29
+        10:03:52","DATE_UPDATED_UTC":"2016-02-29 10:03:52","CONVERTED":false,"CONVERTED_DATE_UTC":null,"CONVERTED_CONTACT_ID":null,"CONVERTED_ORGANIZATION_ID":null,"CONVERTED_OPPORTUNITY_ID":null,"VISIBLE_TO":"EVERYONE","RESPONSIBLE_USER_ID":1067519,"INDUSTRY":null,"LEAD_STATUS_ID":841784,"LEAD_SOURCE_ID":841088,"VISIBLE_TEAM_ID":null,"EMPLOYEE_COUNT":null,"LEAD_RATING":null,"LEAD_DESCRIPTION":null,"VISIBLE_USER_IDS":null,"CUSTOMFIELDS":[],"ADDRESS_STREET":null,"ADDRESS_CITY":null,"ADDRESS_STATE":null,"ADDRESS_POSTCODE":null,"ADDRESS_COUNTRY":"South
+        Africa","TAGS":[],"EMAIL_LINKS":[],"EVENT_LINKS":[],"TASK_LINKS":[],"NOTE_LINKS":[],"FILE_ATTACHMENTS":[],"IMAGE_URL":"http://s3.amazonaws.com/insightly.userfiles/626712/"}'
+    headers:
+      User-Agent:
+      - Faraday v0.9.2
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - no-cache
+      Pragma:
+      - no-cache
+      Content-Type:
+      - application/json; charset=utf-8
+      Expires:
+      - "-1"
+      Location:
+      - https://api.insight.ly/v2.1/Leads/7246484
+      Vary:
+      - Accept-Encoding
+      Server:
+      - Microsoft-IIS/7.5
+      X-Powered-By:
+      - ASP.NET
+      Date:
+      - Mon, 29 Feb 2016 10:10:44 GMT
+      Content-Length:
+      - '692'
+      Set-Cookie:
+      - snaptid=sac1prdc01ut04; path=/; HttpOnly; Secure
+    body:
+      encoding: ASCII-8BIT
+      string: '{"LEAD_ID":7246484,"SALUTATION":null,"TITLE":null,"FIRST_NAME":null,"LAST_NAME":"Test","ORGANIZATION_NAME":"Test
+        Org","PHONE_NUMBER":null,"MOBILE_PHONE_NUMBER":null,"FAX_NUMBER":null,"EMAIL_ADDRESS":null,"WEBSITE_URL":null,"OWNER_USER_ID":1067519,"DATE_CREATED_UTC":"2016-02-29
+        10:03:52","DATE_UPDATED_UTC":"2016-02-29 10:10:43","CONVERTED":false,"CONVERTED_DATE_UTC":null,"CONVERTED_CONTACT_ID":null,"CONVERTED_ORGANIZATION_ID":null,"CONVERTED_OPPORTUNITY_ID":null,"VISIBLE_TO":"EVERYONE","RESPONSIBLE_USER_ID":1067519,"INDUSTRY":null,"LEAD_STATUS_ID":841784,"LEAD_SOURCE_ID":841088,"VISIBLE_TEAM_ID":null,"EMPLOYEE_COUNT":null,"LEAD_RATING":null,"LEAD_DESCRIPTION":null,"VISIBLE_USER_IDS":null,"CUSTOMFIELDS":[],"ADDRESS_STREET":null,"ADDRESS_CITY":null,"ADDRESS_STATE":null,"ADDRESS_POSTCODE":null,"ADDRESS_COUNTRY":"South
+        Africa","TAGS":[],"EMAIL_LINKS":[],"EVENT_LINKS":[],"TASK_LINKS":[],"NOTE_LINKS":[],"FILE_ATTACHMENTS":[],"IMAGE_URL":"http://s3.amazonaws.com/insightly.userfiles/626712/"}'
+    http_version: 
+  recorded_at: Mon, 29 Feb 2016 10:10:56 GMT
+recorded_with: VCR 3.0.1
