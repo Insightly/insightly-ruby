@@ -2,10 +2,10 @@ require 'insightly2/dsl'
 
 module Insightly2
   module DSL::LeadStatuses
-    # GET /v2.1/LeadStatuses?includeConverted=includeConverted
+    # GET /v2.1/LeadStatuses?includeConverted={includeConverted}
     # Get a list of lead statuses.
     # @return [Array, nil].
-    def get_lead_statuses
+    def get_lead_statuses(includeConverted: 'false')
       url = Utils::UrlHelper.build_url(path: "LeadStatuses", params: { includeConverted: includeConverted })
       Resources::LeadStatus.parse(request(:get, url))
     end

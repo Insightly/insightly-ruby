@@ -24,7 +24,7 @@ module Insightly2
     # @param [Hash] lead_source: The lead source to update.
     # @raise [ArgumentError] If the method arguments are blank.
     # @return [Insightly2::Resources::LeadSource, nil]
-    def update_lead_status(lead_source: nil)
+    def update_lead_source(lead_source: nil)
       raise ArgumentError, "lead source cannot be blank" if lead_source.blank?
       Resources::LeadSource.parse(request(:put, "LeadSources", lead_source))
     end
