@@ -8,7 +8,7 @@ module Insightly2
     # @raise [ArgumentError] If the method arguments are blank.
     # @return [Insightly2::Resources::PipelineStage, nil].
     def get_pipeline_stage(id: nil)
-      raise ArgumentError, "ID cannot be blank" if id.blank?
+      raise ArgumentError, 'ID cannot be blank' if id.blank?
       Resources::PipelineStage.parse(request(:get, "PipelineStages/#{id}"))
     end
 
@@ -16,7 +16,7 @@ module Insightly2
     # Get a list of pipeline stages.
     # @return [Array, nil]
     def get_pipeline_stages
-      Resources::PipelineStage.parse(request(:get, "PipelineStages"))
+      Resources::PipelineStage.parse(request(:get, 'PipelineStages'))
     end
   end
 end

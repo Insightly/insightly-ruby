@@ -8,7 +8,7 @@ module Insightly2
     # @raise [ArgumentError] If the method arguments are blank.
     # @return [Insightly2::Resources::TaskCategory, nil].
     def get_task_category(id: nil)
-      raise ArgumentError, "ID cannot be blank" if id.blank?
+      raise ArgumentError, 'ID cannot be blank' if id.blank?
       Resources::TaskCategory.parse(request(:get, "TaskCategories/#{id}"))
     end
 
@@ -16,7 +16,7 @@ module Insightly2
     # Get a list of task categories.
     # @return [Insightly2::Resources::TaskCategory, nil].
     def get_task_categories
-      Resources::TaskCategory.parse(request(:get, "TaskCategories"))
+      Resources::TaskCategory.parse(request(:get, 'TaskCategories'))
     end
 
     # POST /v2.1/TaskCategories
@@ -25,8 +25,8 @@ module Insightly2
     # @raise [ArgumentError] If the method arguments are blank.
     # @return [Insightly2::Resources::TaskCategory, nil].
     def create_task_category(category: nil)
-      raise ArgumentError, "Category cannot be blank" if category.blank?
-      Resources::TaskCategory.parse(request(:post, "TaskCategories", category))
+      raise ArgumentError, 'Category cannot be blank' if category.blank?
+      Resources::TaskCategory.parse(request(:post, 'TaskCategories', category))
     end
 
     # PUT /v2.1/TaskCategories
@@ -35,8 +35,8 @@ module Insightly2
     # @raise [ArgumentError] If the method arguments are blank.
     # @return [Insightly2::Resources::TaskCategory, nil].
     def update_task_category(category: nil)
-      raise ArgumentError, "Category cannot be blank" if category.blank?
-      Resources::TaskCategory.parse(request(:put, "TaskCategories", category))
+      raise ArgumentError, 'Category cannot be blank' if category.blank?
+      Resources::TaskCategory.parse(request(:put, 'TaskCategories', category))
     end
 
     # DELETE /v2.1/TaskCategories/{id}
@@ -45,7 +45,7 @@ module Insightly2
     # @raise [ArgumentError] If the method arguments are blank.
     # @return [Faraday::Response].
     def delete_task_category(id: nil)
-      raise ArgumentError, "ID cannot be blank" if id.blank?
+      raise ArgumentError, 'ID cannot be blank' if id.blank?
       request(:delete, "TaskCategories/#{id}")
     end
   end

@@ -6,7 +6,7 @@ module Insightly2
     # Get a list of relationships.
     # @return [Array, nil].
     def get_relationships
-      Resources::Relationship.parse(request(:get, "Relationships"))
+      Resources::Relationship.parse(request(:get, 'Relationships'))
     end
   end
 end

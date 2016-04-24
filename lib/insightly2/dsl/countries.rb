@@ -6,7 +6,7 @@ module Insightly2
     # Get a list of countries.
     # @return [Array, nil].
     def get_countries
-      Resources::Country.parse(request(:get, "Countries"))
+      Resources::Country.parse(request(:get, 'Countries'))
     end
   end
 end

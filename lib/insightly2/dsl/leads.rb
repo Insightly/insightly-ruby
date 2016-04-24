@@ -8,7 +8,7 @@ module Insightly2
     # @raise [ArgumentError] If the method arguments are blank.
     # @return [Insightly2::Resources::Lead, nil].
     def get_lead(id: nil)
-      raise ArgumentError, "ID cannot be blank" if id.blank?
+      raise ArgumentError, 'ID cannot be blank' if id.blank?
       Resources::Lead.parse(request(:get, "Leads/#{id}"))
     end
 
@@ -18,7 +18,7 @@ module Insightly2
     # @raise [ArgumentError] If the method arguments are blank.
     # @return [Array, nil].
     def get_lead_emails(id: nil)
-      raise ArgumentError, "ID cannot be blank" if id.blank?
+      raise ArgumentError, 'ID cannot be blank' if id.blank?
       Resources::Email.parse(request(:get, "Leads/#{id}/Emails"))
     end
 
@@ -28,7 +28,7 @@ module Insightly2
     # @raise [ArgumentError] If the method arguments are blank.
     # @return [Faraday::Response].
     def get_lead_image(id: nil)
-      raise ArgumentError, "ID cannot be blank" if id.blank?
+      raise ArgumentError, 'ID cannot be blank' if id.blank?
       request(:get, "Leads/#{id}/Image")
     end
 
@@ -38,7 +38,7 @@ module Insightly2
     # @raise [ArgumentError] If the method arguments are blank.
     # @return [Array, nil].
     def get_lead_notes(id: nil)
-      raise ArgumentError, "ID cannot be blank" if id.blank?
+      raise ArgumentError, 'ID cannot be blank' if id.blank?
       Resources::Note.parse(request(:get, "Leads/#{id}/Notes"))
     end
 
@@ -48,7 +48,7 @@ module Insightly2
     # @raise [ArgumentError] If the method arguments are blank.
     # @return [Array, nil].
     def get_lead_tasks(id: nil)
-      raise ArgumentError, "ID cannot be blank" if id.blank?
+      raise ArgumentError, 'ID cannot be blank' if id.blank?
       Resources::Task.parse(request(:get, "Leads/#{id}/Tasks"))
     end
 
@@ -60,7 +60,7 @@ module Insightly2
     # @param [String] includeConverted by default converted leads are not included, pass in "true" to include them in the response (optional).
     # @return [Array, nil].
     def get_leads(ids: [], email: '', tag: '', includeConverted: 'false')
-      url = Utils::UrlHelper.build_url(path: "Leads", params: {ids: ids.join(','), email: email, tag: tag, includeConverted: includeConverted})
+      url = Utils::UrlHelper.build_url(path: 'Leads', params: {ids: ids.join(','), email: email, tag: tag, includeConverted: includeConverted})
       Resources::Lead.parse(request(:get, url))
     end
 
@@ -70,8 +70,8 @@ module Insightly2
     # @raise [ArgumentError] If the method arguments are blank.
     # @return [Insightly2::Resources::Lead, nil].
     def create_lead(lead: nil)
-      raise ArgumentError, "lead cannot be blank" if lead.blank?
-      Resources::Lead.parse(request(:post, "Leads", lead))
+      raise ArgumentError, 'lead cannot be blank' if lead.blank?
+      Resources::Lead.parse(request(:post, 'Leads', lead))
     end
 
     # POST /v2.1/Leads/{c_id}/Image/{filename}
@@ -81,8 +81,8 @@ module Insightly2
     # @raise [ArgumentError] If the method arguments are blank.
     # @return [Faraday::Response].
     def create_lead_image(id: nil, filename: nil)
-      raise ArgumentError, "ID cannot be blank" if id.blank?
-      raise ArgumentError, "Filename cannot be blank" if filename.blank?
+      raise ArgumentError, 'ID cannot be blank' if id.blank?
+      raise ArgumentError, 'Filename cannot be blank' if filename.blank?
       request(:post, "Leads/#{id}/Image/#{filename}")
     end
 
@@ -92,8 +92,8 @@ module Insightly2
     # @raise [ArgumentError] If the method arguments are blank.
     # @return [Insightly2::Resources::Lead, nil].
     def update_lead(lead: nil)
-      raise ArgumentError, "lead cannot be blank" if lead.blank?
-      Resources::Lead.parse(request(:put, "Leads", lead))
+      raise ArgumentError, 'lead cannot be blank' if lead.blank?
+      Resources::Lead.parse(request(:put, 'Leads', lead))
     end
 
     # PUT /v2.1/Leads/{c_id}/Image/{filename}
@@ -103,8 +103,8 @@ module Insightly2
     # @raise [ArgumentError] If the method arguments are blank.
     # @return [Faraday::Response].
     def update_lead_image(id: nil, filename: nil)
-      raise ArgumentError, "ID cannot be blank" if id.blank?
-      raise ArgumentError, "Filename cannot be blank" if filename.blank?
+      raise ArgumentError, 'ID cannot be blank' if id.blank?
+      raise ArgumentError, 'Filename cannot be blank' if filename.blank?
       request(:put, "Leads/#{id}/Image/#{filename}")
     end
 
@@ -114,7 +114,7 @@ module Insightly2
     # @raise [ArgumentError] If the method arguments are blank.
     # @return [Faraday::Response].
     def delete_lead(id: nil)
-      raise ArgumentError, "ID cannot be blank" if id.blank?
+      raise ArgumentError, 'ID cannot be blank' if id.blank?
       request(:delete, "Leads/#{id}")
     end
 
@@ -124,7 +124,7 @@ module Insightly2
     # @raise [ArgumentError] If the method arguments are blank.
     # @return [Faraday::Response].
     def delete_lead_image(id: nil)
-      raise ArgumentError, "ID cannot be blank" if id.blank?
+      raise ArgumentError, 'ID cannot be blank' if id.blank?
       request(:delete, "Leads/#{id}/Image")
     end
   end
