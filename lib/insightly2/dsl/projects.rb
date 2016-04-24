@@ -8,7 +8,7 @@ module Insightly2
     # @raise [ArgumentError] If the method arguments are blank.
     # @return [Insightly2::Resources::Project, nil].
     def get_project(id: nil)
-      raise ArgumentError, "ID cannot be blank" if id.blank?
+      raise ArgumentError, 'ID cannot be blank' if id.blank?
       Resources::Project.parse(request(:get, "Projects/#{id}"))
     end
 
@@ -18,7 +18,7 @@ module Insightly2
     # @raise [ArgumentError] If the method arguments are blank.
     # @return [Array, nil].
     def get_project_emails(id: nil)
-      raise ArgumentError, "ID cannot be blank" if id.blank?
+      raise ArgumentError, 'ID cannot be blank' if id.blank?
       Resources::Email.parse(request(:get, "Projects/#{id}/Emails"))
     end
 
@@ -28,7 +28,7 @@ module Insightly2
     # @raise [ArgumentError] If the method arguments are blank.
     # @return [Faraday::Response].
     def get_project_image(id: nil)
-      raise ArgumentError, "ID cannot be blank" if id.blank?
+      raise ArgumentError, 'ID cannot be blank' if id.blank?
       request(:get, "Projects/#{id}/Image")
     end
 
@@ -38,7 +38,7 @@ module Insightly2
     # @raise [ArgumentError] If the method arguments are blank.
     # @return [Array, nil].
     def get_project_notes(id: nil)
-      raise ArgumentError, "ID cannot be blank" if id.blank?
+      raise ArgumentError, 'ID cannot be blank' if id.blank?
       Resources::Note.parse(request(:get, "Projects/#{id}/Notes"))
     end
 
@@ -48,7 +48,7 @@ module Insightly2
     # @raise [ArgumentError] If the method arguments are blank.
     # @return [Array, nil].
     def get_project_tasks(id: nil)
-      raise ArgumentError, "ID cannot be blank" if id.blank?
+      raise ArgumentError, 'ID cannot be blank' if id.blank?
       Resources::Task.parse(request(:get, "Projects/#{id}/Tasks"))
     end
 
@@ -58,7 +58,7 @@ module Insightly2
     # @param [String] tag The tag that is applied to the projects (optional).
     # @return [Array, nil].
     def get_projects(ids: [], tag: '')
-      url = Utils::UrlHelper.build_url(path: "Projects", params: {ids: ids.join(','), tag: tag})
+      url = Utils::UrlHelper.build_url(path: 'Projects', params: {ids: ids.join(','), tag: tag})
       Resources::Project.parse(request(:get, url))
     end
 
@@ -68,8 +68,8 @@ module Insightly2
     # @raise [ArgumentError] If the method arguments are blank.
     # @return [Insightly2::Resources::Project, nil].
     def create_project(project: nil)
-      raise ArgumentError, "Project cannot be blank" if project.blank?
-      Resources::Project.parse(request(:post, "Projects", project))
+      raise ArgumentError, 'Project cannot be blank' if project.blank?
+      Resources::Project.parse(request(:post, 'Projects', project))
     end
 
     # POST /v2.1/Projects/{c_id}/Image/{filename}
@@ -79,8 +79,8 @@ module Insightly2
     # @raise [ArgumentError] If the method arguments are blank.
     # @return [Faraday::Response].
     def create_project_image(id: nil, filename: nil)
-      raise ArgumentError, "ID cannot be blank" if id.blank?
-      raise ArgumentError, "Filename cannot be blank" if filename.blank?
+      raise ArgumentError, 'ID cannot be blank' if id.blank?
+      raise ArgumentError, 'Filename cannot be blank' if filename.blank?
       request(:post, "Projects/#{id}/Image/#{filename}")
     end
 
@@ -90,8 +90,8 @@ module Insightly2
     # @raise [ArgumentError] If the method arguments are blank.
     # @return [Insightly2::Resources::Project, nil].
     def update_project(project: nil)
-      raise ArgumentError, "Project cannot be blank" if project.blank?
-      Resources::Project.parse(request(:put, "Projects", project))
+      raise ArgumentError, 'Project cannot be blank' if project.blank?
+      Resources::Project.parse(request(:put, 'Projects', project))
     end
 
     # PUT /v2.1/Projects/{c_id}/Image/{filename}
@@ -101,8 +101,8 @@ module Insightly2
     # @raise [ArgumentError] If the method arguments are blank.
     # @return [Faraday::Response].
     def update_project_image(id: nil, filename: nil)
-      raise ArgumentError, "ID cannot be blank" if id.blank?
-      raise ArgumentError, "Filename cannot be blank" if filename.blank?
+      raise ArgumentError, 'ID cannot be blank' if id.blank?
+      raise ArgumentError, 'Filename cannot be blank' if filename.blank?
       request(:put, "Projects/#{id}/Image/#{filename}")
     end
 
@@ -112,7 +112,7 @@ module Insightly2
     # @raise [ArgumentError] If the method arguments are blank.
     # @return [Faraday::Response].
     def delete_project(id: nil)
-      raise ArgumentError, "ID cannot be blank" if id.blank?
+      raise ArgumentError, 'ID cannot be blank' if id.blank?
       request(:delete, "Projects/#{id}")
     end
 
@@ -122,7 +122,7 @@ module Insightly2
     # @raise [ArgumentError] If the method arguments are blank.
     # @return [Faraday::Response].
     def delete_project_image(id: nil)
-      raise ArgumentError, "ID cannot be blank" if id.blank?
+      raise ArgumentError, 'ID cannot be blank' if id.blank?
       request(:delete, "Projects/#{id}/Image")
     end
   end

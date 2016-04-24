@@ -8,7 +8,7 @@ module Insightly2
     # @raise [ArgumentError] If the method arguments are blank.
     # @return [Insightly2::Resources::ProjectCategory, nil].
     def get_project_category(id: nil)
-      raise ArgumentError, "ID cannot be blank" if id.blank?
+      raise ArgumentError, 'ID cannot be blank' if id.blank?
       Resources::ProjectCategory.parse(request(:get, "ProjectCategories/#{id}"))
     end
 
@@ -16,7 +16,7 @@ module Insightly2
     # Get a list of project categories.
     # @return [Array, nil].
     def get_project_categories
-      Resources::ProjectCategory.parse(request(:get, "ProjectCategories"))
+      Resources::ProjectCategory.parse(request(:get, 'ProjectCategories'))
     end
 
     # POST /v2.1/ProjectCategories
@@ -25,8 +25,8 @@ module Insightly2
     # @raise [ArgumentError] If the method arguments are blank.
     # @return [Insightly2::Resources::ProjectCategory, nil].
     def create_project_category(category: nil)
-      raise ArgumentError, "Category cannot be blank" if category.blank?
-      Resources::ProjectCategory.parse(request(:post, "ProjectCategories", category))
+      raise ArgumentError, 'Category cannot be blank' if category.blank?
+      Resources::ProjectCategory.parse(request(:post, 'ProjectCategories', category))
     end
 
     # PUT /v2.1/ProjectCategories
@@ -35,8 +35,8 @@ module Insightly2
     # @raise [ArgumentError] If the method arguments are blank.
     # @return [Insightly2::Resources::ProjectCategory, nil]
     def update_project_category(category: nil)
-      raise ArgumentError, "Category cannot be blank" if category.blank?
-      Resources::ProjectCategory.parse(request(:put, "ProjectCategories", category))
+      raise ArgumentError, 'Category cannot be blank' if category.blank?
+      Resources::ProjectCategory.parse(request(:put, 'ProjectCategories', category))
     end
 
     # DELETE /v2.1/ProjectCategories/{id}
@@ -45,7 +45,7 @@ module Insightly2
     # @raise [ArgumentError] If the method arguments are blank.
     # @return [Faraday::Response].
     def delete_project_category(id: nil)
-      raise ArgumentError, "ID cannot be blank" if id.blank?
+      raise ArgumentError, 'ID cannot be blank' if id.blank?
       request(:delete, "ProjectCategories/#{id}")
     end
   end

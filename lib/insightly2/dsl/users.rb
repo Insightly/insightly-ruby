@@ -8,7 +8,7 @@ module Insightly2
     # @raise [ArgumentError] If the method arguments are blank.
     # @return [Insightly2::Resources::User, nil].
     def get_user(id: nil)
-      raise ArgumentError, "ID cannot be blank" if id.blank?
+      raise ArgumentError, 'ID cannot be blank' if id.blank?
       Resources::User.parse(request(:get, "Users/#{id}"))
     end
 
@@ -16,7 +16,7 @@ module Insightly2
     # Get a list of users.
     # @return [Array, nil]
     def get_users
-      Resources::User.parse(request(:get, "Users"))
+      Resources::User.parse(request(:get, 'Users'))
     end
   end
 end

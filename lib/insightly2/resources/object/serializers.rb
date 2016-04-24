@@ -61,7 +61,7 @@ module Insightly2
           # @raise [ArgumentError] If the response is blank.
           # @return [Object, nil].
           def deserialize(response)
-            raise ArgumentError, "Response cannot be blank" if response.blank?
+            raise ArgumentError, 'Response cannot be blank' if response.blank?
 
             attributes = response.body
             begin

@@ -8,7 +8,7 @@ module Insightly2
     # @raise [ArgumentError] If the method arguments are blank.
     # @return [Insightly2::Resources::FileCategory, nil].
     def get_file_category(id: nil)
-      raise ArgumentError, "ID cannot be blank" if id.blank?
+      raise ArgumentError, 'ID cannot be blank' if id.blank?
       Resources::FileCategory.parse(request(:get, "FileCategories/#{id}"))
     end
 
@@ -16,7 +16,7 @@ module Insightly2
     # Get a list of file categories.
     # @return [Array, nil].
     def get_file_categories
-      Resources::FileCategory.parse(request(:get, "FileCategories"))
+      Resources::FileCategory.parse(request(:get, 'FileCategories'))
     end
 
     # POST /v2.1/FileCategories
@@ -25,8 +25,8 @@ module Insightly2
     # @raise [ArgumentError] If the method arguments are blank.
     # @return [Insightly2::Resources::FileCategory, nil].
     def create_file_category(category: nil)
-      raise ArgumentError, "Category cannot be blank" if category.blank?
-      Resources::FileCategory.parse(request(:post, "FileCategories", category))
+      raise ArgumentError, 'Category cannot be blank' if category.blank?
+      Resources::FileCategory.parse(request(:post, 'FileCategories', category))
     end
 
     # PUT /v2.1/FileCategories
@@ -35,8 +35,8 @@ module Insightly2
     # @raise [ArgumentError] If the method arguments are blank.
     # @return [Insightly2::Resources::FileCategory].
     def update_file_category(category: nil)
-      raise ArgumentError, "Category cannot be blank" if category.blank?
-      Resources::FileCategory.parse(request(:put, "FileCategories", category))
+      raise ArgumentError, 'Category cannot be blank' if category.blank?
+      Resources::FileCategory.parse(request(:put, 'FileCategories', category))
     end
 
     # DELETE /v2.1/FileCategories/{id}
@@ -45,7 +45,7 @@ module Insightly2
     # @raise [ArgumentError] If the method arguments are blank.
     # @return [Faraday::Response].
     def delete_file_category(id: nil)
-      raise ArgumentError, "ID cannot be blank" if id.blank?
+      raise ArgumentError, 'ID cannot be blank' if id.blank?
       request(:delete, "FileCategories/#{id}")
     end
   end

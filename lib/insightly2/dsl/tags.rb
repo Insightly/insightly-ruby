@@ -8,7 +8,7 @@ module Insightly2
     # @raise [ArgumentError] If the method arguments are blank.
     # @return [Insightly2::Resources::Tag, nil].
     def get_tag(id: nil)
-      raise ArgumentError, "ID cannot be blank" if id.blank?
+      raise ArgumentError, 'ID cannot be blank' if id.blank?
       Resources::Tag.parse(request(:get, "Tags/#{id}"))
     end
   end

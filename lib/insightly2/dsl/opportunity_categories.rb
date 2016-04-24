@@ -8,15 +8,15 @@ module Insightly2
     # @raise [ArgumentError] If the method arguments are blank.
     # @return [Insightly2::Resources::OpportunityCategory, nil].
     def get_opportunity_category(id: nil)
-      raise ArgumentError, "ID cannot be blank" if id.blank?
+      raise ArgumentError, 'ID cannot be blank' if id.blank?
       Resources::OpportunityCategory.parse(request(:get, "OpportunityCategories/#{id}"))
     end
 
     # GET /v2.1/OpportunityCategories
-    # Get a list of opportunity categories.
+    # Get a list of opportunity categories.'
     # @return [Array, nil].
     def get_opportunity_categories
-      Resources::OpportunityCategory.parse(request(:get, "OpportunityCategories"))
+      Resources::OpportunityCategory.parse(request(:get, 'OpportunityCategories'))
     end
 
     # POST /v2.1/OpportunityCategories
@@ -25,8 +25,8 @@ module Insightly2
     # @raise [ArgumentError] If the method arguments are blank.
     # @return [Insightly2::Resources::OpportunityCategory, nil].
     def create_opportunity_category(category: nil)
-      raise ArgumentError, "Category cannot be blank" if category.blank?
-      Resources::OpportunityCategory.parse(request(:post, "OpportunityCategories", category))
+      raise ArgumentError, 'Category cannot be blank' if category.blank?
+      Resources::OpportunityCategory.parse(request(:post, 'OpportunityCategories', category))
     end
 
     # PUT /v2.1/OpportunityCategories
@@ -35,8 +35,8 @@ module Insightly2
     # @raise [ArgumentError] If the method arguments are blank.
     # @return [Insightly2::Resources::OpportunityCategory, nil].
     def update_opportunity_category(category: nil)
-      raise ArgumentError, "Category cannot be blank" if category.blank?
-      Resources::OpportunityCategory.parse(request(:put, "OpportunityCategories", category))
+      raise ArgumentError, 'Category cannot be blank' if category.blank?
+      Resources::OpportunityCategory.parse(request(:put, 'OpportunityCategories', category))
     end
 
     # DELETE /v2.1/OpportunityCategories/{id}
@@ -45,7 +45,7 @@ module Insightly2
     # @raise [ArgumentError] If the method arguments are blank.
     # @return [Faraday::Response].
     def delete_opportunity_category(id: nil)
-      raise ArgumentError, "ID cannot be blank" if id.blank?
+      raise ArgumentError, 'ID cannot be blank' if id.blank?
       request(:delete, "OpportunityCategories/#{id}")
     end
   end
