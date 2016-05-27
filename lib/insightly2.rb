@@ -17,6 +17,10 @@ module Insightly2
 
   # @return [Insightly2::Client]
   def client
-    @client ||= Client.new(Insightly2.api_key)
+    if @client && @client.api_key != self.api_key
+      @client = Client.new(Insightly2.api_key) #force new client in case api_key has changed
+    else
+      @client ||= Client.new(Insightly2.api_key)
+    end
   end
 end

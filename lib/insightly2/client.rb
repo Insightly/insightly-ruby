@@ -16,6 +16,8 @@ module Insightly2
     HEADERS = {'Accept' => 'application/json', 'Content-Type' => 'application/json'}
     LOGGER = Logger.new(STDOUT)
 
+    attr_reader :api_key
+
     # @param [String] api_key
     def initialize(api_key = Insightly2.api_key)
       @api_key = api_key
