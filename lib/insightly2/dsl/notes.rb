@@ -25,8 +25,9 @@ module Insightly2
     # GET /v2.1/Notes
     # Get a list of notes.
     # @return [Insightly2::Resources::Note, nil].
-    def get_notes
-      Resources::Note.parse(request(:get, "Notes"))
+    def get_notes(query_params: {})
+      url = Utils::UrlHelper.build_url(path: "Notes", params: query_params)
+      Resources::Note.parse(request(:get, url))
     end
 
     # POST /v2.1/Notes

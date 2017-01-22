@@ -26,8 +26,8 @@ module Insightly2
     # Get a list of tasks.
     # @param [ids:] Array of task ids (optional).
     # @return [Insightly2::Resources::Task, nil].
-    def get_tasks(ids: [])
-      url = Utils::UrlHelper.build_url(path: "Tasks", params: {ids: ids.join(',')})
+    def get_tasks(ids: [], query_params: {})
+      url = Utils::UrlHelper.build_url(path: "Tasks", params: {ids: ids.join(',')}.merge(query_params))
       Resources::Task.parse(request(:get, url))
     end
 

@@ -56,8 +56,8 @@ module Insightly2
     # @param [String] domain The email domain (optional).
     # @param [String] tag The tag an organisation has been tagged with (optional).
     # @return [Array, nil].
-    def get_organisations(ids: [], domain: '', tag: '')
-      url = Utils::UrlHelper.build_url(path: "Organisations", params: {ids: ids.join(','), domain: domain, tag: tag})
+    def get_organisations(ids: [], domain: '', tag: '', query_params: {})
+      url = Utils::UrlHelper.build_url(path: "Organisations", params: {ids: ids.join(','), domain: domain, tag: tag}.merge(query_params))
       Resources::Organisation.parse(request(:get, url))
     end
 
