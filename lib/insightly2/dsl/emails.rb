@@ -27,8 +27,8 @@ module Insightly2
     # @param [Array] ids The list of email IDs (optional).
     # @param [String] tag Emails tagged with this tag (optional).
     # @return [Array, nil].
-    def get_emails(ids: [], tag: '')
-      url = Utils::UrlHelper.build_url(path: "Emails", params: {ids: ids.join(','), tag: tag})
+    def get_emails(ids: [], tag: '', query_params: {})
+      url = Utils::UrlHelper.build_url(path: "Emails", params: {ids: ids.join(','), tag: tag}.merge(query_params))
       Resources::Email.parse(request(:get, url))
     end
 

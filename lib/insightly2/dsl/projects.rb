@@ -57,8 +57,8 @@ module Insightly2
     # @param [Array] ids The IDs of the projects to retrieve (optional).
     # @param [String] tag The tag that is applied to the projects (optional).
     # @return [Array, nil].
-    def get_projects(ids: [], tag: '')
-      url = Utils::UrlHelper.build_url(path: "Projects", params: {ids: ids.join(','), tag: tag})
+    def get_projects(ids: [], tag: '', query_params: {})
+      url = Utils::UrlHelper.build_url(path: "Projects", params: {ids: ids.join(','), tag: tag}.merge(query_params))
       Resources::Project.parse(request(:get, url))
     end
 
