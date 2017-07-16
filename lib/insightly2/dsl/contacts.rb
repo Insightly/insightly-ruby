@@ -62,11 +62,11 @@ module Insightly2
       url = Utils::UrlHelper.build_url(path: "Contacts", params: {ids: ids.join(','), email: email, tag: tag})
       ext = url.include?("?") ? "&$" : "?$"
       if created_since.present?
-        url += "#{ext}filter=DATE_CREATED_UTC%20gt%20DateTime'#{created_since.strftime("%Y-%m-%dT00:00:00")}'"
+        url += "#{ext}filter=DATE_CREATED_UTC%20gt%20DateTime'#{created_since.strftime("%Y-%m-%dT%H:%M:%S")}'"
       end
       ext = url.include?("?") ? "&$" : "?$"
       if updated_since.present?
-        url += "#{ext}filter=DATE_UPDATED_UTC%20gt%20DateTime'#{updated_since.strftime("%Y-%m-%dT00:00:00")}'"
+        url += "#{ext}filter=DATE_UPDATED_UTC%20gt%20DateTime'#{updated_since.strftime("%Y-%m-%dT%H:%M:%S")}'"
       end
       Resources::Contact.parse(request(:get, url))
     end
