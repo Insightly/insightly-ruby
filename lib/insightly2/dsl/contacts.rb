@@ -58,8 +58,16 @@ module Insightly2
     # @param [String] email The email address of the contact to return (optional).
     # @param [String] tag The tag that has been applied to contacts (optional).
     # @return [Array, nil].
-    def get_contacts(ids: [], email: '', tag: '', query_params: {})
-      url = Utils::UrlHelper.build_url(path: "Contacts", params: {ids: ids.join(','), email: email, tag: tag}.merge(query_params))
+    def get_contacts(ids: [], email: '', tag: '', created_since: '', updated_since: '')
+      url = Utils::UrlHelper.build_url(path: "Contacts", params: {ids: ids.join(','), email: email, tag: tag})
+      ext = url.include?("?") ? "&$" : "?$"
+      if created_since.present?
+        url += "#{ext}filter=DATE_CREATED_UTC%20gt%20DateTime'#{created_since.strftime("%Y-%m-%dT00:00:00")}'"
+      end
+      ext = url.include?("?") ? "&$" : "?$"
+      if updated_since.present?
+        url += "#{ext}filter=DATE_UPDATED_UTC%20gt%20DateTime'#{updated_since.strftime("%Y-%m-%dT00:00:00")}'"
+      end
       Resources::Contact.parse(request(:get, url))
     end
 
